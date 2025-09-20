@@ -58,7 +58,6 @@ public class VentanaInicio extends javax.swing.JFrame {
 
         jTextField2.setBackground(new java.awt.Color(255, 255, 255));
         jTextField2.setForeground(new java.awt.Color(153, 153, 153));
-        jTextField2.setText("Introduce usuario");
         jTextField2.setBorder(null);
         jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 150, 240, 30));
 
@@ -76,7 +75,6 @@ public class VentanaInicio extends javax.swing.JFrame {
 
         jTextField3.setBackground(new java.awt.Color(255, 255, 255));
         jTextField3.setForeground(new java.awt.Color(153, 153, 153));
-        jTextField3.setText("Introduce contraseña");
         jTextField3.setBorder(null);
         jTextField3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
