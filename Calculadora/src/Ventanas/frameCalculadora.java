@@ -78,9 +78,11 @@ public class frameCalculadora extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(385, 650));
         setResizable(false);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         panelCalculadora.setBackground(new java.awt.Color(49, 60, 103));
         panelCalculadora.setPreferredSize(new java.awt.Dimension(450, 650));
+        panelCalculadora.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         boton1.setBackground(new java.awt.Color(165, 190, 247));
         boton1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -116,6 +118,8 @@ public class frameCalculadora extends javax.swing.JFrame {
                 .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 52, Short.MAX_VALUE)
                 .addContainerGap())
         );
+
+        panelCalculadora.add(boton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(54, 323, -1, -1));
 
         boton2.setBackground(new java.awt.Color(165, 190, 247));
         boton2.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -155,6 +159,8 @@ public class frameCalculadora extends javax.swing.JFrame {
                     .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 58, Short.MAX_VALUE)))
         );
 
+        panelCalculadora.add(boton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(122, 323, -1, -1));
+
         boton3.setBackground(new java.awt.Color(165, 190, 247));
         boton3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -192,6 +198,8 @@ public class frameCalculadora extends javax.swing.JFrame {
                     .addContainerGap()
                     .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 58, Short.MAX_VALUE)))
         );
+
+        panelCalculadora.add(boton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 323, -1, -1));
 
         boton4.setBackground(new java.awt.Color(165, 190, 247));
         boton4.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -231,6 +239,8 @@ public class frameCalculadora extends javax.swing.JFrame {
                     .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 58, Short.MAX_VALUE)))
         );
 
+        panelCalculadora.add(boton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(54, 405, -1, -1));
+
         boton5.setBackground(new java.awt.Color(165, 190, 247));
         boton5.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -268,6 +278,8 @@ public class frameCalculadora extends javax.swing.JFrame {
                     .addContainerGap()
                     .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 58, Short.MAX_VALUE)))
         );
+
+        panelCalculadora.add(boton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(122, 405, -1, -1));
 
         boton6.setBackground(new java.awt.Color(165, 190, 247));
         boton6.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -307,6 +319,8 @@ public class frameCalculadora extends javax.swing.JFrame {
                     .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, 58, Short.MAX_VALUE)))
         );
 
+        panelCalculadora.add(boton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(192, 405, -1, -1));
+
         boton7.setBackground(new java.awt.Color(165, 190, 247));
         boton7.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -344,6 +358,8 @@ public class frameCalculadora extends javax.swing.JFrame {
                     .addContainerGap()
                     .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, 58, Short.MAX_VALUE)))
         );
+
+        panelCalculadora.add(boton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(54, 487, -1, -1));
 
         boton8.setBackground(new java.awt.Color(165, 190, 247));
         boton8.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -383,6 +399,8 @@ public class frameCalculadora extends javax.swing.JFrame {
                     .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, 58, Short.MAX_VALUE)))
         );
 
+        panelCalculadora.add(boton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(122, 487, -1, -1));
+
         boton9.setBackground(new java.awt.Color(165, 190, 247));
         boton9.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -420,6 +438,8 @@ public class frameCalculadora extends javax.swing.JFrame {
                     .addContainerGap()
                     .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, 58, Short.MAX_VALUE)))
         );
+
+        panelCalculadora.add(boton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 487, -1, -1));
 
         boton0.setBackground(new java.awt.Color(165, 190, 247));
         boton0.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -459,6 +479,8 @@ public class frameCalculadora extends javax.swing.JFrame {
                     .addComponent(jLabel0, javax.swing.GroupLayout.DEFAULT_SIZE, 58, Short.MAX_VALUE)))
         );
 
+        panelCalculadora.add(boton0, new org.netbeans.lib.awtextra.AbsoluteConstraints(122, 569, -1, -1));
+
         botonAC.setBackground(new java.awt.Color(165, 190, 247));
         botonAC.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -496,6 +518,8 @@ public class frameCalculadora extends javax.swing.JFrame {
                     .addContainerGap()
                     .addComponent(jLabelAC, javax.swing.GroupLayout.DEFAULT_SIZE, 58, Short.MAX_VALUE)))
         );
+
+        panelCalculadora.add(botonAC, new org.netbeans.lib.awtextra.AbsoluteConstraints(38, 241, -1, -1));
 
         botonPorcentaje.setBackground(new java.awt.Color(165, 190, 247));
         botonPorcentaje.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -535,6 +559,8 @@ public class frameCalculadora extends javax.swing.JFrame {
                     .addComponent(jLabelPorcentaje, javax.swing.GroupLayout.DEFAULT_SIZE, 58, Short.MAX_VALUE)))
         );
 
+        panelCalculadora.add(botonPorcentaje, new org.netbeans.lib.awtextra.AbsoluteConstraints(194, 241, -1, -1));
+
         botonC.setBackground(new java.awt.Color(165, 190, 247));
         botonC.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -573,6 +599,8 @@ public class frameCalculadora extends javax.swing.JFrame {
                     .addComponent(jLabelC, javax.swing.GroupLayout.DEFAULT_SIZE, 58, Short.MAX_VALUE)))
         );
 
+        panelCalculadora.add(botonC, new org.netbeans.lib.awtextra.AbsoluteConstraints(116, 241, -1, -1));
+
         botonDividir.setBackground(new java.awt.Color(165, 190, 247));
         botonDividir.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -598,18 +626,16 @@ public class frameCalculadora extends javax.swing.JFrame {
         botonDividir.setLayout(botonDividirLayout);
         botonDividirLayout.setHorizontalGroup(
             botonDividirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 50, Short.MAX_VALUE)
-            .addGroup(botonDividirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jLabelDividir, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, botonDividirLayout.createSequentialGroup()
+                .addComponent(jLabelDividir, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         botonDividirLayout.setVerticalGroup(
             botonDividirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 64, Short.MAX_VALUE)
-            .addGroup(botonDividirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(botonDividirLayout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(jLabelDividir, javax.swing.GroupLayout.DEFAULT_SIZE, 58, Short.MAX_VALUE)))
+            .addComponent(jLabelDividir, javax.swing.GroupLayout.DEFAULT_SIZE, 58, Short.MAX_VALUE)
         );
+
+        panelCalculadora.add(botonDividir, new org.netbeans.lib.awtextra.AbsoluteConstraints(285, 241, -1, -1));
 
         botonMultiplicar.setBackground(new java.awt.Color(165, 190, 247));
         botonMultiplicar.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -649,6 +675,8 @@ public class frameCalculadora extends javax.swing.JFrame {
                     .addComponent(jLabelMultiplicar, javax.swing.GroupLayout.DEFAULT_SIZE, 58, Short.MAX_VALUE)))
         );
 
+        panelCalculadora.add(botonMultiplicar, new org.netbeans.lib.awtextra.AbsoluteConstraints(285, 323, -1, -1));
+
         botonSumar.setBackground(new java.awt.Color(165, 190, 247));
         botonSumar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -686,6 +714,8 @@ public class frameCalculadora extends javax.swing.JFrame {
                     .addContainerGap()
                     .addComponent(jLabelSumar, javax.swing.GroupLayout.DEFAULT_SIZE, 58, Short.MAX_VALUE)))
         );
+
+        panelCalculadora.add(botonSumar, new org.netbeans.lib.awtextra.AbsoluteConstraints(284, 405, -1, -1));
 
         botonRestar.setBackground(new java.awt.Color(165, 190, 247));
         botonRestar.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -725,6 +755,8 @@ public class frameCalculadora extends javax.swing.JFrame {
                     .addComponent(jLabelRestar, javax.swing.GroupLayout.DEFAULT_SIZE, 58, Short.MAX_VALUE)))
         );
 
+        panelCalculadora.add(botonRestar, new org.netbeans.lib.awtextra.AbsoluteConstraints(284, 487, -1, -1));
+
         botonIgual.setBackground(new java.awt.Color(165, 190, 247));
         botonIgual.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -763,10 +795,13 @@ public class frameCalculadora extends javax.swing.JFrame {
                     .addComponent(jLabelIgual, javax.swing.GroupLayout.DEFAULT_SIZE, 58, Short.MAX_VALUE)))
         );
 
+        panelCalculadora.add(botonIgual, new org.netbeans.lib.awtextra.AbsoluteConstraints(284, 569, -1, -1));
+
         jLabel10.setBackground(new java.awt.Color(165, 190, 247));
         jLabel10.setFont(new java.awt.Font("Nimbus Mono PS", 1, 18)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(165, 190, 247));
         jLabel10.setText("CALCULADORA DISEÑO WEB | 2º DAM");
+        panelCalculadora.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 44, -1, 46));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -816,109 +851,9 @@ public class frameCalculadora extends javax.swing.JFrame {
             .addComponent(jLabelPantallaSalida, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        javax.swing.GroupLayout panelCalculadoraLayout = new javax.swing.GroupLayout(panelCalculadora);
-        panelCalculadora.setLayout(panelCalculadoraLayout);
-        panelCalculadoraLayout.setHorizontalGroup(
-            panelCalculadoraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelCalculadoraLayout.createSequentialGroup()
-                .addGroup(panelCalculadoraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panelCalculadoraLayout.createSequentialGroup()
-                        .addGap(54, 54, 54)
-                        .addGroup(panelCalculadoraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(panelCalculadoraLayout.createSequentialGroup()
-                                .addComponent(boton4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(boton5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(20, 20, 20)
-                                .addComponent(boton6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(panelCalculadoraLayout.createSequentialGroup()
-                                .addComponent(boton7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(boton8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(boton9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(panelCalculadoraLayout.createSequentialGroup()
-                                .addGap(68, 68, 68)
-                                .addComponent(boton0, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(panelCalculadoraLayout.createSequentialGroup()
-                                .addComponent(boton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(boton2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(boton3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(42, 42, 42)
-                        .addGroup(panelCalculadoraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(botonSumar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(panelCalculadoraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(botonMultiplicar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(botonDividir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(botonRestar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(botonIgual, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(panelCalculadoraLayout.createSequentialGroup()
-                        .addGap(38, 38, 38)
-                        .addGroup(panelCalculadoraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(panelCalculadoraLayout.createSequentialGroup()
-                                .addComponent(botonAC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(12, 12, 12)
-                                .addComponent(botonC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(12, 12, 12)
-                                .addComponent(botonPorcentaje, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(panelCalculadoraLayout.createSequentialGroup()
-                        .addGap(16, 16, 16)
-                        .addComponent(jLabel10)))
-                .addContainerGap(38, Short.MAX_VALUE))
-        );
-        panelCalculadoraLayout.setVerticalGroup(
-            panelCalculadoraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelCalculadoraLayout.createSequentialGroup()
-                .addGap(44, 44, 44)
-                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(panelCalculadoraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(botonAC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(botonC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(botonPorcentaje, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(botonDividir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(panelCalculadoraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panelCalculadoraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addGroup(panelCalculadoraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(boton2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(boton3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(boton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(botonMultiplicar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(panelCalculadoraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(boton4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(boton5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(boton6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(botonSumar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(panelCalculadoraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(boton7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(boton8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(boton9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(botonRestar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(panelCalculadoraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(boton0, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(botonIgual, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(38, Short.MAX_VALUE))
-        );
+        panelCalculadora.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(38, 108, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelCalculadora, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 395, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelCalculadora, javax.swing.GroupLayout.DEFAULT_SIZE, 671, Short.MAX_VALUE)
-        );
+        getContentPane().add(panelCalculadora, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 395, 671));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
