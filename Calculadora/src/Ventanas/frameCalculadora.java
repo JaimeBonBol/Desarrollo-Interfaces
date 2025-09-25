@@ -865,9 +865,9 @@ public class frameCalculadora extends javax.swing.JFrame {
                                 .addGap(12, 12, 12)
                                 .addComponent(botonPorcentaje, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(panelCalculadoraLayout.createSequentialGroup()
-                        .addContainerGap()
+                        .addGap(16, 16, 16)
                         .addComponent(jLabel10)))
-                .addContainerGap(46, Short.MAX_VALUE))
+                .addContainerGap(38, Short.MAX_VALUE))
         );
         panelCalculadoraLayout.setVerticalGroup(
             panelCalculadoraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1299,12 +1299,6 @@ public class frameCalculadora extends javax.swing.JFrame {
     }*/
 
     
-    
-    /*private void jLabelSumarMouseClicked(java.awt.event.MouseEvent evt) {                                         
-        if(jLabelPantallaOperacion.getText().isEmpty()){
-            jLabelPantallaOperacion.setText(jLabelSumar.getText());
-        }
-    }*/ 
     /**
      * @param args the command line arguments
      */
