@@ -4,6 +4,8 @@
  */
 package Vistas;
 
+import java.awt.Color;
+
 /**
  *
  * @author jaimedam
@@ -17,6 +19,16 @@ public class PantallaMovil extends javax.swing.JFrame {
      */
     public PantallaMovil() {
         initComponents();
+        // setUndecorated(true);
+        setLocationRelativeTo(null);
+        vistaHome.setVisible(true);
+        vistaChats.setVisible(false);
+        vistaAjustes.setVisible(false);
+        vistaChat1.setVisible(false);
+        vistaChat2.setVisible(false);
+        vistaChat3.setVisible(false);
+        vistaChat4.setVisible(false);
+        cambiarDarkTheme();
     }
 
     /**
@@ -31,18 +43,16 @@ public class PantallaMovil extends javax.swing.JFrame {
         Fondo = new javax.swing.JPanel();
         vistaChats = new javax.swing.JPanel();
         cabeceraInicio = new javax.swing.JPanel();
-        mensajeCabecera = new javax.swing.JLabel();
-        iconoCabecera = new javax.swing.JLabel();
-        barraHomeMovilChats = new javax.swing.JLabel();
-        iconoChatsChats = new javax.swing.JLabel();
-        iconoSettingsChats = new javax.swing.JLabel();
         barraBusqueda = new javax.swing.JPanel();
         iconoBusqueda = new javax.swing.JLabel();
+        iconoAddUser = new javax.swing.JLabel();
+        barraHomeMovilChats = new javax.swing.JLabel();
+        iconoSettingsChats = new javax.swing.JLabel();
         conversacion1 = new javax.swing.JPanel();
         fotoConv1 = new javax.swing.JLabel();
-        nombreConv1 = new javax.swing.JLabel();
-        mensajeConv1 = new javax.swing.JLabel();
         horaConv1 = new javax.swing.JLabel();
+        mensajeConv1 = new javax.swing.JLabel();
+        nombreConv1 = new javax.swing.JLabel();
         conversacion2 = new javax.swing.JPanel();
         fotoConv2 = new javax.swing.JLabel();
         nombreConv2 = new javax.swing.JLabel();
@@ -54,20 +64,103 @@ public class PantallaMovil extends javax.swing.JFrame {
         mensajeConv3 = new javax.swing.JLabel();
         horaConv3 = new javax.swing.JLabel();
         iconoHomeChats = new javax.swing.JLabel();
-        Chat1 = new javax.swing.JPanel();
-        Chat2 = new javax.swing.JPanel();
-        Chat3 = new javax.swing.JPanel();
+        iconoChatsChats = new javax.swing.JLabel();
+        conversacion4 = new javax.swing.JPanel();
+        fotoConv4 = new javax.swing.JLabel();
+        nombreConv4 = new javax.swing.JLabel();
+        mensajeConv4 = new javax.swing.JLabel();
+        horaConv4 = new javax.swing.JLabel();
+        vistaChat1 = new javax.swing.JPanel();
+        cabeceraChat1 = new javax.swing.JPanel();
+        iconoChat1 = new javax.swing.JLabel();
+        nombreChat1 = new javax.swing.JLabel();
+        barraHomeMovilChats1 = new javax.swing.JLabel();
+        iconoBackChat1 = new javax.swing.JLabel();
+        imgKeyboardChat1 = new javax.swing.JLabel();
+        iconoEmojiChat1 = new javax.swing.JLabel();
+        iconoPictureChat1 = new javax.swing.JLabel();
+        iconoMicrophoneChat1 = new javax.swing.JLabel();
+        mensaje1Chat1 = new javax.swing.JPanel();
+        textoMensaje1Chat1 = new javax.swing.JLabel();
+        mensaje2Chat1 = new javax.swing.JPanel();
+        textoMensaje2Chat1 = new javax.swing.JLabel();
+        mensaje3Chat1 = new javax.swing.JPanel();
+        textoMensaje3Chat1 = new javax.swing.JLabel();
+        barraEscrituraChat1 = new javax.swing.JPanel();
         vistaAjustes = new javax.swing.JPanel();
         iconoHomeSettings = new javax.swing.JLabel();
         barraHomeMovilSettings = new javax.swing.JLabel();
         iconoChatsSettings = new javax.swing.JLabel();
         iconoSettingsSettings = new javax.swing.JLabel();
+        cabeceraInicio1 = new javax.swing.JPanel();
+        barraBusqueda1 = new javax.swing.JPanel();
+        iconoBusqueda1 = new javax.swing.JLabel();
+        iconoNotificaciones = new javax.swing.JLabel();
+        textoPrivacity = new javax.swing.JLabel();
+        iconoDarkTheme = new javax.swing.JLabel();
+        textoNotificaciones1 = new javax.swing.JLabel();
+        iconoPrivacity = new javax.swing.JLabel();
+        textoDarkTheme1 = new javax.swing.JLabel();
+        iconoCuenta = new javax.swing.JLabel();
+        textoPrivacity1 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
         vistaHome = new javax.swing.JPanel();
         iconoAppPrincipal = new javax.swing.JLabel();
         iconoChatsHome = new javax.swing.JLabel();
         iconoHomeHome = new javax.swing.JLabel();
         iconoSettingsHome = new javax.swing.JLabel();
         barraHomeMovilHome = new javax.swing.JLabel();
+        vistaChat2 = new javax.swing.JPanel();
+        cabeceraChat2 = new javax.swing.JPanel();
+        iconoChat2 = new javax.swing.JLabel();
+        nombreChat2 = new javax.swing.JLabel();
+        barraHomeMovilChats2 = new javax.swing.JLabel();
+        iconoBackChat2 = new javax.swing.JLabel();
+        imgKeyboardChat2 = new javax.swing.JLabel();
+        iconoEmojiChat2 = new javax.swing.JLabel();
+        iconoPictureChat2 = new javax.swing.JLabel();
+        iconoMicrophoneChat2 = new javax.swing.JLabel();
+        mensaje1Chat2 = new javax.swing.JPanel();
+        textoMensaje1Chat2 = new javax.swing.JLabel();
+        mensaje2Chat2 = new javax.swing.JPanel();
+        textoMensaje2Chat2 = new javax.swing.JLabel();
+        mensaje3Chat2 = new javax.swing.JPanel();
+        textoMensaje3Chat2 = new javax.swing.JLabel();
+        barraEscrituraChat2 = new javax.swing.JPanel();
+        vistaChat3 = new javax.swing.JPanel();
+        cabeceraChat3 = new javax.swing.JPanel();
+        iconoChat3 = new javax.swing.JLabel();
+        nombreChat3 = new javax.swing.JLabel();
+        barraHomeMovilChats3 = new javax.swing.JLabel();
+        iconoBackChat3 = new javax.swing.JLabel();
+        imgKeyboardChat3 = new javax.swing.JLabel();
+        iconoEmojiChat3 = new javax.swing.JLabel();
+        iconoPictureChat3 = new javax.swing.JLabel();
+        iconoMicrophoneChat3 = new javax.swing.JLabel();
+        mensaje1Chat3 = new javax.swing.JPanel();
+        textoMensaje1Chat3 = new javax.swing.JLabel();
+        mensaje2Chat3 = new javax.swing.JPanel();
+        textoMensaje2Chat3 = new javax.swing.JLabel();
+        mensaje3Chat3 = new javax.swing.JPanel();
+        textoMensaje3Chat3 = new javax.swing.JLabel();
+        barraEscrituraChat3 = new javax.swing.JPanel();
+        vistaChat4 = new javax.swing.JPanel();
+        cabeceraChat4 = new javax.swing.JPanel();
+        iconoChat4 = new javax.swing.JLabel();
+        nombreChat4 = new javax.swing.JLabel();
+        barraHomeMovilChats4 = new javax.swing.JLabel();
+        iconoBackChat4 = new javax.swing.JLabel();
+        imgKeyboardChat4 = new javax.swing.JLabel();
+        iconoEmojiChat4 = new javax.swing.JLabel();
+        iconoPictureChat4 = new javax.swing.JLabel();
+        iconoMicrophoneChat4 = new javax.swing.JLabel();
+        mensaje1Chat4 = new javax.swing.JPanel();
+        textoMensaje1Chat4 = new javax.swing.JLabel();
+        mensaje2Chat4 = new javax.swing.JPanel();
+        textoMensaje2Chat4 = new javax.swing.JLabel();
+        mensaje3Chat4 = new javax.swing.JPanel();
+        textoMensaje3Chat4 = new javax.swing.JLabel();
+        barraEscrituraChat4 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -76,39 +169,6 @@ public class PantallaMovil extends javax.swing.JFrame {
         vistaChats.setBackground(new java.awt.Color(216, 219, 243));
 
         cabeceraInicio.setBackground(new java.awt.Color(0, 33, 85));
-
-        mensajeCabecera.setFont(new java.awt.Font("Nimbus Mono PS", 1, 22)); // NOI18N
-        mensajeCabecera.setForeground(new java.awt.Color(216, 219, 243));
-        mensajeCabecera.setText("APLICACIÓN MENSAJERÍA");
-
-        iconoCabecera.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/icon-app.png"))); // NOI18N
-
-        javax.swing.GroupLayout cabeceraInicioLayout = new javax.swing.GroupLayout(cabeceraInicio);
-        cabeceraInicio.setLayout(cabeceraInicioLayout);
-        cabeceraInicioLayout.setHorizontalGroup(
-            cabeceraInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(cabeceraInicioLayout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addComponent(mensajeCabecera)
-                .addGap(31, 31, 31)
-                .addComponent(iconoCabecera)
-                .addContainerGap(34, Short.MAX_VALUE))
-        );
-        cabeceraInicioLayout.setVerticalGroup(
-            cabeceraInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(cabeceraInicioLayout.createSequentialGroup()
-                .addGap(37, 37, 37)
-                .addGroup(cabeceraInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(iconoCabecera)
-                    .addComponent(mensajeCabecera))
-                .addContainerGap(45, Short.MAX_VALUE))
-        );
-
-        barraHomeMovilChats.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/line.png"))); // NOI18N
-
-        iconoChatsChats.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/message-strong.png"))); // NOI18N
-
-        iconoSettingsChats.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/settings.png"))); // NOI18N
 
         barraBusqueda.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -131,20 +191,79 @@ public class PantallaMovil extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        iconoAddUser.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/add-user.png"))); // NOI18N
+
+        javax.swing.GroupLayout cabeceraInicioLayout = new javax.swing.GroupLayout(cabeceraInicio);
+        cabeceraInicio.setLayout(cabeceraInicioLayout);
+        cabeceraInicioLayout.setHorizontalGroup(
+            cabeceraInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(cabeceraInicioLayout.createSequentialGroup()
+                .addGap(29, 29, 29)
+                .addComponent(barraBusqueda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(iconoAddUser)
+                .addGap(23, 23, 23))
+        );
+        cabeceraInicioLayout.setVerticalGroup(
+            cabeceraInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(cabeceraInicioLayout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addGroup(cabeceraInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(iconoAddUser, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cabeceraInicioLayout.createSequentialGroup()
+                        .addComponent(barraBusqueda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(10, 10, 10)))
+                .addContainerGap(27, Short.MAX_VALUE))
+        );
+
+        barraHomeMovilChats.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/line.png"))); // NOI18N
+        barraHomeMovilChats.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                barraHomeMovilChatsMouseClicked(evt);
+            }
+        });
+
+        iconoSettingsChats.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/settings.png"))); // NOI18N
+        iconoSettingsChats.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                iconoSettingsChatsMouseClicked(evt);
+            }
+        });
+
         conversacion1.setBackground(new java.awt.Color(168, 181, 202));
         conversacion1.setPreferredSize(new java.awt.Dimension(339, 80));
+        conversacion1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                conversacion1MouseClicked(evt);
+            }
+        });
 
         fotoConv1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/man1.png"))); // NOI18N
-
-        nombreConv1.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
-        nombreConv1.setForeground(new java.awt.Color(0, 33, 85));
-        nombreConv1.setText("Pedro Profesor");
-
-        mensajeConv1.setForeground(new java.awt.Color(0, 33, 85));
-        mensajeConv1.setText("Tienes una nueva tarea de Diseño de Interfaces");
+        fotoConv1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                fotoConv1MouseClicked(evt);
+            }
+        });
 
         horaConv1.setForeground(new java.awt.Color(0, 33, 85));
         horaConv1.setText("14:25");
+
+        mensajeConv1.setForeground(new java.awt.Color(0, 33, 85));
+        mensajeConv1.setText("Tienes una nueva tarea de Diseño de Interfaces");
+        mensajeConv1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                mensajeConv1MouseClicked(evt);
+            }
+        });
+
+        nombreConv1.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        nombreConv1.setForeground(new java.awt.Color(0, 33, 85));
+        nombreConv1.setText("Profesor");
+        nombreConv1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                nombreConv1MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout conversacion1Layout = new javax.swing.GroupLayout(conversacion1);
         conversacion1.setLayout(conversacion1Layout);
@@ -184,15 +303,35 @@ public class PantallaMovil extends javax.swing.JFrame {
 
         conversacion2.setBackground(new java.awt.Color(168, 181, 202));
         conversacion2.setPreferredSize(new java.awt.Dimension(362, 80));
+        conversacion2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                conversacion2MouseClicked(evt);
+            }
+        });
 
         fotoConv2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/woman1.png"))); // NOI18N
+        fotoConv2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                fotoConv2MouseClicked(evt);
+            }
+        });
 
         nombreConv2.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
         nombreConv2.setForeground(new java.awt.Color(0, 33, 85));
         nombreConv2.setText("Mamá");
+        nombreConv2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                nombreConv2MouseClicked(evt);
+            }
+        });
 
         mensajeConv2.setForeground(new java.awt.Color(0, 33, 85));
         mensajeConv2.setText("Ve a por el pan");
+        mensajeConv2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                mensajeConv2MouseClicked(evt);
+            }
+        });
 
         horaConv2.setForeground(new java.awt.Color(0, 33, 85));
         horaConv2.setText("10:30");
@@ -235,15 +374,35 @@ public class PantallaMovil extends javax.swing.JFrame {
 
         conversacion3.setBackground(new java.awt.Color(168, 181, 202));
         conversacion3.setPreferredSize(new java.awt.Dimension(339, 80));
+        conversacion3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                conversacion3MouseClicked(evt);
+            }
+        });
 
         fotoConv3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/man2.png"))); // NOI18N
+        fotoConv3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                fotoConv3MouseClicked(evt);
+            }
+        });
 
         nombreConv3.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
         nombreConv3.setForeground(new java.awt.Color(0, 33, 85));
         nombreConv3.setText("Amigo");
+        nombreConv3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                nombreConv3MouseClicked(evt);
+            }
+        });
 
         mensajeConv3.setForeground(new java.awt.Color(0, 33, 85));
         mensajeConv3.setText("Me explicas la tarea de clase de hoy, no la entiedo");
+        mensajeConv3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                mensajeConv3MouseClicked(evt);
+            }
+        });
 
         horaConv3.setForeground(new java.awt.Color(0, 33, 85));
         horaConv3.setText("17:58");
@@ -285,146 +444,532 @@ public class PantallaMovil extends javax.swing.JFrame {
         );
 
         iconoHomeChats.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/home.png"))); // NOI18N
+        iconoHomeChats.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                iconoHomeChatsMouseClicked(evt);
+            }
+        });
+
+        iconoChatsChats.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/chats-strong.png"))); // NOI18N
+
+        conversacion4.setBackground(new java.awt.Color(168, 181, 202));
+        conversacion4.setPreferredSize(new java.awt.Dimension(339, 80));
+        conversacion4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                conversacion4MouseClicked(evt);
+            }
+        });
+
+        fotoConv4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/worke.png"))); // NOI18N
+        fotoConv4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                fotoConv4MouseClicked(evt);
+            }
+        });
+
+        nombreConv4.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        nombreConv4.setForeground(new java.awt.Color(0, 33, 85));
+        nombreConv4.setText("Fontanera");
+        nombreConv4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                nombreConv4MouseClicked(evt);
+            }
+        });
+
+        mensajeConv4.setForeground(new java.awt.Color(0, 33, 85));
+        mensajeConv4.setText("Ya está arreglada la ducha");
+        mensajeConv4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                mensajeConv4MouseClicked(evt);
+            }
+        });
+
+        horaConv4.setForeground(new java.awt.Color(0, 33, 85));
+        horaConv4.setText("09:00");
+
+        javax.swing.GroupLayout conversacion4Layout = new javax.swing.GroupLayout(conversacion4);
+        conversacion4.setLayout(conversacion4Layout);
+        conversacion4Layout.setHorizontalGroup(
+            conversacion4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(conversacion4Layout.createSequentialGroup()
+                .addGap(17, 17, 17)
+                .addComponent(fotoConv4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(conversacion4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(conversacion4Layout.createSequentialGroup()
+                        .addComponent(nombreConv4)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(horaConv4))
+                    .addGroup(conversacion4Layout.createSequentialGroup()
+                        .addComponent(mensajeConv4, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 72, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        conversacion4Layout.setVerticalGroup(
+            conversacion4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(conversacion4Layout.createSequentialGroup()
+                .addGroup(conversacion4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(conversacion4Layout.createSequentialGroup()
+                        .addGap(16, 16, 16)
+                        .addGroup(conversacion4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(conversacion4Layout.createSequentialGroup()
+                                .addComponent(nombreConv4)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(mensajeConv4))
+                            .addComponent(fotoConv4)))
+                    .addGroup(conversacion4Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(horaConv4)))
+                .addContainerGap(16, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout vistaChatsLayout = new javax.swing.GroupLayout(vistaChats);
         vistaChats.setLayout(vistaChatsLayout);
         vistaChatsLayout.setHorizontalGroup(
             vistaChatsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(cabeceraInicio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(vistaChatsLayout.createSequentialGroup()
-                .addComponent(cabeceraInicio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(vistaChatsLayout.createSequentialGroup()
-                .addGap(37, 37, 37)
+                .addGap(53, 53, 53)
                 .addComponent(iconoChatsChats)
-                .addGap(84, 84, 84)
+                .addGap(70, 70, 70)
                 .addComponent(iconoHomeChats)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(iconoSettingsChats)
-                .addGap(42, 42, 42))
-            .addGroup(vistaChatsLayout.createSequentialGroup()
+                .addGap(57, 57, 57))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, vistaChatsLayout.createSequentialGroup()
+                .addContainerGap(21, Short.MAX_VALUE)
                 .addGroup(vistaChatsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(vistaChatsLayout.createSequentialGroup()
-                        .addGap(68, 68, 68)
-                        .addComponent(barraBusqueda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(vistaChatsLayout.createSequentialGroup()
-                        .addGap(17, 17, 17)
-                        .addGroup(vistaChatsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(conversacion2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(conversacion1, javax.swing.GroupLayout.PREFERRED_SIZE, 362, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(conversacion3, javax.swing.GroupLayout.PREFERRED_SIZE, 362, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(vistaChatsLayout.createSequentialGroup()
-                        .addGap(144, 144, 144)
-                        .addComponent(barraHomeMovilChats)))
+                    .addComponent(conversacion4, javax.swing.GroupLayout.PREFERRED_SIZE, 362, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(conversacion2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(conversacion1, javax.swing.GroupLayout.PREFERRED_SIZE, 362, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(conversacion3, javax.swing.GroupLayout.PREFERRED_SIZE, 362, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(17, 17, 17))
+            .addGroup(vistaChatsLayout.createSequentialGroup()
+                .addGap(147, 147, 147)
+                .addComponent(barraHomeMovilChats)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         vistaChatsLayout.setVerticalGroup(
             vistaChatsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(vistaChatsLayout.createSequentialGroup()
-                .addComponent(cabeceraInicio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(barraBusqueda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
-                .addComponent(conversacion1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(45, 45, 45)
-                .addComponent(conversacion2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(56, 56, 56)
-                .addComponent(conversacion3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(87, 87, 87)
-                .addGroup(vistaChatsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(iconoSettingsChats)
-                    .addComponent(iconoChatsChats)
-                    .addComponent(iconoHomeChats))
-                .addGap(12, 12, 12)
-                .addComponent(barraHomeMovilChats, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(vistaChatsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(vistaChatsLayout.createSequentialGroup()
+                        .addComponent(cabeceraInicio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(43, 43, 43)
+                        .addComponent(conversacion1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(29, 29, 29)
+                        .addComponent(conversacion2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(38, 38, 38)
+                        .addComponent(conversacion3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(30, 30, 30)
+                        .addComponent(conversacion4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(vistaChatsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(vistaChatsLayout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 95, Short.MAX_VALUE)
+                                .addComponent(iconoHomeChats))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, vistaChatsLayout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(iconoChatsChats))))
+                    .addGroup(vistaChatsLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(iconoSettingsChats)))
+                .addGap(14, 14, 14)
+                .addComponent(barraHomeMovilChats, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         Fondo.add(vistaChats, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 750));
 
-        Chat1.setBackground(new java.awt.Color(216, 219, 243));
+        vistaChat1.setBackground(new java.awt.Color(216, 219, 243));
+        vistaChat1.setPreferredSize(new java.awt.Dimension(400, 755));
 
-        javax.swing.GroupLayout Chat1Layout = new javax.swing.GroupLayout(Chat1);
-        Chat1.setLayout(Chat1Layout);
-        Chat1Layout.setHorizontalGroup(
-            Chat1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+        cabeceraChat1.setBackground(new java.awt.Color(0, 33, 85));
+
+        iconoChat1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/man1.png"))); // NOI18N
+
+        nombreChat1.setFont(new java.awt.Font("Liberation Sans", 1, 32)); // NOI18N
+        nombreChat1.setForeground(new java.awt.Color(216, 219, 243));
+        nombreChat1.setText("Profesor");
+
+        javax.swing.GroupLayout cabeceraChat1Layout = new javax.swing.GroupLayout(cabeceraChat1);
+        cabeceraChat1.setLayout(cabeceraChat1Layout);
+        cabeceraChat1Layout.setHorizontalGroup(
+            cabeceraChat1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(cabeceraChat1Layout.createSequentialGroup()
+                .addGap(37, 37, 37)
+                .addComponent(iconoChat1)
+                .addGap(18, 18, 18)
+                .addComponent(nombreChat1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        Chat1Layout.setVerticalGroup(
-            Chat1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 750, Short.MAX_VALUE)
-        );
-
-        Fondo.add(Chat1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 750));
-
-        Chat2.setBackground(new java.awt.Color(216, 219, 243));
-
-        javax.swing.GroupLayout Chat2Layout = new javax.swing.GroupLayout(Chat2);
-        Chat2.setLayout(Chat2Layout);
-        Chat2Layout.setHorizontalGroup(
-            Chat2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        Chat2Layout.setVerticalGroup(
-            Chat2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 750, Short.MAX_VALUE)
-        );
-
-        Fondo.add(Chat2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 750));
-
-        Chat3.setBackground(new java.awt.Color(216, 219, 243));
-
-        javax.swing.GroupLayout Chat3Layout = new javax.swing.GroupLayout(Chat3);
-        Chat3.setLayout(Chat3Layout);
-        Chat3Layout.setHorizontalGroup(
-            Chat3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        Chat3Layout.setVerticalGroup(
-            Chat3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 750, Short.MAX_VALUE)
+        cabeceraChat1Layout.setVerticalGroup(
+            cabeceraChat1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cabeceraChat1Layout.createSequentialGroup()
+                .addContainerGap(29, Short.MAX_VALUE)
+                .addGroup(cabeceraChat1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(nombreChat1)
+                    .addComponent(iconoChat1))
+                .addGap(26, 26, 26))
         );
 
-        Fondo.add(Chat3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 750));
+        barraHomeMovilChats1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/line.png"))); // NOI18N
+        barraHomeMovilChats1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                barraHomeMovilChats1MouseClicked(evt);
+            }
+        });
+
+        iconoBackChat1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/back.png"))); // NOI18N
+        iconoBackChat1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                iconoBackChat1MouseClicked(evt);
+            }
+        });
+
+        imgKeyboardChat1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/keyboard2.png"))); // NOI18N
+
+        iconoEmojiChat1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/emoji.png"))); // NOI18N
+
+        iconoPictureChat1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/picture.png"))); // NOI18N
+
+        iconoMicrophoneChat1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/microphone.png"))); // NOI18N
+
+        mensaje1Chat1.setBackground(new java.awt.Color(168, 181, 202));
+
+        textoMensaje1Chat1.setForeground(new java.awt.Color(0, 33, 85));
+        textoMensaje1Chat1.setText("Tienes una nueva tarea de Diseño");
+
+        javax.swing.GroupLayout mensaje1Chat1Layout = new javax.swing.GroupLayout(mensaje1Chat1);
+        mensaje1Chat1.setLayout(mensaje1Chat1Layout);
+        mensaje1Chat1Layout.setHorizontalGroup(
+            mensaje1Chat1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(mensaje1Chat1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(textoMensaje1Chat1, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        mensaje1Chat1Layout.setVerticalGroup(
+            mensaje1Chat1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(mensaje1Chat1Layout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addComponent(textoMensaje1Chat1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        mensaje2Chat1.setBackground(new java.awt.Color(113, 126, 147));
+
+        textoMensaje2Chat1.setForeground(new java.awt.Color(0, 33, 85));
+        textoMensaje2Chat1.setText("Vale entendido!");
+
+        javax.swing.GroupLayout mensaje2Chat1Layout = new javax.swing.GroupLayout(mensaje2Chat1);
+        mensaje2Chat1.setLayout(mensaje2Chat1Layout);
+        mensaje2Chat1Layout.setHorizontalGroup(
+            mensaje2Chat1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(mensaje2Chat1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(textoMensaje2Chat1, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(18, Short.MAX_VALUE))
+        );
+        mensaje2Chat1Layout.setVerticalGroup(
+            mensaje2Chat1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mensaje2Chat1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(textoMensaje2Chat1)
+                .addGap(15, 15, 15))
+        );
+
+        mensaje3Chat1.setBackground(new java.awt.Color(168, 181, 202));
+
+        textoMensaje3Chat1.setForeground(new java.awt.Color(0, 33, 85));
+        textoMensaje3Chat1.setText("Perfecto");
+
+        javax.swing.GroupLayout mensaje3Chat1Layout = new javax.swing.GroupLayout(mensaje3Chat1);
+        mensaje3Chat1.setLayout(mensaje3Chat1Layout);
+        mensaje3Chat1Layout.setHorizontalGroup(
+            mensaje3Chat1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(mensaje3Chat1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(textoMensaje3Chat1, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(69, Short.MAX_VALUE))
+        );
+        mensaje3Chat1Layout.setVerticalGroup(
+            mensaje3Chat1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mensaje3Chat1Layout.createSequentialGroup()
+                .addContainerGap(17, Short.MAX_VALUE)
+                .addComponent(textoMensaje3Chat1)
+                .addGap(16, 16, 16))
+        );
+
+        barraEscrituraChat1.setBackground(new java.awt.Color(255, 255, 255));
+
+        javax.swing.GroupLayout barraEscrituraChat1Layout = new javax.swing.GroupLayout(barraEscrituraChat1);
+        barraEscrituraChat1.setLayout(barraEscrituraChat1Layout);
+        barraEscrituraChat1Layout.setHorizontalGroup(
+            barraEscrituraChat1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 319, Short.MAX_VALUE)
+        );
+        barraEscrituraChat1Layout.setVerticalGroup(
+            barraEscrituraChat1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 16, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout vistaChat1Layout = new javax.swing.GroupLayout(vistaChat1);
+        vistaChat1.setLayout(vistaChat1Layout);
+        vistaChat1Layout.setHorizontalGroup(
+            vistaChat1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(cabeceraChat1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(vistaChat1Layout.createSequentialGroup()
+                .addGroup(vistaChat1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(vistaChat1Layout.createSequentialGroup()
+                        .addGap(23, 23, 23)
+                        .addComponent(iconoBackChat1)
+                        .addGap(93, 93, 93)
+                        .addComponent(barraHomeMovilChats1))
+                    .addGroup(vistaChat1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(imgKeyboardChat1))
+                    .addGroup(vistaChat1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(vistaChat1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(iconoEmojiChat1)
+                            .addComponent(iconoMicrophoneChat1)
+                            .addComponent(iconoPictureChat1))
+                        .addGap(35, 35, 35)
+                        .addGroup(vistaChat1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(mensaje1Chat1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(mensaje3Chat1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(vistaChat1Layout.createSequentialGroup()
+                                .addComponent(mensaje2Chat1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(62, 62, 62)))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, vistaChat1Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(barraEscrituraChat1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(29, 29, 29))
+        );
+        vistaChat1Layout.setVerticalGroup(
+            vistaChat1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(vistaChat1Layout.createSequentialGroup()
+                .addComponent(cabeceraChat1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(vistaChat1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(iconoEmojiChat1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(mensaje1Chat1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(29, 29, 29)
+                .addGroup(vistaChat1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(iconoPictureChat1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(mensaje2Chat1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(vistaChat1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(vistaChat1Layout.createSequentialGroup()
+                        .addGap(56, 56, 56)
+                        .addComponent(iconoMicrophoneChat1))
+                    .addGroup(vistaChat1Layout.createSequentialGroup()
+                        .addGap(29, 29, 29)
+                        .addComponent(mensaje3Chat1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
+                .addComponent(barraEscrituraChat1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(imgKeyboardChat1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(vistaChat1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, vistaChat1Layout.createSequentialGroup()
+                        .addComponent(barraHomeMovilChats1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, vistaChat1Layout.createSequentialGroup()
+                        .addComponent(iconoBackChat1)
+                        .addGap(35, 35, 35))))
+        );
+
+        Fondo.add(vistaChat1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 750));
 
         vistaAjustes.setBackground(new java.awt.Color(216, 219, 243));
 
         iconoHomeSettings.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/home.png"))); // NOI18N
+        iconoHomeSettings.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                iconoHomeSettingsMouseClicked(evt);
+            }
+        });
 
         barraHomeMovilSettings.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/line.png"))); // NOI18N
+        barraHomeMovilSettings.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                barraHomeMovilSettingsMouseClicked(evt);
+            }
+        });
 
-        iconoChatsSettings.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/message.png"))); // NOI18N
+        iconoChatsSettings.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/chats.png"))); // NOI18N
+        iconoChatsSettings.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                iconoChatsSettingsMouseClicked(evt);
+            }
+        });
 
         iconoSettingsSettings.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/settings-strong.png"))); // NOI18N
+
+        cabeceraInicio1.setBackground(new java.awt.Color(0, 33, 85));
+
+        barraBusqueda1.setBackground(new java.awt.Color(255, 255, 255));
+
+        iconoBusqueda1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/search.png"))); // NOI18N
+
+        javax.swing.GroupLayout barraBusqueda1Layout = new javax.swing.GroupLayout(barraBusqueda1);
+        barraBusqueda1.setLayout(barraBusqueda1Layout);
+        barraBusqueda1Layout.setHorizontalGroup(
+            barraBusqueda1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(barraBusqueda1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(iconoBusqueda1)
+                .addContainerGap(227, Short.MAX_VALUE))
+        );
+        barraBusqueda1Layout.setVerticalGroup(
+            barraBusqueda1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, barraBusqueda1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(iconoBusqueda1)
+                .addContainerGap())
+        );
+
+        javax.swing.GroupLayout cabeceraInicio1Layout = new javax.swing.GroupLayout(cabeceraInicio1);
+        cabeceraInicio1.setLayout(cabeceraInicio1Layout);
+        cabeceraInicio1Layout.setHorizontalGroup(
+            cabeceraInicio1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(cabeceraInicio1Layout.createSequentialGroup()
+                .addGap(69, 69, 69)
+                .addComponent(barraBusqueda1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(74, Short.MAX_VALUE))
+        );
+        cabeceraInicio1Layout.setVerticalGroup(
+            cabeceraInicio1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(cabeceraInicio1Layout.createSequentialGroup()
+                .addGap(39, 39, 39)
+                .addComponent(barraBusqueda1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(39, Short.MAX_VALUE))
+        );
+
+        iconoNotificaciones.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/notifications.png"))); // NOI18N
+
+        textoPrivacity.setFont(new java.awt.Font("Liberation Sans", 1, 24)); // NOI18N
+        textoPrivacity.setForeground(new java.awt.Color(0, 33, 85));
+        textoPrivacity.setText("Privacidad");
+
+        iconoDarkTheme.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/darkTheme-desactivated.png"))); // NOI18N
+        iconoDarkTheme.setDisabledIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/darkTheme-activated.png"))); // NOI18N
+        iconoDarkTheme.setEnabled(false);
+        iconoDarkTheme.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                iconoDarkThemeMouseClicked(evt);
+            }
+        });
+
+        textoNotificaciones1.setFont(new java.awt.Font("Liberation Sans", 1, 24)); // NOI18N
+        textoNotificaciones1.setForeground(new java.awt.Color(0, 33, 85));
+        textoNotificaciones1.setText("Notificaciones");
+
+        iconoPrivacity.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/privacity.png"))); // NOI18N
+
+        textoDarkTheme1.setFont(new java.awt.Font("Liberation Sans", 1, 24)); // NOI18N
+        textoDarkTheme1.setForeground(new java.awt.Color(0, 33, 85));
+        textoDarkTheme1.setText("Tema");
+
+        iconoCuenta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/account.png"))); // NOI18N
+
+        textoPrivacity1.setFont(new java.awt.Font("Liberation Sans", 1, 24)); // NOI18N
+        textoPrivacity1.setForeground(new java.awt.Color(0, 33, 85));
+        textoPrivacity1.setText("Cuenta");
+
+        jLabel1.setForeground(new java.awt.Color(0, 33, 85));
+        jLabel1.setText("Tiene funcionalidad de cambio de tema");
 
         javax.swing.GroupLayout vistaAjustesLayout = new javax.swing.GroupLayout(vistaAjustes);
         vistaAjustes.setLayout(vistaAjustesLayout);
         vistaAjustesLayout.setHorizontalGroup(
             vistaAjustesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(cabeceraInicio1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(vistaAjustesLayout.createSequentialGroup()
+                .addGap(40, 40, 40)
+                .addGroup(vistaAjustesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(iconoNotificaciones)
+                    .addGroup(vistaAjustesLayout.createSequentialGroup()
+                        .addGroup(vistaAjustesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(iconoPrivacity)
+                            .addComponent(iconoDarkTheme)
+                            .addComponent(iconoCuenta))
+                        .addGroup(vistaAjustesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(vistaAjustesLayout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addGroup(vistaAjustesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(textoPrivacity)
+                                    .addComponent(textoPrivacity1)))
+                            .addGroup(vistaAjustesLayout.createSequentialGroup()
+                                .addGap(28, 28, 28)
+                                .addComponent(jLabel1)))))
+                .addGap(0, 28, Short.MAX_VALUE))
             .addGroup(vistaAjustesLayout.createSequentialGroup()
                 .addGap(50, 50, 50)
                 .addComponent(iconoChatsSettings)
-                .addGap(46, 46, 46)
-                .addGroup(vistaAjustesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(vistaAjustesLayout.createSequentialGroup()
-                        .addComponent(barraHomeMovilSettings)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(vistaAjustesLayout.createSequentialGroup()
-                        .addGap(25, 25, 25)
-                        .addComponent(iconoHomeSettings)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 72, Short.MAX_VALUE)
-                        .addComponent(iconoSettingsSettings)
-                        .addGap(59, 59, 59))))
+                .addGap(75, 75, 75)
+                .addComponent(iconoHomeSettings)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(iconoSettingsSettings)
+                .addGap(50, 50, 50))
+            .addGroup(vistaAjustesLayout.createSequentialGroup()
+                .addGap(146, 146, 146)
+                .addComponent(barraHomeMovilSettings)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(vistaAjustesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(vistaAjustesLayout.createSequentialGroup()
+                    .addGap(116, 116, 116)
+                    .addComponent(textoNotificaciones1)
+                    .addContainerGap(120, Short.MAX_VALUE)))
+            .addGroup(vistaAjustesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(vistaAjustesLayout.createSequentialGroup()
+                    .addGap(118, 118, 118)
+                    .addComponent(textoDarkTheme1)
+                    .addContainerGap(220, Short.MAX_VALUE)))
         );
         vistaAjustesLayout.setVerticalGroup(
             vistaAjustesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, vistaAjustesLayout.createSequentialGroup()
-                .addContainerGap(652, Short.MAX_VALUE)
+                .addComponent(cabeceraInicio1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(53, 53, 53)
+                .addComponent(iconoNotificaciones)
+                .addGroup(vistaAjustesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(vistaAjustesLayout.createSequentialGroup()
+                        .addGap(69, 69, 69)
+                        .addComponent(iconoDarkTheme)
+                        .addGap(49, 49, 49)
+                        .addComponent(iconoPrivacity))
+                    .addGroup(vistaAjustesLayout.createSequentialGroup()
+                        .addGap(114, 114, 114)
+                        .addComponent(jLabel1)
+                        .addGap(47, 47, 47)
+                        .addComponent(textoPrivacity)))
+                .addGroup(vistaAjustesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(vistaAjustesLayout.createSequentialGroup()
+                        .addGap(73, 73, 73)
+                        .addComponent(iconoCuenta))
+                    .addGroup(vistaAjustesLayout.createSequentialGroup()
+                        .addGap(83, 83, 83)
+                        .addComponent(textoPrivacity1)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 98, Short.MAX_VALUE)
                 .addGroup(vistaAjustesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(iconoHomeSettings, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(iconoChatsSettings, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(iconoSettingsSettings, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addGap(12, 12, 12)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(barraHomeMovilSettings, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
+            .addGroup(vistaAjustesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(vistaAjustesLayout.createSequentialGroup()
+                    .addGap(189, 189, 189)
+                    .addComponent(textoNotificaciones1)
+                    .addContainerGap(533, Short.MAX_VALUE)))
+            .addGroup(vistaAjustesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(vistaAjustesLayout.createSequentialGroup()
+                    .addGap(297, 297, 297)
+                    .addComponent(textoDarkTheme1)
+                    .addContainerGap(425, Short.MAX_VALUE)))
         );
 
         Fondo.add(vistaAjustes, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 750));
@@ -432,14 +977,30 @@ public class PantallaMovil extends javax.swing.JFrame {
         vistaHome.setBackground(new java.awt.Color(216, 219, 243));
 
         iconoAppPrincipal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/img-principal2.png"))); // NOI18N
+        iconoAppPrincipal.setDisabledIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/img-principal3.png"))); // NOI18N
 
-        iconoChatsHome.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/message.png"))); // NOI18N
+        iconoChatsHome.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/chats.png"))); // NOI18N
+        iconoChatsHome.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                iconoChatsHomeMouseClicked(evt);
+            }
+        });
 
-        iconoHomeHome.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/home.png"))); // NOI18N
+        iconoHomeHome.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/home-strong.png"))); // NOI18N
 
         iconoSettingsHome.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/settings.png"))); // NOI18N
+        iconoSettingsHome.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                iconoSettingsHomeMouseClicked(evt);
+            }
+        });
 
         barraHomeMovilHome.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/line.png"))); // NOI18N
+        barraHomeMovilHome.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                barraHomeMovilHomeMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout vistaHomeLayout = new javax.swing.GroupLayout(vistaHome);
         vistaHome.setLayout(vistaHomeLayout);
@@ -449,27 +1010,27 @@ public class PantallaMovil extends javax.swing.JFrame {
                 .addGap(40, 40, 40)
                 .addGroup(vistaHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(vistaHomeLayout.createSequentialGroup()
-                        .addGap(107, 107, 107)
-                        .addComponent(barraHomeMovilHome)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(vistaHomeLayout.createSequentialGroup()
                         .addComponent(iconoChatsHome)
                         .addGap(83, 83, 83)
                         .addComponent(iconoHomeHome)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 90, Short.MAX_VALUE)
                         .addComponent(iconoSettingsHome)
-                        .addGap(41, 41, 41))))
+                        .addGap(41, 41, 41))
+                    .addGroup(vistaHomeLayout.createSequentialGroup()
+                        .addGap(107, 107, 107)
+                        .addComponent(barraHomeMovilHome)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
             .addGroup(vistaHomeLayout.createSequentialGroup()
-                .addGap(57, 57, 57)
+                .addGap(58, 58, 58)
                 .addComponent(iconoAppPrincipal)
-                .addContainerGap(67, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         vistaHomeLayout.setVerticalGroup(
             vistaHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(vistaHomeLayout.createSequentialGroup()
-                .addGap(211, 211, 211)
+                .addGap(167, 167, 167)
                 .addComponent(iconoAppPrincipal)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 270, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 316, Short.MAX_VALUE)
                 .addGroup(vistaHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(vistaHomeLayout.createSequentialGroup()
                         .addGroup(vistaHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -485,6 +1046,621 @@ public class PantallaMovil extends javax.swing.JFrame {
 
         Fondo.add(vistaHome, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 750));
 
+        vistaChat2.setBackground(new java.awt.Color(216, 219, 243));
+        vistaChat2.setPreferredSize(new java.awt.Dimension(400, 755));
+
+        cabeceraChat2.setBackground(new java.awt.Color(0, 33, 85));
+
+        iconoChat2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/woman1.png"))); // NOI18N
+
+        nombreChat2.setFont(new java.awt.Font("Liberation Sans", 1, 32)); // NOI18N
+        nombreChat2.setForeground(new java.awt.Color(216, 219, 243));
+        nombreChat2.setText("Mamá");
+
+        javax.swing.GroupLayout cabeceraChat2Layout = new javax.swing.GroupLayout(cabeceraChat2);
+        cabeceraChat2.setLayout(cabeceraChat2Layout);
+        cabeceraChat2Layout.setHorizontalGroup(
+            cabeceraChat2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(cabeceraChat2Layout.createSequentialGroup()
+                .addGap(37, 37, 37)
+                .addComponent(iconoChat2)
+                .addGap(18, 18, 18)
+                .addComponent(nombreChat2)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        cabeceraChat2Layout.setVerticalGroup(
+            cabeceraChat2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cabeceraChat2Layout.createSequentialGroup()
+                .addContainerGap(29, Short.MAX_VALUE)
+                .addGroup(cabeceraChat2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(nombreChat2)
+                    .addComponent(iconoChat2))
+                .addGap(26, 26, 26))
+        );
+
+        barraHomeMovilChats2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/line.png"))); // NOI18N
+        barraHomeMovilChats2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                barraHomeMovilChats2MouseClicked(evt);
+            }
+        });
+
+        iconoBackChat2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/back.png"))); // NOI18N
+        iconoBackChat2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                iconoBackChat2MouseClicked(evt);
+            }
+        });
+
+        imgKeyboardChat2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/keyboard2.png"))); // NOI18N
+
+        iconoEmojiChat2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/emoji.png"))); // NOI18N
+
+        iconoPictureChat2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/picture.png"))); // NOI18N
+
+        iconoMicrophoneChat2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/microphone.png"))); // NOI18N
+
+        mensaje1Chat2.setBackground(new java.awt.Color(168, 181, 202));
+
+        textoMensaje1Chat2.setForeground(new java.awt.Color(0, 33, 85));
+        textoMensaje1Chat2.setText("¿Estás en casa?");
+
+        javax.swing.GroupLayout mensaje1Chat2Layout = new javax.swing.GroupLayout(mensaje1Chat2);
+        mensaje1Chat2.setLayout(mensaje1Chat2Layout);
+        mensaje1Chat2Layout.setHorizontalGroup(
+            mensaje1Chat2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(mensaje1Chat2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(textoMensaje1Chat2, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        mensaje1Chat2Layout.setVerticalGroup(
+            mensaje1Chat2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(mensaje1Chat2Layout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addComponent(textoMensaje1Chat2)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        mensaje2Chat2.setBackground(new java.awt.Color(113, 126, 147));
+
+        textoMensaje2Chat2.setForeground(new java.awt.Color(0, 33, 85));
+        textoMensaje2Chat2.setText("Si");
+
+        javax.swing.GroupLayout mensaje2Chat2Layout = new javax.swing.GroupLayout(mensaje2Chat2);
+        mensaje2Chat2.setLayout(mensaje2Chat2Layout);
+        mensaje2Chat2Layout.setHorizontalGroup(
+            mensaje2Chat2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(mensaje2Chat2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(textoMensaje2Chat2, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        mensaje2Chat2Layout.setVerticalGroup(
+            mensaje2Chat2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mensaje2Chat2Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(textoMensaje2Chat2)
+                .addGap(15, 15, 15))
+        );
+
+        mensaje3Chat2.setBackground(new java.awt.Color(168, 181, 202));
+
+        textoMensaje3Chat2.setForeground(new java.awt.Color(0, 33, 85));
+        textoMensaje3Chat2.setText("Ve a por el pan");
+
+        javax.swing.GroupLayout mensaje3Chat2Layout = new javax.swing.GroupLayout(mensaje3Chat2);
+        mensaje3Chat2.setLayout(mensaje3Chat2Layout);
+        mensaje3Chat2Layout.setHorizontalGroup(
+            mensaje3Chat2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(mensaje3Chat2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(textoMensaje3Chat2, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(69, Short.MAX_VALUE))
+        );
+        mensaje3Chat2Layout.setVerticalGroup(
+            mensaje3Chat2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mensaje3Chat2Layout.createSequentialGroup()
+                .addContainerGap(17, Short.MAX_VALUE)
+                .addComponent(textoMensaje3Chat2)
+                .addGap(16, 16, 16))
+        );
+
+        barraEscrituraChat2.setBackground(new java.awt.Color(255, 255, 255));
+
+        javax.swing.GroupLayout barraEscrituraChat2Layout = new javax.swing.GroupLayout(barraEscrituraChat2);
+        barraEscrituraChat2.setLayout(barraEscrituraChat2Layout);
+        barraEscrituraChat2Layout.setHorizontalGroup(
+            barraEscrituraChat2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 319, Short.MAX_VALUE)
+        );
+        barraEscrituraChat2Layout.setVerticalGroup(
+            barraEscrituraChat2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 16, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout vistaChat2Layout = new javax.swing.GroupLayout(vistaChat2);
+        vistaChat2.setLayout(vistaChat2Layout);
+        vistaChat2Layout.setHorizontalGroup(
+            vistaChat2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(cabeceraChat2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(vistaChat2Layout.createSequentialGroup()
+                .addGroup(vistaChat2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(vistaChat2Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(vistaChat2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(vistaChat2Layout.createSequentialGroup()
+                                .addGroup(vistaChat2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(iconoEmojiChat2)
+                                    .addComponent(iconoMicrophoneChat2))
+                                .addGap(35, 35, 35)
+                                .addGroup(vistaChat2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(mensaje1Chat2, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(mensaje3Chat2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(vistaChat2Layout.createSequentialGroup()
+                                .addComponent(iconoPictureChat2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(mensaje2Chat2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(35, 35, 35))))
+                    .addGroup(vistaChat2Layout.createSequentialGroup()
+                        .addGap(23, 23, 23)
+                        .addComponent(iconoBackChat2)
+                        .addGap(93, 93, 93)
+                        .addComponent(barraHomeMovilChats2))
+                    .addGroup(vistaChat2Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(imgKeyboardChat2)))
+                .addGap(0, 2, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, vistaChat2Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(barraEscrituraChat2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(26, 26, 26))
+        );
+        vistaChat2Layout.setVerticalGroup(
+            vistaChat2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(vistaChat2Layout.createSequentialGroup()
+                .addComponent(cabeceraChat2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(vistaChat2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(iconoEmojiChat2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(mensaje1Chat2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(29, 29, 29)
+                .addGroup(vistaChat2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(iconoPictureChat2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(mensaje2Chat2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(vistaChat2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(vistaChat2Layout.createSequentialGroup()
+                        .addGap(56, 56, 56)
+                        .addComponent(iconoMicrophoneChat2))
+                    .addGroup(vistaChat2Layout.createSequentialGroup()
+                        .addGap(29, 29, 29)
+                        .addComponent(mensaje3Chat2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
+                .addComponent(barraEscrituraChat2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(imgKeyboardChat2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(vistaChat2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, vistaChat2Layout.createSequentialGroup()
+                        .addComponent(barraHomeMovilChats2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, vistaChat2Layout.createSequentialGroup()
+                        .addComponent(iconoBackChat2)
+                        .addGap(35, 35, 35))))
+        );
+
+        Fondo.add(vistaChat2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 750));
+
+        vistaChat3.setBackground(new java.awt.Color(216, 219, 243));
+        vistaChat3.setPreferredSize(new java.awt.Dimension(400, 755));
+
+        cabeceraChat3.setBackground(new java.awt.Color(0, 33, 85));
+
+        iconoChat3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/man2.png"))); // NOI18N
+
+        nombreChat3.setFont(new java.awt.Font("Liberation Sans", 1, 32)); // NOI18N
+        nombreChat3.setForeground(new java.awt.Color(216, 219, 243));
+        nombreChat3.setText("Amigo");
+
+        javax.swing.GroupLayout cabeceraChat3Layout = new javax.swing.GroupLayout(cabeceraChat3);
+        cabeceraChat3.setLayout(cabeceraChat3Layout);
+        cabeceraChat3Layout.setHorizontalGroup(
+            cabeceraChat3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(cabeceraChat3Layout.createSequentialGroup()
+                .addGap(37, 37, 37)
+                .addComponent(iconoChat3)
+                .addGap(18, 18, 18)
+                .addComponent(nombreChat3)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        cabeceraChat3Layout.setVerticalGroup(
+            cabeceraChat3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cabeceraChat3Layout.createSequentialGroup()
+                .addContainerGap(29, Short.MAX_VALUE)
+                .addGroup(cabeceraChat3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(nombreChat3)
+                    .addComponent(iconoChat3))
+                .addGap(26, 26, 26))
+        );
+
+        barraHomeMovilChats3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/line.png"))); // NOI18N
+        barraHomeMovilChats3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                barraHomeMovilChats3MouseClicked(evt);
+            }
+        });
+
+        iconoBackChat3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/back.png"))); // NOI18N
+        iconoBackChat3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                iconoBackChat3MouseClicked(evt);
+            }
+        });
+
+        imgKeyboardChat3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/keyboard2.png"))); // NOI18N
+
+        iconoEmojiChat3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/emoji.png"))); // NOI18N
+
+        iconoPictureChat3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/picture.png"))); // NOI18N
+
+        iconoMicrophoneChat3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/microphone.png"))); // NOI18N
+
+        mensaje1Chat3.setBackground(new java.awt.Color(168, 181, 202));
+
+        textoMensaje1Chat3.setForeground(new java.awt.Color(0, 33, 85));
+        textoMensaje1Chat3.setText("¿Quedamos hoy?");
+
+        javax.swing.GroupLayout mensaje1Chat3Layout = new javax.swing.GroupLayout(mensaje1Chat3);
+        mensaje1Chat3.setLayout(mensaje1Chat3Layout);
+        mensaje1Chat3Layout.setHorizontalGroup(
+            mensaje1Chat3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(mensaje1Chat3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(textoMensaje1Chat3, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        mensaje1Chat3Layout.setVerticalGroup(
+            mensaje1Chat3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(mensaje1Chat3Layout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addComponent(textoMensaje1Chat3)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        mensaje2Chat3.setBackground(new java.awt.Color(113, 126, 147));
+
+        textoMensaje2Chat3.setForeground(new java.awt.Color(0, 33, 85));
+        textoMensaje2Chat3.setText("Si");
+
+        javax.swing.GroupLayout mensaje2Chat3Layout = new javax.swing.GroupLayout(mensaje2Chat3);
+        mensaje2Chat3.setLayout(mensaje2Chat3Layout);
+        mensaje2Chat3Layout.setHorizontalGroup(
+            mensaje2Chat3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(mensaje2Chat3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(textoMensaje2Chat3, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        mensaje2Chat3Layout.setVerticalGroup(
+            mensaje2Chat3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mensaje2Chat3Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(textoMensaje2Chat3)
+                .addGap(15, 15, 15))
+        );
+
+        mensaje3Chat3.setBackground(new java.awt.Color(168, 181, 202));
+
+        textoMensaje3Chat3.setForeground(new java.awt.Color(0, 33, 85));
+        textoMensaje3Chat3.setText("Me explicas la tarea de la clase de hoy?");
+
+        javax.swing.GroupLayout mensaje3Chat3Layout = new javax.swing.GroupLayout(mensaje3Chat3);
+        mensaje3Chat3.setLayout(mensaje3Chat3Layout);
+        mensaje3Chat3Layout.setHorizontalGroup(
+            mensaje3Chat3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(mensaje3Chat3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(textoMensaje3Chat3)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        mensaje3Chat3Layout.setVerticalGroup(
+            mensaje3Chat3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mensaje3Chat3Layout.createSequentialGroup()
+                .addContainerGap(17, Short.MAX_VALUE)
+                .addComponent(textoMensaje3Chat3)
+                .addGap(16, 16, 16))
+        );
+
+        barraEscrituraChat3.setBackground(new java.awt.Color(255, 255, 255));
+
+        javax.swing.GroupLayout barraEscrituraChat3Layout = new javax.swing.GroupLayout(barraEscrituraChat3);
+        barraEscrituraChat3.setLayout(barraEscrituraChat3Layout);
+        barraEscrituraChat3Layout.setHorizontalGroup(
+            barraEscrituraChat3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 319, Short.MAX_VALUE)
+        );
+        barraEscrituraChat3Layout.setVerticalGroup(
+            barraEscrituraChat3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 16, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout vistaChat3Layout = new javax.swing.GroupLayout(vistaChat3);
+        vistaChat3.setLayout(vistaChat3Layout);
+        vistaChat3Layout.setHorizontalGroup(
+            vistaChat3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(cabeceraChat3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(vistaChat3Layout.createSequentialGroup()
+                .addGroup(vistaChat3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(vistaChat3Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(vistaChat3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(vistaChat3Layout.createSequentialGroup()
+                                .addGroup(vistaChat3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(iconoEmojiChat3)
+                                    .addComponent(iconoMicrophoneChat3))
+                                .addGap(35, 35, 35)
+                                .addGroup(vistaChat3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(mensaje1Chat3, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(mensaje3Chat3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addGroup(vistaChat3Layout.createSequentialGroup()
+                                .addComponent(iconoPictureChat3)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(mensaje2Chat3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(35, 35, 35))
+                    .addGroup(vistaChat3Layout.createSequentialGroup()
+                        .addGap(23, 23, 23)
+                        .addComponent(iconoBackChat3)
+                        .addGap(93, 93, 93)
+                        .addComponent(barraHomeMovilChats3))
+                    .addGroup(vistaChat3Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(imgKeyboardChat3)))
+                .addGap(0, 2, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, vistaChat3Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(barraEscrituraChat3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(25, 25, 25))
+        );
+        vistaChat3Layout.setVerticalGroup(
+            vistaChat3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(vistaChat3Layout.createSequentialGroup()
+                .addComponent(cabeceraChat3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(vistaChat3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(iconoEmojiChat3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(mensaje1Chat3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(29, 29, 29)
+                .addGroup(vistaChat3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(iconoPictureChat3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(mensaje2Chat3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(vistaChat3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(vistaChat3Layout.createSequentialGroup()
+                        .addGap(56, 56, 56)
+                        .addComponent(iconoMicrophoneChat3))
+                    .addGroup(vistaChat3Layout.createSequentialGroup()
+                        .addGap(29, 29, 29)
+                        .addComponent(mensaje3Chat3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(barraEscrituraChat3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(imgKeyboardChat3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(vistaChat3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, vistaChat3Layout.createSequentialGroup()
+                        .addComponent(barraHomeMovilChats3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, vistaChat3Layout.createSequentialGroup()
+                        .addComponent(iconoBackChat3)
+                        .addGap(35, 35, 35))))
+        );
+
+        Fondo.add(vistaChat3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 750));
+
+        vistaChat4.setBackground(new java.awt.Color(216, 219, 243));
+        vistaChat4.setPreferredSize(new java.awt.Dimension(400, 755));
+
+        cabeceraChat4.setBackground(new java.awt.Color(0, 33, 85));
+
+        iconoChat4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/worke.png"))); // NOI18N
+
+        nombreChat4.setFont(new java.awt.Font("Liberation Sans", 1, 32)); // NOI18N
+        nombreChat4.setForeground(new java.awt.Color(216, 219, 243));
+        nombreChat4.setText("Fontanera");
+
+        javax.swing.GroupLayout cabeceraChat4Layout = new javax.swing.GroupLayout(cabeceraChat4);
+        cabeceraChat4.setLayout(cabeceraChat4Layout);
+        cabeceraChat4Layout.setHorizontalGroup(
+            cabeceraChat4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(cabeceraChat4Layout.createSequentialGroup()
+                .addGap(37, 37, 37)
+                .addComponent(iconoChat4)
+                .addGap(18, 18, 18)
+                .addComponent(nombreChat4)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        cabeceraChat4Layout.setVerticalGroup(
+            cabeceraChat4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cabeceraChat4Layout.createSequentialGroup()
+                .addContainerGap(29, Short.MAX_VALUE)
+                .addGroup(cabeceraChat4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(nombreChat4)
+                    .addComponent(iconoChat4))
+                .addGap(26, 26, 26))
+        );
+
+        barraHomeMovilChats4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/line.png"))); // NOI18N
+        barraHomeMovilChats4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                barraHomeMovilChats4MouseClicked(evt);
+            }
+        });
+
+        iconoBackChat4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/back.png"))); // NOI18N
+        iconoBackChat4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                iconoBackChat4MouseClicked(evt);
+            }
+        });
+
+        imgKeyboardChat4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/keyboard2.png"))); // NOI18N
+
+        iconoEmojiChat4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/emoji.png"))); // NOI18N
+
+        iconoPictureChat4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/picture.png"))); // NOI18N
+
+        iconoMicrophoneChat4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/microphone.png"))); // NOI18N
+
+        mensaje1Chat4.setBackground(new java.awt.Color(168, 181, 202));
+
+        textoMensaje1Chat4.setForeground(new java.awt.Color(0, 33, 85));
+        textoMensaje1Chat4.setText("Hola he estado mirando la ducha");
+
+        javax.swing.GroupLayout mensaje1Chat4Layout = new javax.swing.GroupLayout(mensaje1Chat4);
+        mensaje1Chat4.setLayout(mensaje1Chat4Layout);
+        mensaje1Chat4Layout.setHorizontalGroup(
+            mensaje1Chat4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(mensaje1Chat4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(textoMensaje1Chat4, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        mensaje1Chat4Layout.setVerticalGroup(
+            mensaje1Chat4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(mensaje1Chat4Layout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addComponent(textoMensaje1Chat4)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        mensaje2Chat4.setBackground(new java.awt.Color(113, 126, 147));
+
+        textoMensaje2Chat4.setForeground(new java.awt.Color(0, 33, 85));
+        textoMensaje2Chat4.setText("Si cuentame, tiene solución?");
+
+        javax.swing.GroupLayout mensaje2Chat4Layout = new javax.swing.GroupLayout(mensaje2Chat4);
+        mensaje2Chat4.setLayout(mensaje2Chat4Layout);
+        mensaje2Chat4Layout.setHorizontalGroup(
+            mensaje2Chat4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(mensaje2Chat4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(textoMensaje2Chat4, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE))
+        );
+        mensaje2Chat4Layout.setVerticalGroup(
+            mensaje2Chat4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mensaje2Chat4Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(textoMensaje2Chat4)
+                .addGap(15, 15, 15))
+        );
+
+        mensaje3Chat4.setBackground(new java.awt.Color(168, 181, 202));
+
+        textoMensaje3Chat4.setForeground(new java.awt.Color(0, 33, 85));
+        textoMensaje3Chat4.setText("Ya está arreglada la ducha");
+
+        javax.swing.GroupLayout mensaje3Chat4Layout = new javax.swing.GroupLayout(mensaje3Chat4);
+        mensaje3Chat4.setLayout(mensaje3Chat4Layout);
+        mensaje3Chat4Layout.setHorizontalGroup(
+            mensaje3Chat4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(mensaje3Chat4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(textoMensaje3Chat4)
+                .addContainerGap(14, Short.MAX_VALUE))
+        );
+        mensaje3Chat4Layout.setVerticalGroup(
+            mensaje3Chat4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mensaje3Chat4Layout.createSequentialGroup()
+                .addContainerGap(17, Short.MAX_VALUE)
+                .addComponent(textoMensaje3Chat4)
+                .addGap(16, 16, 16))
+        );
+
+        barraEscrituraChat4.setBackground(new java.awt.Color(255, 255, 255));
+
+        javax.swing.GroupLayout barraEscrituraChat4Layout = new javax.swing.GroupLayout(barraEscrituraChat4);
+        barraEscrituraChat4.setLayout(barraEscrituraChat4Layout);
+        barraEscrituraChat4Layout.setHorizontalGroup(
+            barraEscrituraChat4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 319, Short.MAX_VALUE)
+        );
+        barraEscrituraChat4Layout.setVerticalGroup(
+            barraEscrituraChat4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 16, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout vistaChat4Layout = new javax.swing.GroupLayout(vistaChat4);
+        vistaChat4.setLayout(vistaChat4Layout);
+        vistaChat4Layout.setHorizontalGroup(
+            vistaChat4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(cabeceraChat4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(vistaChat4Layout.createSequentialGroup()
+                .addGroup(vistaChat4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(vistaChat4Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(vistaChat4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(vistaChat4Layout.createSequentialGroup()
+                                .addGroup(vistaChat4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(iconoEmojiChat4)
+                                    .addComponent(iconoMicrophoneChat4))
+                                .addGap(35, 35, 35)
+                                .addGroup(vistaChat4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(mensaje1Chat4, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(mensaje3Chat4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(vistaChat4Layout.createSequentialGroup()
+                                .addComponent(iconoPictureChat4)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(mensaje2Chat4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(35, 35, 35))))
+                    .addGroup(vistaChat4Layout.createSequentialGroup()
+                        .addGap(23, 23, 23)
+                        .addComponent(iconoBackChat4)
+                        .addGap(93, 93, 93)
+                        .addComponent(barraHomeMovilChats4))
+                    .addGroup(vistaChat4Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(imgKeyboardChat4)))
+                .addGap(0, 2, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, vistaChat4Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(barraEscrituraChat4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(23, 23, 23))
+        );
+        vistaChat4Layout.setVerticalGroup(
+            vistaChat4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(vistaChat4Layout.createSequentialGroup()
+                .addComponent(cabeceraChat4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(vistaChat4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(iconoEmojiChat4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(mensaje1Chat4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(29, 29, 29)
+                .addGroup(vistaChat4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(iconoPictureChat4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(mensaje2Chat4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(vistaChat4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(vistaChat4Layout.createSequentialGroup()
+                        .addGap(56, 56, 56)
+                        .addComponent(iconoMicrophoneChat4))
+                    .addGroup(vistaChat4Layout.createSequentialGroup()
+                        .addGap(29, 29, 29)
+                        .addComponent(mensaje3Chat4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(barraEscrituraChat4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(imgKeyboardChat4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(vistaChat4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, vistaChat4Layout.createSequentialGroup()
+                        .addComponent(barraHomeMovilChats4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, vistaChat4Layout.createSequentialGroup()
+                        .addComponent(iconoBackChat4)
+                        .addGap(35, 35, 35))))
+        );
+
+        Fondo.add(vistaChat4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 750));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -499,6 +1675,225 @@ public class PantallaMovil extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    // PANTALLA HOME
+    private void iconoChatsHomeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_iconoChatsHomeMouseClicked
+        vistaChats.setVisible(true);
+        vistaHome.setVisible(false);
+    }//GEN-LAST:event_iconoChatsHomeMouseClicked
+
+    private void iconoSettingsHomeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_iconoSettingsHomeMouseClicked
+        vistaAjustes.setVisible(true);
+        vistaHome.setVisible(false);
+    }//GEN-LAST:event_iconoSettingsHomeMouseClicked
+
+    // PANTALLA CHATS
+    private void iconoHomeChatsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_iconoHomeChatsMouseClicked
+        vistaHome.setVisible(true);
+        vistaChats.setVisible(false);
+    }//GEN-LAST:event_iconoHomeChatsMouseClicked
+
+    private void iconoSettingsChatsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_iconoSettingsChatsMouseClicked
+        vistaAjustes.setVisible(true);
+        vistaChats.setVisible(false);
+    }//GEN-LAST:event_iconoSettingsChatsMouseClicked
+
+    // PANTALLA AJUSTES
+    private void iconoChatsSettingsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_iconoChatsSettingsMouseClicked
+        vistaChats.setVisible(true);
+        vistaAjustes.setVisible(false);
+    }//GEN-LAST:event_iconoChatsSettingsMouseClicked
+
+    private void iconoHomeSettingsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_iconoHomeSettingsMouseClicked
+        vistaHome.setVisible(true);
+        vistaAjustes.setVisible(false);
+    }//GEN-LAST:event_iconoHomeSettingsMouseClicked
+
+    //CONVERSACION 1
+    private void conversacion1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_conversacion1MouseClicked
+        vistaChat1.setVisible(true);
+        vistaChats.setVisible(false);
+    }//GEN-LAST:event_conversacion1MouseClicked
+
+    private void mensajeConv1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mensajeConv1MouseClicked
+        vistaChat1.setVisible(true);
+        vistaChats.setVisible(false);
+    }//GEN-LAST:event_mensajeConv1MouseClicked
+
+    private void nombreConv1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nombreConv1MouseClicked
+        vistaChat1.setVisible(true);
+        vistaChats.setVisible(false);
+    }//GEN-LAST:event_nombreConv1MouseClicked
+
+    private void fotoConv1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fotoConv1MouseClicked
+        vistaChat1.setVisible(true);
+        vistaChats.setVisible(false);
+    }//GEN-LAST:event_fotoConv1MouseClicked
+
+    // CONVERSACION 2
+    private void conversacion2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_conversacion2MouseClicked
+        vistaChat2.setVisible(true);
+        vistaChats.setVisible(false);
+    }//GEN-LAST:event_conversacion2MouseClicked
+
+    private void nombreConv2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nombreConv2MouseClicked
+        vistaChat2.setVisible(true);
+        vistaChats.setVisible(false);
+                                     
+    }//GEN-LAST:event_nombreConv2MouseClicked
+
+    private void mensajeConv2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mensajeConv2MouseClicked
+        vistaChat2.setVisible(true);
+        vistaChats.setVisible(false);
+                                   
+    }//GEN-LAST:event_mensajeConv2MouseClicked
+
+    private void fotoConv2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fotoConv2MouseClicked
+        vistaChat2.setVisible(true);
+        vistaChats.setVisible(false);
+    }//GEN-LAST:event_fotoConv2MouseClicked
+
+    // CONVERSACION 3
+    private void conversacion3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_conversacion3MouseClicked
+        vistaChat3.setVisible(true);
+        vistaChats.setVisible(false);
+    }//GEN-LAST:event_conversacion3MouseClicked
+
+    private void nombreConv3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nombreConv3MouseClicked
+        vistaChat3.setVisible(true);
+        vistaChats.setVisible(false);
+    }//GEN-LAST:event_nombreConv3MouseClicked
+
+    private void mensajeConv3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mensajeConv3MouseClicked
+        vistaChat3.setVisible(true);
+        vistaChats.setVisible(false);
+    }//GEN-LAST:event_mensajeConv3MouseClicked
+
+    private void fotoConv3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fotoConv3MouseClicked
+        vistaChat3.setVisible(true);
+        vistaChats.setVisible(false);
+    }//GEN-LAST:event_fotoConv3MouseClicked
+
+    // CONVERSACION 4
+    private void conversacion4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_conversacion4MouseClicked
+        vistaChat4.setVisible(true);
+        vistaChats.setVisible(false);
+    }//GEN-LAST:event_conversacion4MouseClicked
+
+    private void nombreConv4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nombreConv4MouseClicked
+        vistaChat4.setVisible(true);
+        vistaChats.setVisible(false);
+    }//GEN-LAST:event_nombreConv4MouseClicked
+
+    private void mensajeConv4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mensajeConv4MouseClicked
+        vistaChat4.setVisible(true);
+        vistaChats.setVisible(false);
+    }//GEN-LAST:event_mensajeConv4MouseClicked
+
+    private void fotoConv4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fotoConv4MouseClicked
+        vistaChat4.setVisible(true);
+        vistaChats.setVisible(false);
+    }//GEN-LAST:event_fotoConv4MouseClicked
+
+    // VOLVER DE UN CHAT A LA VISTA CHATS
+    private void iconoBackChat1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_iconoBackChat1MouseClicked
+        vistaChats.setVisible(true);
+        vistaChat1.setVisible(false);
+    }//GEN-LAST:event_iconoBackChat1MouseClicked
+
+    private void iconoBackChat2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_iconoBackChat2MouseClicked
+        vistaChats.setVisible(true);
+        vistaChat2.setVisible(false);
+    }//GEN-LAST:event_iconoBackChat2MouseClicked
+
+    private void iconoBackChat3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_iconoBackChat3MouseClicked
+        vistaChats.setVisible(true);
+        vistaChat3.setVisible(false);
+    }//GEN-LAST:event_iconoBackChat3MouseClicked
+
+    private void iconoBackChat4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_iconoBackChat4MouseClicked
+        vistaChats.setVisible(true);
+        vistaChat4.setVisible(false);
+    }//GEN-LAST:event_iconoBackChat4MouseClicked
+
+    // CAMBIO DARK THEME
+    private boolean darkTheme = false;
+
+    private void iconoDarkThemeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_iconoDarkThemeMouseClicked
+        if(darkTheme){
+            darkTheme = false;
+            iconoDarkTheme.setEnabled(false);
+        }else{
+            darkTheme = true;
+            iconoDarkTheme.setEnabled(true);
+        }
+        
+        cambiarDarkTheme();
+    }//GEN-LAST:event_iconoDarkThemeMouseClicked
+
+    // CERRAR LA APP CUANDO SE CLICKEA EN LA BARRA DE ABAJO
+    private void barraHomeMovilHomeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_barraHomeMovilHomeMouseClicked
+        System.exit(0);
+    }//GEN-LAST:event_barraHomeMovilHomeMouseClicked
+
+    private void barraHomeMovilSettingsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_barraHomeMovilSettingsMouseClicked
+        System.exit(0);
+    }//GEN-LAST:event_barraHomeMovilSettingsMouseClicked
+
+    private void barraHomeMovilChatsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_barraHomeMovilChatsMouseClicked
+        System.exit(0);
+    }//GEN-LAST:event_barraHomeMovilChatsMouseClicked
+
+    private void barraHomeMovilChats1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_barraHomeMovilChats1MouseClicked
+        System.exit(0);
+    }//GEN-LAST:event_barraHomeMovilChats1MouseClicked
+
+    private void barraHomeMovilChats2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_barraHomeMovilChats2MouseClicked
+        System.exit(0);
+    }//GEN-LAST:event_barraHomeMovilChats2MouseClicked
+
+    private void barraHomeMovilChats3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_barraHomeMovilChats3MouseClicked
+        System.exit(0);
+    }//GEN-LAST:event_barraHomeMovilChats3MouseClicked
+
+    private void barraHomeMovilChats4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_barraHomeMovilChats4MouseClicked
+        System.exit(0);
+    }//GEN-LAST:event_barraHomeMovilChats4MouseClicked
+
+    // Cambiar el fondo segun el dark theme
+    public void cambiarDarkTheme(){
+        if(darkTheme){
+            vistaHome.setBackground(new Color(86, 88, 97));
+            vistaChats.setBackground(new Color(86, 88, 97));
+            vistaAjustes.setBackground(new Color(86, 88, 97));
+            vistaChat1.setBackground(new Color(86, 88, 97));
+            vistaChat2.setBackground(new Color(86, 88, 97));
+            vistaChat3.setBackground(new Color(86, 88, 97));
+            vistaChat4.setBackground(new Color(86, 88, 97));
+            imgKeyboardChat1.setVisible(false);
+            imgKeyboardChat2.setVisible(false);
+            imgKeyboardChat3.setVisible(false);
+            imgKeyboardChat4.setVisible(false);
+            iconoAppPrincipal.setEnabled(false);
+            
+        }else{
+            vistaHome.setBackground(new Color(216,219,243));
+            vistaChats.setBackground(new Color(216,219,243));
+            vistaAjustes.setBackground(new Color(216,219,243));
+            vistaChat1.setBackground(new Color(216,219,243));
+            vistaChat2.setBackground(new Color(216,219,243));
+            vistaChat3.setBackground(new Color(216,219,243));
+            vistaChat4.setBackground(new Color(216,219,243));
+            imgKeyboardChat1.setVisible(true);
+            imgKeyboardChat2.setVisible(true);
+            imgKeyboardChat3.setVisible(true);
+            imgKeyboardChat4.setVisible(true);
+            iconoAppPrincipal.setEnabled(true);
+        }
+    }
+    
+    
+    
+    
     /**
      * @param args the command line arguments
      */
@@ -523,46 +1918,129 @@ public class PantallaMovil extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> new PantallaMovil().setVisible(true));
     }
+    
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel Chat1;
-    private javax.swing.JPanel Chat2;
-    private javax.swing.JPanel Chat3;
     private javax.swing.JPanel Fondo;
     private javax.swing.JPanel barraBusqueda;
+    private javax.swing.JPanel barraBusqueda1;
+    private javax.swing.JPanel barraEscrituraChat1;
+    private javax.swing.JPanel barraEscrituraChat2;
+    private javax.swing.JPanel barraEscrituraChat3;
+    private javax.swing.JPanel barraEscrituraChat4;
     private javax.swing.JLabel barraHomeMovilChats;
+    private javax.swing.JLabel barraHomeMovilChats1;
+    private javax.swing.JLabel barraHomeMovilChats2;
+    private javax.swing.JLabel barraHomeMovilChats3;
+    private javax.swing.JLabel barraHomeMovilChats4;
     private javax.swing.JLabel barraHomeMovilHome;
     private javax.swing.JLabel barraHomeMovilSettings;
+    private javax.swing.JPanel cabeceraChat1;
+    private javax.swing.JPanel cabeceraChat2;
+    private javax.swing.JPanel cabeceraChat3;
+    private javax.swing.JPanel cabeceraChat4;
     private javax.swing.JPanel cabeceraInicio;
+    private javax.swing.JPanel cabeceraInicio1;
     private javax.swing.JPanel conversacion1;
     private javax.swing.JPanel conversacion2;
     private javax.swing.JPanel conversacion3;
+    private javax.swing.JPanel conversacion4;
     private javax.swing.JLabel fotoConv1;
     private javax.swing.JLabel fotoConv2;
     private javax.swing.JLabel fotoConv3;
+    private javax.swing.JLabel fotoConv4;
     private javax.swing.JLabel horaConv1;
     private javax.swing.JLabel horaConv2;
     private javax.swing.JLabel horaConv3;
+    private javax.swing.JLabel horaConv4;
+    private javax.swing.JLabel iconoAddUser;
     private javax.swing.JLabel iconoAppPrincipal;
+    private javax.swing.JLabel iconoBackChat1;
+    private javax.swing.JLabel iconoBackChat2;
+    private javax.swing.JLabel iconoBackChat3;
+    private javax.swing.JLabel iconoBackChat4;
     private javax.swing.JLabel iconoBusqueda;
-    private javax.swing.JLabel iconoCabecera;
+    private javax.swing.JLabel iconoBusqueda1;
+    private javax.swing.JLabel iconoChat1;
+    private javax.swing.JLabel iconoChat2;
+    private javax.swing.JLabel iconoChat3;
+    private javax.swing.JLabel iconoChat4;
     private javax.swing.JLabel iconoChatsChats;
     private javax.swing.JLabel iconoChatsHome;
     private javax.swing.JLabel iconoChatsSettings;
+    private javax.swing.JLabel iconoCuenta;
+    private javax.swing.JLabel iconoDarkTheme;
+    private javax.swing.JLabel iconoEmojiChat1;
+    private javax.swing.JLabel iconoEmojiChat2;
+    private javax.swing.JLabel iconoEmojiChat3;
+    private javax.swing.JLabel iconoEmojiChat4;
     private javax.swing.JLabel iconoHomeChats;
     private javax.swing.JLabel iconoHomeHome;
     private javax.swing.JLabel iconoHomeSettings;
+    private javax.swing.JLabel iconoMicrophoneChat1;
+    private javax.swing.JLabel iconoMicrophoneChat2;
+    private javax.swing.JLabel iconoMicrophoneChat3;
+    private javax.swing.JLabel iconoMicrophoneChat4;
+    private javax.swing.JLabel iconoNotificaciones;
+    private javax.swing.JLabel iconoPictureChat1;
+    private javax.swing.JLabel iconoPictureChat2;
+    private javax.swing.JLabel iconoPictureChat3;
+    private javax.swing.JLabel iconoPictureChat4;
+    private javax.swing.JLabel iconoPrivacity;
     private javax.swing.JLabel iconoSettingsChats;
     private javax.swing.JLabel iconoSettingsHome;
     private javax.swing.JLabel iconoSettingsSettings;
-    private javax.swing.JLabel mensajeCabecera;
+    private javax.swing.JLabel imgKeyboardChat1;
+    private javax.swing.JLabel imgKeyboardChat2;
+    private javax.swing.JLabel imgKeyboardChat3;
+    private javax.swing.JLabel imgKeyboardChat4;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel mensaje1Chat1;
+    private javax.swing.JPanel mensaje1Chat2;
+    private javax.swing.JPanel mensaje1Chat3;
+    private javax.swing.JPanel mensaje1Chat4;
+    private javax.swing.JPanel mensaje2Chat1;
+    private javax.swing.JPanel mensaje2Chat2;
+    private javax.swing.JPanel mensaje2Chat3;
+    private javax.swing.JPanel mensaje2Chat4;
+    private javax.swing.JPanel mensaje3Chat1;
+    private javax.swing.JPanel mensaje3Chat2;
+    private javax.swing.JPanel mensaje3Chat3;
+    private javax.swing.JPanel mensaje3Chat4;
     private javax.swing.JLabel mensajeConv1;
     private javax.swing.JLabel mensajeConv2;
     private javax.swing.JLabel mensajeConv3;
+    private javax.swing.JLabel mensajeConv4;
+    private javax.swing.JLabel nombreChat1;
+    private javax.swing.JLabel nombreChat2;
+    private javax.swing.JLabel nombreChat3;
+    private javax.swing.JLabel nombreChat4;
     private javax.swing.JLabel nombreConv1;
     private javax.swing.JLabel nombreConv2;
     private javax.swing.JLabel nombreConv3;
+    private javax.swing.JLabel nombreConv4;
+    private javax.swing.JLabel textoDarkTheme1;
+    private javax.swing.JLabel textoMensaje1Chat1;
+    private javax.swing.JLabel textoMensaje1Chat2;
+    private javax.swing.JLabel textoMensaje1Chat3;
+    private javax.swing.JLabel textoMensaje1Chat4;
+    private javax.swing.JLabel textoMensaje2Chat1;
+    private javax.swing.JLabel textoMensaje2Chat2;
+    private javax.swing.JLabel textoMensaje2Chat3;
+    private javax.swing.JLabel textoMensaje2Chat4;
+    private javax.swing.JLabel textoMensaje3Chat1;
+    private javax.swing.JLabel textoMensaje3Chat2;
+    private javax.swing.JLabel textoMensaje3Chat3;
+    private javax.swing.JLabel textoMensaje3Chat4;
+    private javax.swing.JLabel textoNotificaciones1;
+    private javax.swing.JLabel textoPrivacity;
+    private javax.swing.JLabel textoPrivacity1;
     private javax.swing.JPanel vistaAjustes;
+    private javax.swing.JPanel vistaChat1;
+    private javax.swing.JPanel vistaChat2;
+    private javax.swing.JPanel vistaChat3;
+    private javax.swing.JPanel vistaChat4;
     private javax.swing.JPanel vistaChats;
     private javax.swing.JPanel vistaHome;
     // End of variables declaration//GEN-END:variables
