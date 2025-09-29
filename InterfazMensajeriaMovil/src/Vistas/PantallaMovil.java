@@ -15,7 +15,7 @@ public class PantallaMovil extends javax.swing.JFrame {
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(PantallaMovil.class.getName());
 
     /**
-     * Creates new form PantallaMovil
+     * Creates new form PantallaMovil 
      */
     public PantallaMovil() {
         initComponents();
