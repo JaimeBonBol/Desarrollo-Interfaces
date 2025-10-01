@@ -14,7 +14,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 /**
@@ -22,14 +21,10 @@ import javafx.stage.Stage;
  *
  * @author jaimedam
  */
-public class Vista1Controller implements Initializable {
+public class Vista2Controller implements Initializable {
 
     @FXML
-    private Button boton1;
-    @FXML
-    private Label texto1;
-    @FXML
-    private Button btn2;
+    private Button btnVolver;
 
     /**
      * Initializes the controller class.
@@ -40,25 +35,18 @@ public class Vista1Controller implements Initializable {
     }    
 
     @FXML
-    private void click(ActionEvent event) {
-        texto1.setText("Texto cambiado al pulsar");
-    }
-
-    @FXML
-    private void clickBtn2(ActionEvent event) throws IOException {
-        
-        // Cargar el FXML de gestión de productos
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/vista2.fxml"));
+    private void volver(ActionEvent event) throws IOException {
+                // Cargar el FXML de gestión de productos
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/vista1.fxml"));
 
         Parent root = loader.load();
         Scene escena = new Scene(root);
 
         // Obtener el Stage actual desde el botón
-        Stage stage = (Stage) btn2.getScene().getWindow();
+        Stage stage = (Stage) btnVolver.getScene().getWindow();
 
         // Reemplazar la escena actual
         stage.setScene(escena);
-        stage.setTitle("Vista 2");
         
     }
     
