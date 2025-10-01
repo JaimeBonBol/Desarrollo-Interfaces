@@ -6,107 +6,111 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="454.0" prefWidth="310.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/24.0.1" fx:controller="controlador.VistaCalculadoraController">
+<AnchorPane id="AnchorPane" prefHeight="454.0" prefWidth="287.0" style="-fx-background-color: #2b252b;" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.VistaCalculadoraController">
    <children>
-      <Button fx:id="btn7" layoutX="14.0" layoutY="198.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="34.0" text="7">
+      <Button fx:id="btn7" layoutX="41.0" layoutY="199.0" mnemonicParsing="false" onAction="#clickBtn7" prefHeight="41.0" prefWidth="34.0" style="-fx-background-color: #fffbd2;" text="7">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </Button>
-      <Button fx:id="btn8" layoutX="83.0" layoutY="200.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="34.0" text="8">
+      <Button fx:id="btn8" layoutX="97.0" layoutY="200.0" mnemonicParsing="false" onAction="#clickBtn8" prefHeight="41.0" prefWidth="34.0" style="-fx-background-color: #fffbd2;" text="8">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </Button>
-      <Button fx:id="btn9" layoutX="155.0" layoutY="200.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="34.0" text="9">
+      <Button fx:id="btn9" layoutX="151.0" layoutY="199.0" mnemonicParsing="false" onAction="#clickBtn9" prefHeight="41.0" prefWidth="34.0" style="-fx-background-color: #fffbd2;" text="9">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </Button>
-      <Button fx:id="btn4" layoutX="14.0" layoutY="257.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="34.0" text="4">
+      <Button fx:id="btn4" layoutX="41.0" layoutY="258.0" mnemonicParsing="false" onAction="#clickBtn4" prefHeight="41.0" prefWidth="34.0" style="-fx-background-color: #fffbd2;" text="4">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </Button>
-      <Button fx:id="btn5" layoutX="83.0" layoutY="259.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="34.0" text="5">
+      <Button fx:id="btn5" layoutX="97.0" layoutY="259.0" mnemonicParsing="false" onAction="#clickBtn5" prefHeight="41.0" prefWidth="34.0" style="-fx-background-color: #fffbd2;" text="5">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </Button>
-      <Button fx:id="btn6" layoutX="155.0" layoutY="259.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="34.0" text="6">
+      <Button fx:id="btn6" layoutX="151.0" layoutY="258.0" mnemonicParsing="false" onAction="#clickBtn6" prefHeight="41.0" prefWidth="34.0" style="-fx-background-color: #fffbd2;" text="6">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </Button>
-      <Button fx:id="btn1" layoutX="14.0" layoutY="318.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="34.0" text="1">
+      <Button fx:id="btn1" layoutX="41.0" layoutY="319.0" mnemonicParsing="false" onAction="#clickBtn1" prefHeight="41.0" prefWidth="34.0" style="-fx-background-color: #fffbd2;" text="1">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </Button>
-      <Button fx:id="btn2" layoutX="83.0" layoutY="320.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="34.0" text="2">
+      <Button fx:id="btn2" layoutX="97.0" layoutY="320.0" mnemonicParsing="false" onAction="#clickBtn2" prefHeight="41.0" prefWidth="34.0" style="-fx-background-color: #fffbd2;" text="2">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </Button>
-      <Button fx:id="btn3" layoutX="155.0" layoutY="320.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="34.0" text="3">
+      <Button fx:id="btn3" layoutX="151.0" layoutY="319.0" mnemonicParsing="false" onAction="#clickBtn3" prefHeight="41.0" prefWidth="34.0" style="-fx-background-color: #fffbd2;" text="3">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </Button>
-      <Button fx:id="btn0" layoutX="83.0" layoutY="376.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="34.0" text="0">
+      <Button fx:id="btn0" layoutX="97.0" layoutY="376.0" mnemonicParsing="false" onAction="#clickBtn0" prefHeight="41.0" prefWidth="34.0" style="-fx-background-color: #fffbd2;" text="0">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </Button>
-      <Button fx:id="btnAC" layoutX="14.0" layoutY="142.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="54.0" text="AC">
+      <Button fx:id="btnAC" layoutX="41.0" layoutY="143.0" mnemonicParsing="false" onAction="#clickBtnAC" prefHeight="43.0" prefWidth="54.0" style="-fx-background-color: #fffbd2;" text="AC">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </Button>
-      <Button fx:id="btnDivision" layoutX="233.0" layoutY="143.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="38.0" text="/">
+      <Button fx:id="btnDivision" layoutX="208.0" layoutY="143.0" mnemonicParsing="false" onAction="#clickBtnDivision" prefHeight="41.0" prefWidth="38.0" style="-fx-background-color: #fffbd2;" text="/">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </Button>
-      <Button fx:id="btnMultiplicacion" layoutX="233.0" layoutY="195.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="34.0" text="x">
+      <Button fx:id="btnMultiplicacion" layoutX="208.0" layoutY="200.0" mnemonicParsing="false" onAction="#clickBtnMultiplicacion" prefHeight="41.0" prefWidth="34.0" style="-fx-background-color: #fffbd2;" text="x">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </Button>
-      <Button fx:id="btnSuma" layoutX="233.0" layoutY="254.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="34.0" text="+">
+      <Button fx:id="btnSuma" layoutX="208.0" layoutY="259.0" mnemonicParsing="false" onAction="#clickBtnSuma" prefHeight="41.0" prefWidth="34.0" style="-fx-background-color: #fffbd2;" text="+">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </Button>
-      <Button fx:id="btnResta" layoutX="233.0" layoutY="315.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="34.0" text="-">
+      <Button fx:id="btnResta" layoutX="208.0" layoutY="320.0" mnemonicParsing="false" onAction="#clickBtnResta" prefHeight="43.0" prefWidth="38.0" style="-fx-background-color: #fffbd2;" text="-">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </Button>
-      <Button fx:id="btnPorcentaje" layoutX="155.0" layoutY="143.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="34.0" text="\%">
+      <Button fx:id="btnPorcentaje" layoutX="135.0" layoutY="143.0" mnemonicParsing="false" onAction="#clickBtnPorcentaje" prefHeight="43.0" prefWidth="54.0" style="-fx-background-color: #fffbd2;" text="\%">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </Button>
-      <Button fx:id="btnResultado" layoutX="233.0" layoutY="371.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="34.0" text="=">
+      <Button fx:id="btnResultado" layoutX="208.0" layoutY="376.0" mnemonicParsing="false" onAction="#clickBtnResultado" prefHeight="41.0" prefWidth="34.0" style="-fx-background-color: #fffbd2;" text="=">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </Button>
-      <Pane fx:id="pantalla" layoutX="14.0" layoutY="27.0" prefHeight="95.0" prefWidth="273.0">
+      <Pane fx:id="pantalla" layoutX="16.0" layoutY="28.0" prefHeight="95.0" prefWidth="256.0" style="-fx-background-color: #fffbd2;">
          <children>
             <Label fx:id="labelOperador1" alignment="CENTER" layoutX="14.0" layoutY="14.0" prefHeight="28.0" prefWidth="86.0" textAlignment="CENTER">
                <font>
                   <Font size="17.0" />
                </font>
             </Label>
-            <Label fx:id="labelOperador2" alignment="CENTER" layoutX="173.0" layoutY="14.0" prefHeight="28.0" prefWidth="86.0" textAlignment="CENTER">
+            <Label fx:id="labelOperador2" alignment="CENTER" layoutX="156.0" layoutY="14.0" prefHeight="28.0" prefWidth="86.0" textAlignment="CENTER">
                <font>
                   <Font size="17.0" />
                </font>
             </Label>
-            <Label fx:id="labelOperacion" alignment="CENTER" layoutX="110.0" layoutY="14.0" prefHeight="28.0" prefWidth="54.0" textAlignment="CENTER">
+            <Label fx:id="labelOperacion" alignment="CENTER" layoutX="101.0" layoutY="14.0" prefHeight="28.0" prefWidth="54.0" textAlignment="CENTER">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelResultado" alignment="CENTER" layoutX="85.0" layoutY="53.0" prefHeight="28.0" prefWidth="86.0" textAlignment="CENTER">
                <font>
                   <Font size="17.0" />
                </font>
