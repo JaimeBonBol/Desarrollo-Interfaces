@@ -23,22 +23,22 @@
             <Font name="Liberation Sans Bold" size="59.0" />
          </font>
       </Label>
-      <ImageView fx:id="iconGps" fitHeight="65.0" fitWidth="65.0" layoutX="855.0" layoutY="168.0" onMouseClicked="#cambiarVistaGps" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="iconGps" fitHeight="80.0" fitWidth="80.0" layoutX="607.0" layoutY="210.0" onMouseClicked="#cambiarVistaGps" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/gps3.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="iconMultimedia" fitHeight="65.0" fitWidth="65.0" layoutX="855.0" layoutY="263.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="iconMultimedia" fitHeight="80.0" fitWidth="80.0" layoutX="790.0" layoutY="213.0" onMouseClicked="#cambiarVistaMultimedia" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/multimedia.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="iconCarSettings" fitHeight="65.0" fitWidth="65.0" layoutX="855.0" layoutY="364.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="iconCarSettings" fitHeight="80.0" fitWidth="80.0" layoutX="607.0" layoutY="343.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/carSettings.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="iconPhone" fitHeight="65.0" fitWidth="65.0" layoutX="855.0" layoutY="463.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="iconPhone" fitHeight="80.0" fitWidth="80.0" layoutX="790.0" layoutY="353.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/phone.png" />
          </image>

@@ -8,8 +8,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="584.0" prefWidth="1030.0" style="-fx-background-color: #141724;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/24.0.1" fx:controller="controlador.VistaGpsController">
+<AnchorPane id="AnchorPane" prefHeight="584.0" prefWidth="1030.0" style="-fx-background-color: #141724;" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.VistaGpsController">
    <children>
       <ImageView fitHeight="591.0" fitWidth="1030.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -21,7 +20,7 @@
             <Image url="@../images/home.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="iconMultimedia" fitHeight="65.0" fitWidth="65.0" layoutX="350.0" layoutY="515.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="iconMultimedia" fitHeight="65.0" fitWidth="65.0" layoutX="350.0" layoutY="515.0" onMouseClicked="#cambiarVistaMultimedia" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/multimedia.png" />
          </image>
@@ -41,8 +40,8 @@
             <Image url="@../images/power-off.png" />
          </image>
       </ImageView>
-      <Pane fx:id="panelMapa" layoutX="116.0" layoutY="97.0" prefHeight="359.0" prefWidth="429.0" style="-fx-border-color: #ff66c4; -fx-border-width: 3; -fx-border-style: solid; -fx-background-color: transparent;" />
-      <Pane fx:id="panelDestino" layoutX="612.0" layoutY="89.0" prefHeight="168.0" prefWidth="383.0" style="-fx-border-color: #ff66c4; -fx-border-width: 2;">
+      <Pane fx:id="panelMapa" layoutX="116.0" layoutY="109.0" prefHeight="359.0" prefWidth="429.0" style="-fx-border-color: #ff66c4; -fx-border-width: 3; -fx-border-style: solid; -fx-background-color: transparent;" />
+      <Pane fx:id="panelDestino" layoutX="612.0" layoutY="109.0" prefHeight="168.0" prefWidth="383.0" style="-fx-border-color: #ff66c4; -fx-border-width: 2;">
          <children>
             <ImageView fx:id="iconLupa" fitHeight="39.0" fitWidth="47.0" layoutX="330.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -55,14 +54,31 @@
                   <Image url="@../images/destination.png" />
                </image>
             </ImageView>
-            <Label layoutX="168.0" layoutY="20.0" text="Busca tu destino" textFill="WHITE">
+            <Label layoutX="148.0" layoutY="14.0" text="Busca tu destino" textFill="WHITE">
                <font>
-                  <Font name="Liberation Sans Bold" size="22.0" />
+                  <Font name="Liberation Sans Bold" size="27.0" />
                </font>
             </Label>
          </children>
       </Pane>
-      <Pane fx:id="panelDirecciones" layoutX="612.0" layoutY="288.0" prefHeight="168.0" prefWidth="383.0" style="-fx-border-color: #ff66c4; -fx-border-width: 2;" />
+      <Pane fx:id="panelDirecciones" layoutX="612.0" layoutY="300.0" prefHeight="168.0" prefWidth="383.0" style="-fx-border-color: #ff66c4; -fx-border-width: 2;">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="219.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true" rotate="90.0">
+               <image>
+                  <Image url="@../images/arrow-direction.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="14.0" layoutY="14.0" text="Próximo movimiento" textFill="WHITE">
+               <font>
+                  <Font name="Liberation Sans Bold" size="27.0" />
+               </font>
+            </Label>
+            <Label layoutX="28.0" layoutY="84.0" text="Gire a la izquierda" textFill="WHITE">
+               <font>
+                  <Font name="Liberation Sans Bold" size="19.0" />
+               </font>
+            </Label>
+         </children></Pane>
       <Label fx:id="labelTime" alignment="CENTER" layoutX="882.0" layoutY="14.0" prefHeight="18.0" prefWidth="134.0" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
          <font>
             <Font name="Liberation Sans" size="16.0" />
@@ -71,6 +87,11 @@
       <Label fx:id="labelDate" alignment="CENTER" layoutX="882.0" layoutY="37.0" prefHeight="18.0" prefWidth="134.0" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
          <font>
             <Font name="Liberation Sans" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelTitulo" layoutX="224.0" layoutY="18.0" text="SISTEMA DE NAVEGACIÓN" textFill="WHITE">
+         <font>
+            <Font name="Noto Sans Bold" size="48.0" />
          </font>
       </Label>
    </children>

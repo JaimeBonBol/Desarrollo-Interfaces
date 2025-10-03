@@ -60,6 +60,8 @@ public class VistaGpsController implements Initializable {
     private ImageView iconLupa;
     @FXML
     private TextField textFielBusquedaDestino;
+    @FXML
+    private Label labelTitulo;
 
 
     /**
@@ -128,6 +130,22 @@ public class VistaGpsController implements Initializable {
         
         mapView.setCenter(new Coordinate(37.8882, -4.7794)); // lat, lon
         mapView.setZoom(14); // nivel de zoom
+    }
+
+    @FXML
+    private void cambiarVistaMultimedia(MouseEvent event) throws IOException {
+        
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/vistaMultimedia.fxml"));
+
+        Parent root = loader.load();
+        Scene escena = new Scene(root);
+
+        // Obtener el Stage actual desde el botón
+        Stage stage = (Stage) iconMultimedia.getScene().getWindow();
+
+        // Reemplazar la escena actual
+        stage.setScene(escena);
+        stage.setTitle("MULTIMEDIA");
     }
     
     

@@ -6,13 +6,11 @@ package controlador;
 
 import java.io.IOException;
 import java.net.URL;
-import javafx.util.Duration;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ResourceBundle;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
-import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -21,33 +19,32 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-
+import javafx.util.Duration;
 
 /**
  * FXML Controller class
  *
  * @author jaimedam
  */
-public class VistaHomeController implements Initializable {
+public class VistaMultimediaController implements Initializable {
 
     @FXML
-    private AnchorPane vistaHome;
-    @FXML
-    private Label labelTime;
-    @FXML
-    private Label labelDate;
-    @FXML
-    private ImageView iconGps;
-    @FXML
-    private ImageView iconMultimedia;
+    private ImageView iconHome;
     @FXML
     private ImageView iconCarSettings;
     @FXML
     private ImageView iconPhone;
     @FXML
     private ImageView iconPowerOff;
+    @FXML
+    private Label labelTitulo;
+    @FXML
+    private Label labelTime;
+    @FXML
+    private Label labelDate;
+    @FXML
+    private ImageView iconGps;
 
     /**
      * Initializes the controller class.
@@ -56,31 +53,6 @@ public class VistaHomeController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         inicializarTiempoyFecha();
     }    
-
-    @FXML
-    private void cambiarVistaGps(MouseEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/vistaGps.fxml"));
-
-        Parent root = loader.load();
-        Scene escena = new Scene(root);
-
-        // Obtener el Stage actual desde el botón
-        Stage stage = (Stage) iconGps.getScene().getWindow();
-
-        // Reemplazar la escena actual
-        stage.setScene(escena);
-        stage.setTitle("GPS");
-    }
-
-    @FXML
-    private void salirApp(MouseEvent event) {
-        Stage stage = (Stage) iconPowerOff.getScene().getWindow();
-        
-        stage.close();
-        
-        //Platform.exit();
-        
-    }
     
     public void inicializarTiempoyFecha(){
         // Formato de hora y fecha
@@ -98,19 +70,43 @@ public class VistaHomeController implements Initializable {
     }
 
     @FXML
-    private void cambiarVistaMultimedia(MouseEvent event) throws IOException {
+    private void cambiarVistaHome(MouseEvent event) throws IOException {
         
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/vistaMultimedia.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/vistaHome.fxml"));
 
         Parent root = loader.load();
         Scene escena = new Scene(root);
 
         // Obtener el Stage actual desde el botón
-        Stage stage = (Stage) iconMultimedia.getScene().getWindow();
+        Stage stage = (Stage) iconHome.getScene().getWindow();
 
         // Reemplazar la escena actual
         stage.setScene(escena);
-        stage.setTitle("MULTIMEDIA");
+        stage.setTitle("HOME");
+    }
+
+    @FXML
+    private void salirApp(MouseEvent event) {
+        Stage stage = (Stage) iconPowerOff.getScene().getWindow();
+        
+        stage.close();
+        
+        //Platform.exit();
+    }
+
+    @FXML
+    private void cambiarVistaGps(MouseEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/vistaGps.fxml"));
+
+        Parent root = loader.load();
+        Scene escena = new Scene(root);
+
+        // Obtener el Stage actual desde el botón
+        Stage stage = (Stage) iconGps.getScene().getWindow();
+
+        // Reemplazar la escena actual
+        stage.setScene(escena);
+        stage.setTitle("GPS");
     }
     
 }
