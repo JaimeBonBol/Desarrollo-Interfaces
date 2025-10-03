@@ -1,11 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.VistaGpsController">
-    
+
+<AnchorPane id="AnchorPane" prefHeight="584.0" prefWidth="1030.0" style="-fx-background-color: #141724;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/24.0.1" fx:controller="controlador.VistaGpsController">
+   <children>
+      <ImageView fitHeight="591.0" fitWidth="1030.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/fondoVistas.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="iconHome" fitHeight="65.0" fitWidth="65.0" layoutX="72.0" layoutY="515.0" onMouseClicked="#cambiarVistaHome" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/home.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="iconMultimedia" fitHeight="65.0" fitWidth="65.0" layoutX="350.0" layoutY="515.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/multimedia.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="iconCarSettings" fitHeight="65.0" fitWidth="65.0" layoutX="631.0" layoutY="515.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/carSettings.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="iconPhone" fitHeight="65.0" fitWidth="65.0" layoutX="884.0" layoutY="515.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/phone.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="iconPowerOff" fitHeight="65.0" fitWidth="65.0" layoutX="14.0" layoutY="14.0" onMouseClicked="#salirApp" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/power-off.png" />
+         </image>
+      </ImageView>
+      <Pane fx:id="panelMapa" layoutX="116.0" layoutY="97.0" prefHeight="359.0" prefWidth="429.0" style="-fx-border-color: #ff66c4; -fx-border-width: 3; -fx-border-style: solid; -fx-background-color: transparent;" />
+      <Pane fx:id="panelDestino" layoutX="612.0" layoutY="89.0" prefHeight="168.0" prefWidth="383.0" style="-fx-border-color: #ff66c4; -fx-border-width: 2;">
+         <children>
+            <ImageView fx:id="iconLupa" fitHeight="39.0" fitWidth="47.0" layoutX="330.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/search.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="textFielBusquedaDestino" layoutX="168.0" layoutY="72.0" promptText="Destino" />
+            <ImageView fitHeight="150.0" fitWidth="134.0" layoutX="14.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/destination.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="168.0" layoutY="20.0" text="Busca tu destino" textFill="WHITE">
+               <font>
+                  <Font name="Liberation Sans Bold" size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="panelDirecciones" layoutX="612.0" layoutY="288.0" prefHeight="168.0" prefWidth="383.0" style="-fx-border-color: #ff66c4; -fx-border-width: 2;" />
+      <Label fx:id="labelTime" alignment="CENTER" layoutX="882.0" layoutY="14.0" prefHeight="18.0" prefWidth="134.0" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
+         <font>
+            <Font name="Liberation Sans" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelDate" alignment="CENTER" layoutX="882.0" layoutY="37.0" prefHeight="18.0" prefWidth="134.0" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
+         <font>
+            <Font name="Liberation Sans" size="16.0" />
+         </font>
+      </Label>
+   </children>
 </AnchorPane>
