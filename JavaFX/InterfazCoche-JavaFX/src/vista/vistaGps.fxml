@@ -25,7 +25,7 @@
             <Image url="@../images/multimedia.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="iconCarSettings" fitHeight="65.0" fitWidth="65.0" layoutX="631.0" layoutY="515.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="iconCarSettings" fitHeight="65.0" fitWidth="65.0" layoutX="631.0" layoutY="515.0" onMouseClicked="#cambiarVistaCarSettings" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/carSettings.png" />
          </image>
@@ -73,7 +73,7 @@
                   <Font name="Liberation Sans Bold" size="27.0" />
                </font>
             </Label>
-            <Label layoutX="28.0" layoutY="84.0" text="Gire a la izquierda" textFill="WHITE">
+            <Label layoutX="28.0" layoutY="84.0" text="Gire a la derecha" textFill="WHITE">
                <font>
                   <Font name="Liberation Sans Bold" size="19.0" />
                </font>

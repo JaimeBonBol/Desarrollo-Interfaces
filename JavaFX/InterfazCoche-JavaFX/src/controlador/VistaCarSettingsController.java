@@ -17,6 +17,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.control.ProgressBar;
+import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
@@ -27,12 +29,10 @@ import javafx.util.Duration;
  *
  * @author jaimedam
  */
-public class VistaMultimediaController implements Initializable {
+public class VistaCarSettingsController implements Initializable {
 
     @FXML
     private ImageView iconHome;
-    @FXML
-    private ImageView iconCarSettings;
     @FXML
     private ImageView iconPhone;
     @FXML
@@ -40,11 +40,23 @@ public class VistaMultimediaController implements Initializable {
     @FXML
     private Label labelTitulo;
     @FXML
+    private ImageView iconGps;
+    @FXML
+    private ProgressBar barraGasoil;
+    @FXML
+    private ImageView iconoRepostar;
+    @FXML
+    private ImageView iconoDeposito;
+    @FXML
+    private TextField textFieldRepostaje;
+    @FXML
+    private ImageView iconMultimedia;
+    
+    private double controlGasoil;
+    @FXML
     private Label labelTime;
     @FXML
     private Label labelDate;
-    @FXML
-    private ImageView iconGps;
 
     /**
      * Initializes the controller class.
@@ -53,25 +65,9 @@ public class VistaMultimediaController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         inicializarTiempoyFecha();
     }    
-    
-    public void inicializarTiempoyFecha(){
-        // Formato de hora y fecha
-        DateTimeFormatter formatoHora = DateTimeFormatter.ofPattern("HH:mm:ss");
-        DateTimeFormatter formatoFecha = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-
-        // Timeline que se ejecuta cada segundo
-        Timeline reloj = new Timeline(new KeyFrame(Duration.seconds(1), event -> {
-            LocalDateTime ahora = LocalDateTime.now();
-            labelTime.setText(formatoHora.format(ahora));
-            labelDate.setText(formatoFecha.format(ahora));
-        }));
-        reloj.setCycleCount(Timeline.INDEFINITE);
-        reloj.play();
-    }
 
     @FXML
     private void cambiarVistaHome(MouseEvent event) throws IOException {
-        
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/vistaHome.fxml"));
 
         Parent root = loader.load();
@@ -82,7 +78,7 @@ public class VistaMultimediaController implements Initializable {
 
         // Reemplazar la escena actual
         stage.setScene(escena);
-        stage.setTitle("HOME");
+        stage.setTitle("HOME");        
     }
 
     @FXML
@@ -91,7 +87,7 @@ public class VistaMultimediaController implements Initializable {
         
         stage.close();
         
-        //Platform.exit();
+        //Platform.exit();        
     }
 
     @FXML
@@ -106,23 +102,74 @@ public class VistaMultimediaController implements Initializable {
 
         // Reemplazar la escena actual
         stage.setScene(escena);
-        stage.setTitle("GPS");
+        stage.setTitle("GPS");        
     }
 
     @FXML
-    private void cambiarVistaCarSettings(MouseEvent event) throws IOException {
+    private void repostar(MouseEvent event) {
         
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/vistaCarSettings.fxml"));
+        controlGasoil = Double.parseDouble(textFieldRepostaje.getText());
+        
+        // Dar estilo de color segú
+        if (controlGasoil < 20 && controlGasoil > 0) {
+            
+            barraGasoil.setStyle("-fx-accent: red;");
+            
+        }else if (controlGasoil < 60) {
+            
+            barraGasoil.setStyle("-fx-accent: yellow;");
+            
+        }else{
+            
+            barraGasoil.setStyle("-fx-accent: green;");
+            
+        }
+        
+        // Controlar la cantida permitida de repostaje
+        if(Double.parseDouble(textFieldRepostaje.getText()) < 0){
+            
+            textFieldRepostaje.setText("Cantidad inválida");
+            
+        }else if (Double.parseDouble(textFieldRepostaje.getText()) > 100) {
+
+            textFieldRepostaje.setText("Cantidad inválida");
+
+        }else{
+            
+            barraGasoil.setProgress(controlGasoil / 100);
+
+        }
+        
+    }
+
+    @FXML
+    private void cambiarVistaMultimedia(MouseEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/vistaMultimedia.fxml"));
 
         Parent root = loader.load();
         Scene escena = new Scene(root);
 
         // Obtener el Stage actual desde el botón
-        Stage stage = (Stage) iconCarSettings.getScene().getWindow();
+        Stage stage = (Stage) iconMultimedia.getScene().getWindow();
 
         // Reemplazar la escena actual
         stage.setScene(escena);
-        stage.setTitle("ANALISIS");            
+        stage.setTitle("MULTIMEDIA");        
+    }
+    
+    public void inicializarTiempoyFecha(){
+        // Formato de hora y fecha
+        DateTimeFormatter formatoHora = DateTimeFormatter.ofPattern("HH:mm:ss");
+        DateTimeFormatter formatoFecha = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+
+        // Timeline que se ejecuta cada segundo
+        Timeline reloj = new Timeline(new KeyFrame(Duration.seconds(1), event -> {
+            LocalDateTime ahora = LocalDateTime.now();
+            labelTime.setText(formatoHora.format(ahora));
+            labelDate.setText(formatoFecha.format(ahora));
+        }));
+        reloj.setCycleCount(Timeline.INDEFINITE);
+        reloj.play();
     }
     
 }

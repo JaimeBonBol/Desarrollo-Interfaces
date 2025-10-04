@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="590.0" prefWidth="1023.0" style="-fx-background-color: #141724;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/24.0.1" fx:controller="controlador.VistaCarSettingsController">
+   <children>
+      <ImageView fitHeight="529.0" fitWidth="1040.0" layoutX="-10.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/fondoVistas.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="iconHome" fitHeight="65.0" fitWidth="65.0" layoutX="89.0" layoutY="525.0" onMouseClicked="#cambiarVistaHome" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/home.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="iconMultimedia" fitHeight="65.0" fitWidth="65.0" layoutX="648.0" layoutY="525.0" onMouseClicked="#cambiarVistaMultimedia" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/multimedia.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="iconPhone" fitHeight="65.0" fitWidth="65.0" layoutX="901.0" layoutY="525.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/phone.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="iconPowerOff" fitHeight="65.0" fitWidth="65.0" layoutX="31.0" layoutY="24.0" onMouseClicked="#salirApp" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/power-off.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="labelTitulo" layoutX="316.0" layoutY="22.0" text="ANÁLISIS COCHE" textFill="WHITE">
+         <font>
+            <Font name="Noto Sans Bold" size="48.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="iconGps" fitHeight="69.0" fitWidth="73.0" layoutX="347.0" layoutY="518.0" onMouseClicked="#cambiarVistaGps" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/gps3.png" />
+         </image>
+      </ImageView>
+      <Pane layoutX="81.0" layoutY="116.0" prefHeight="156.0" prefWidth="370.0" style="-fx-border-color: #ff66c4; -fx-border-width: 1; -fx-border-style: dashed; -fx-background-color: transparent;">
+         <children>
+            <ProgressBar fx:id="barraGasoil" layoutX="84.0" layoutY="28.0" prefHeight="26.0" prefWidth="260.0" progress="0.0" style="-fx-accent: red;" />
+            <ImageView fx:id="iconoRepostar" fitHeight="47.0" fitWidth="50.0" layoutX="14.0" layoutY="95.0" onMouseClicked="#repostar" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/fuel.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="iconoDeposito" fitHeight="47.0" fitWidth="47.0" layoutX="14.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/fuel2.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="textFieldRepostaje" layoutX="84.0" layoutY="106.0" prefHeight="26.0" prefWidth="260.0" promptText="Cantidad a repostar (0-100 y pulse icono)" />
+         </children>
+      </Pane>
+      <Pane layoutX="493.0" layoutY="144.0" prefHeight="271.0" prefWidth="277.0" style="-fx-border-color: #ff66c4; -fx-border-width: 1; -fx-border-style: dashed; -fx-background-color: transparent;">
+         <children>
+            <ImageView fitHeight="89.0" fitWidth="97.0" layoutX="15.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/door1.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="89.0" fitWidth="97.0" layoutX="15.0" layoutY="168.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/door1.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="89.0" fitWidth="97.0" layoutX="173.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/door2.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="89.0" fitWidth="97.0" layoutX="173.0" layoutY="168.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/door2.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="47.0" layoutY="11.0" text="Control de puertas" textFill="WHITE">
+               <font>
+                  <Font name="Liberation Sans" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="81.0" layoutY="295.0" prefHeight="156.0" prefWidth="370.0" style="-fx-border-color: #ff66c4; -fx-border-width: 1; -fx-border-style: dashed; -fx-background-color: transparent;">
+         <children>
+            <ImageView fitHeight="89.0" fitWidth="95.0" layoutX="14.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/wheel.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="56.0" fitWidth="47.0" layoutX="292.0" layoutY="67.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/pressure.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="110.0" layoutY="14.0" text="Control de presión" textFill="WHITE">
+               <font>
+                  <Font name="Liberation Sans" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="208.0" layoutY="77.0" text="2.5 Bar" textFill="WHITE">
+               <font>
+                  <Font name="Liberation Sans" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <ImageView fitHeight="98.0" fitWidth="69.0" layoutX="920.0" layoutY="103.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/service1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="97.0" fitWidth="65.0" layoutX="922.0" layoutY="273.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/service2.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="75.0" fitWidth="65.0" layoutX="922.0" layoutY="426.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/service3.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="labelTime" alignment="CENTER" layoutX="892.0" layoutY="24.0" prefHeight="18.0" prefWidth="134.0" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
+         <font>
+            <Font name="Liberation Sans" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelDate" alignment="CENTER" layoutX="892.0" layoutY="47.0" prefHeight="18.0" prefWidth="134.0" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
+         <font>
+            <Font name="Liberation Sans" size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

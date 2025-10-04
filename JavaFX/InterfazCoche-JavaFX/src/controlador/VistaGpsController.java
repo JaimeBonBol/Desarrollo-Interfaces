@@ -147,6 +147,22 @@ public class VistaGpsController implements Initializable {
         stage.setScene(escena);
         stage.setTitle("MULTIMEDIA");
     }
+
+    @FXML
+    private void cambiarVistaCarSettings(MouseEvent event) throws IOException {
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/vistaCarSettings.fxml"));
+
+        Parent root = loader.load();
+        Scene escena = new Scene(root);
+
+        // Obtener el Stage actual desde el botón
+        Stage stage = (Stage) iconCarSettings.getScene().getWindow();
+
+        // Reemplazar la escena actual
+        stage.setScene(escena);
+        stage.setTitle("ANALISIS");            
+    }
     
     
     

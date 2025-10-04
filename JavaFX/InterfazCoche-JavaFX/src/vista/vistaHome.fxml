@@ -33,7 +33,7 @@
             <Image url="@../images/multimedia.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="iconCarSettings" fitHeight="80.0" fitWidth="80.0" layoutX="607.0" layoutY="343.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="iconCarSettings" fitHeight="80.0" fitWidth="80.0" layoutX="607.0" layoutY="343.0" onMouseClicked="#cambiarVistaCarSettings" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/carSettings.png" />
          </image>
