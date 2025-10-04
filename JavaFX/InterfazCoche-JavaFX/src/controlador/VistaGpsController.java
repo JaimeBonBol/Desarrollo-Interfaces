@@ -163,6 +163,22 @@ public class VistaGpsController implements Initializable {
         stage.setScene(escena);
         stage.setTitle("ANALISIS");            
     }
+
+    @FXML
+    private void cambiarVistaPhone(MouseEvent event) throws IOException {
+        
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/vistaPhone.fxml"));
+
+        Parent root = loader.load();
+        Scene escena = new Scene(root);
+
+        // Obtener el Stage actual desde el botón
+        Stage stage = (Stage) iconPhone.getScene().getWindow();
+
+        // Reemplazar la escena actual
+        stage.setScene(escena);
+        stage.setTitle("TELEFONO");          
+    }
     
     
     

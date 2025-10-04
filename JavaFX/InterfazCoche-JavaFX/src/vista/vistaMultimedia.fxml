@@ -23,7 +23,7 @@
             <Image url="@../images/carSettings.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="iconPhone" fitHeight="65.0" fitWidth="65.0" layoutX="894.0" layoutY="525.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="iconPhone" fitHeight="65.0" fitWidth="65.0" layoutX="894.0" layoutY="525.0" onMouseClicked="#cambiarVistaPhone" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/phone.png" />
          </image>

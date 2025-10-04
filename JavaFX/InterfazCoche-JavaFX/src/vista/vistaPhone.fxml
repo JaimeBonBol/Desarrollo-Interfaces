@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="590.0" prefWidth="1023.0" style="-fx-background-color: #141724;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/24.0.1" fx:controller="controlador.VistaPhoneController">
+   <children>
+      <ImageView fitHeight="528.0" fitWidth="1040.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/fondoVistas.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="iconHome" fitHeight="65.0" fitWidth="65.0" layoutX="98.0" layoutY="525.0" onMouseClicked="#cambiarVistaHome" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/home.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="iconMultimedia" fitHeight="65.0" fitWidth="65.0" layoutX="657.0" layoutY="525.0" onMouseClicked="#cambiarVistaMultimedia" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/multimedia.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="iconCarSettings" fitHeight="65.0" fitWidth="65.0" layoutX="910.0" layoutY="525.0" onMouseClicked="#cambiarVistaCarSettings" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/carSettings.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="iconPowerOff" fitHeight="65.0" fitWidth="65.0" layoutX="41.0" layoutY="34.0" onMouseClicked="#salirApp" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/power-off.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="labelTitulo" layoutX="228.0" layoutY="32.0" text="SISTEMA DE CONTACTOS" textFill="WHITE">
+         <font>
+            <Font name="Noto Sans Bold" size="48.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="iconGps" fitHeight="69.0" fitWidth="73.0" layoutX="356.0" layoutY="518.0" onMouseClicked="#cambiarVistaGps" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/gps3.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="labelTime" alignment="CENTER" layoutX="902.0" layoutY="34.0" prefHeight="18.0" prefWidth="134.0" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
+         <font>
+            <Font name="Liberation Sans" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelDate" alignment="CENTER" layoutX="902.0" layoutY="57.0" prefHeight="18.0" prefWidth="134.0" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
+         <font>
+            <Font name="Liberation Sans" size="16.0" />
+         </font>
+      </Label>
+      <Pane layoutX="76.0" layoutY="144.0" prefHeight="53.0" prefWidth="277.0">
+         <children>
+            <ImageView fitHeight="41.0" fitWidth="43.0" layoutX="14.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/woman1.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="98.0" layoutY="16.0" prefHeight="22.0" prefWidth="102.0" text="Profesora" textFill="WHITE">
+               <font>
+                  <Font name="Liberation Sans" size="20.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="41.0" fitWidth="41.0" layoutX="236.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/phone.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="76.0" layoutY="205.0" prefHeight="53.0" prefWidth="277.0">
+         <children>
+            <ImageView fitHeight="41.0" fitWidth="43.0" layoutX="14.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/man1.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="98.0" layoutY="16.0" prefHeight="22.0" prefWidth="92.0" text="Profesor" textFill="WHITE">
+               <font>
+                  <Font name="Liberation Sans" size="20.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="41.0" fitWidth="41.0" layoutX="236.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/phone.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="76.0" layoutY="275.0" prefHeight="53.0" prefWidth="277.0">
+         <children>
+            <ImageView fitHeight="41.0" fitWidth="43.0" layoutX="14.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/man2.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="98.0" layoutY="16.0" prefHeight="22.0" prefWidth="78.0" text="Amigo" textFill="WHITE">
+               <font>
+                  <Font name="Liberation Sans" size="20.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="41.0" fitWidth="41.0" layoutX="236.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/phone.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="76.0" layoutY="353.0" prefHeight="53.0" prefWidth="277.0">
+         <children>
+            <ImageView fitHeight="41.0" fitWidth="43.0" layoutX="14.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/worke.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="98.0" layoutY="16.0" prefHeight="22.0" prefWidth="112.0" text="Fontanera" textFill="WHITE">
+               <font>
+                  <Font name="Liberation Sans" size="20.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="41.0" fitWidth="41.0" layoutX="236.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/phone.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <ImageView fitHeight="433.0" fitWidth="389.0" layoutX="513.0" layoutY="90.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/llamada.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
