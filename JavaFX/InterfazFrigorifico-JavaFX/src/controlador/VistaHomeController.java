@@ -14,6 +14,9 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 
 /**
@@ -35,6 +38,14 @@ public class VistaHomeController implements Initializable {
     private ImageView iconDish;
     @FXML
     private ImageView iconPowerOff;
+    @FXML
+    private ImageView imagenAlimentos;
+    @FXML
+    private Pane panelDateTime;
+    
+    private boolean alimentosVisibles = false;
+    @FXML
+    private ImageView iconFreeze;
 
     /**
      * Initializes the controller class.
@@ -61,6 +72,28 @@ public class VistaHomeController implements Initializable {
     }));
     reloj.setCycleCount(Timeline.INDEFINITE);
     reloj.play();
+    }
+
+
+    @FXML
+    private void salirApp(MouseEvent event) {
+        Stage stage = (Stage) iconPowerOff.getScene().getWindow();
+        
+        stage.close();
+    }
+
+    @FXML
+    private void mostrarAlimentos(MouseEvent event) {
+        if (!alimentosVisibles) {
+            imagenAlimentos.setOpacity(1.0);
+            panelDateTime.setOpacity(0.0);
+            alimentosVisibles = true;
+        }
+        else{
+            imagenAlimentos.setOpacity(0.1);
+            panelDateTime.setOpacity(1.0);
+            alimentosVisibles = false;
+        }
     }
     
 }

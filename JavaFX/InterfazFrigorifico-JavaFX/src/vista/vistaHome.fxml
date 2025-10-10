@@ -11,19 +11,19 @@
    <children>
       <Pane layoutY="-1.0" prefHeight="754.0" prefWidth="543.0" style="-fx-border-width: 80; -fx-background-color: black;">
          <children>
-            <ImageView fitHeight="596.0" fitWidth="388.0" layoutX="78.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 0.1;">
+            <ImageView fx:id="imagenAlimentos" fitHeight="596.0" fitWidth="388.0" layoutX="78.0" layoutY="60.0" onMouseClicked="#mostrarAlimentos" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 0.05;">
                <image>
                   <Image url="@../images/food.jpg" />
                </image>
             </ImageView>
-            <Pane layoutX="77.0" layoutY="60.0" prefHeight="138.0" prefWidth="388.0">
+            <Pane fx:id="panelDateTime" layoutX="78.0" layoutY="111.0" prefHeight="138.0" prefWidth="388.0">
                <children>
                   <Label fx:id="labelDate" alignment="CENTER" layoutX="66.0" layoutY="87.0" textFill="WHITE">
                      <font>
                         <Font name="Monospaced Bold" size="42.0" />
                      </font>
                   </Label>
-                  <Label fx:id="labelTime" alignment="CENTER" layoutX="66.0" textFill="WHITE">
+                  <Label fx:id="labelTime" alignment="CENTER" layoutX="80.0" prefHeight="51.0" prefWidth="228.0" textFill="WHITE">
                      <font>
                         <Font name="Monospaced Bold" size="42.0" />
                      </font>
@@ -45,9 +45,14 @@
                   <Image url="@../images/dish.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="iconPowerOff" fitHeight="36.0" fitWidth="31.0" layoutX="500.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="iconPowerOff" fitHeight="36.0" fitWidth="31.0" layoutX="500.0" layoutY="13.0" onMouseClicked="#salirApp" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/power-off.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="iconFreeze" fitHeight="50.0" fitWidth="38.0" layoutX="406.0" layoutY="583.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/freeze.png" />
                </image>
             </ImageView>
          </children>
