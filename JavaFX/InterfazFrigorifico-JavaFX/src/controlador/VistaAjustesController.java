@@ -23,17 +23,16 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
+import com.calendarfx.view.CalendarView;
+
+
 /**
  * FXML Controller class
  *
  * @author jaimedam
  */
-public class VistaHomeController implements Initializable {
+public class VistaAjustesController implements Initializable {
 
-    @FXML
-    private Label labelDate;
-    @FXML
-    private Label labelTime;
     @FXML
     private ImageView iconHome;
     @FXML
@@ -43,13 +42,11 @@ public class VistaHomeController implements Initializable {
     @FXML
     private ImageView iconPowerOff;
     @FXML
-    private ImageView imagenAlimentos;
-    @FXML
     private Pane panelDateTime;
-    
-    private boolean alimentosVisibles = false;
     @FXML
-    private ImageView iconFreeze;
+    private Label labelDate;
+    @FXML
+    private Label labelTime;
 
     /**
      * Initializes the controller class.
@@ -57,8 +54,45 @@ public class VistaHomeController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         inicializarTiempoyFecha();
+        //inicializarCalendario();
     }    
-    
+
+    @FXML
+    private void salirApp(MouseEvent event) {
+        Stage stage = (Stage) iconPowerOff.getScene().getWindow();
+        
+        stage.close();
+    }
+
+    @FXML
+    private void cambiarVistaHome(MouseEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/vistaHome.fxml"));
+
+        Parent root = loader.load();
+        Scene escena = new Scene(root);
+
+        // Obtener el Stage actual desde el botón
+        Stage stage = (Stage) iconHome.getScene().getWindow();
+
+        // Reemplazar la escena actual
+        stage.setScene(escena);
+        stage.setTitle("HOME");  
+    }
+
+    @FXML
+    private void cambiarVistaAlimentos(MouseEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/vistaAlimentos.fxml"));
+
+        Parent root = loader.load();
+        Scene escena = new Scene(root);
+
+        // Obtener el Stage actual desde el botón
+        Stage stage = (Stage) iconDish.getScene().getWindow();
+
+        // Reemplazar la escena actual
+        stage.setScene(escena);
+        stage.setTitle("ALIMENTOS");  
+    }
     
     /**
      * Funcion para inicializar los label de tiempo y fecha y se actualizen cada segundo.
@@ -77,57 +111,26 @@ public class VistaHomeController implements Initializable {
         reloj.setCycleCount(Timeline.INDEFINITE);
         reloj.play();
     }
-
-
-    @FXML
-    private void salirApp(MouseEvent event) {
-        Stage stage = (Stage) iconPowerOff.getScene().getWindow();
+    
+    
+    /** NO VOY A UTILIZARLO
+     * Funcion para inicializar calendario, aadido a traves de dependencia maven
+    public void inicializarCalendario(){
+        // Crear el calendario
+        CalendarView calendario = new CalendarView();
         
-        stage.close();
-    }
+        // Configuraciones
+        calendario.setShowPageToolBarControls(false); // Barra navegacion
+        calendario.showMonthPage(); // mostrar vista mensual
 
-    @FXML
-    private void mostrarAlimentos(MouseEvent event) {
-        if (!alimentosVisibles) {
-            imagenAlimentos.setOpacity(1.0);
-            panelDateTime.setOpacity(0.0);
-            alimentosVisibles = true;
-        }
-        else{
-            imagenAlimentos.setOpacity(0.1);
-            panelDateTime.setOpacity(1.0);
-            alimentosVisibles = false;
-        }
-    }
+        // Ajustar el tamaño para que llene el panelCalendar
+        calendario.prefWidthProperty().bind(panelCalendar.widthProperty());
+        calendario.prefHeightProperty().bind(panelCalendar.heightProperty());
 
-    @FXML
-    private void cambiarVistaAjustes(MouseEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/vistaAjustes.fxml"));
+        // Agregar el calendario al panel
+        panelCalendar.getChildren().add(calendario);
 
-        Parent root = loader.load();
-        Scene escena = new Scene(root);
-
-        // Obtener el Stage actual desde el botón
-        Stage stage = (Stage) iconSettings.getScene().getWindow();
-
-        // Reemplazar la escena actual
-        stage.setScene(escena);
-        stage.setTitle("AJUSTES");        
-    }
-
-    @FXML
-    private void cambiarVistaAlimentos(MouseEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/vistaAlimentos.fxml"));
-
-        Parent root = loader.load();
-        Scene escena = new Scene(root);
-
-        // Obtener el Stage actual desde el botón
-        Stage stage = (Stage) iconDish.getScene().getWindow();
-
-        // Reemplazar la escena actual
-        stage.setScene(escena);
-        stage.setTitle("ALIMENTOS");    
-    }
+    }*/
+    
     
 }

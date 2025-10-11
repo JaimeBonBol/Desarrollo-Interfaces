@@ -9,9 +9,9 @@
 
 <AnchorPane id="AnchorPane" prefHeight="748.0" prefWidth="543.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.VistaHomeController">
    <children>
-      <Pane layoutY="-1.0" prefHeight="754.0" prefWidth="543.0" style="-fx-border-width: 80; -fx-background-color: black;">
+      <Pane layoutY="-1.0" prefHeight="754.0" prefWidth="543.0" style="-fx-border-width: 80; -fx-background-color: #13161f;">
          <children>
-            <ImageView fx:id="imagenAlimentos" fitHeight="596.0" fitWidth="388.0" layoutX="78.0" layoutY="60.0" onMouseClicked="#mostrarAlimentos" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 0.05;">
+            <ImageView fx:id="imagenAlimentos" fitHeight="596.0" fitWidth="388.0" layoutX="78.0" layoutY="60.0" onMouseClicked="#mostrarAlimentos" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 0.1;">
                <image>
                   <Image url="@../images/food.jpg" />
                </image>
@@ -35,12 +35,12 @@
                   <Image url="@../images/home.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="iconSettings" fitHeight="50.0" fitWidth="50.0" layoutX="416.0" layoutY="668.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="iconSettings" fitHeight="50.0" fitWidth="50.0" layoutX="416.0" layoutY="668.0" onMouseClicked="#cambiarVistaAjustes" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/settings.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="iconDish" fitHeight="50.0" fitWidth="50.0" layoutX="77.0" layoutY="667.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="iconDish" fitHeight="50.0" fitWidth="50.0" layoutX="77.0" layoutY="667.0" onMouseClicked="#cambiarVistaAlimentos" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/dish.png" />
                </image>
