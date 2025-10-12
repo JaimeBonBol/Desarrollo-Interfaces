@@ -38,23 +38,28 @@
             </Label>
             <Pane layoutX="77.0" layoutY="85.0" prefHeight="557.0" prefWidth="387.0" style="-fx-background-color: #d1e1e7; -fx-opacity: 0.8;">
                <children>
-                  <Pane fx:id="panelDateTime" prefHeight="150.0" prefWidth="236.0" style="-fx-background-color: rgba(0,0,0,0);">
+                  <Pane fx:id="panelDateTime" prefHeight="150.0" prefWidth="387.0" style="-fx-background-color: rgba(0,0,0,0);">
                      <children>
-                        <Label fx:id="labelDate" alignment="CENTER" layoutX="16.0" layoutY="53.0" prefHeight="51.0" prefWidth="228.0">
+                        <Label fx:id="labelDate" alignment="CENTER" layoutX="80.0" layoutY="65.0" prefHeight="51.0" prefWidth="228.0">
                            <font>
                               <Font name="Noto Music Regular" size="30.0" />
                            </font>
                         </Label>
-                        <Label fx:id="labelTime" alignment="CENTER" layoutX="16.0" layoutY="14.0" prefHeight="51.0" prefWidth="228.0">
+                        <Label fx:id="labelTime" alignment="CENTER" layoutX="80.0" layoutY="14.0" prefHeight="51.0" prefWidth="228.0">
                            <font>
                               <Font name="Monospaced Regular" size="30.0" />
                            </font>
                         </Label>
                      </children>
                   </Pane>
-                  <ImageView fitHeight="150.0" fitWidth="177.0" layoutX="237.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="199.0" fitWidth="194.0" layoutX="4.0" layoutY="224.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../images/weather.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="211.0" fitWidth="194.0" layoutX="198.0" layoutY="224.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/news.png" />
                      </image>
                   </ImageView>
                </children>
