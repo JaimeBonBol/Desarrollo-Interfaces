@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="748.0" prefWidth="543.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.VistaAjustesAdicionalesController">
+   <children>
+      <Pane prefHeight="754.0" prefWidth="543.0" style="-fx-border-width: 80; -fx-background-color: #13161f;">
+         <children>
+            <ImageView fx:id="iconHome" fitHeight="50.0" fitWidth="50.0" layoutX="246.0" layoutY="668.0" onMouseClicked="#cambiarVistaHome" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/home.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="iconSettings" fitHeight="50.0" fitWidth="50.0" layoutX="416.0" layoutY="668.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/settings.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="iconDish" fitHeight="50.0" fitWidth="50.0" layoutX="77.0" layoutY="667.0" onMouseClicked="#cambiarVistaAlimentos" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/dish.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="iconPowerOff" fitHeight="36.0" fitWidth="31.0" layoutX="498.0" layoutY="13.0" onMouseClicked="#salirApp" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/power-off.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="161.0" layoutY="5.0" text="AJUSTES ADICIONALES" textFill="WHITE">
+               <font>
+                  <Font name="Noto Music Regular" size="23.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="iconBack" fitHeight="37.0" fitWidth="31.0" layoutX="435.0" layoutY="606.0" onMouseClicked="#cambiarVistaAjustes" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/back.png" />
+               </image>
+            </ImageView>
+            <Pane fx:id="paneTemperature" layoutX="77.0" layoutY="82.0" prefHeight="241.0" prefWidth="200.0">
+               <children>
+                  <Slider fx:id="sliderTemperature" layoutX="74.0" layoutY="80.0" max="10.0" min="-10.0" orientation="VERTICAL" />
+                  <Label fx:id="labelTemperature" layoutX="107.0" layoutY="136.0" text="0º" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="iconTemperature" fitHeight="27.0" fitWidth="31.0" layoutX="97.0" layoutY="193.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/freeze.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="iconTemperature2" fitHeight="27.0" fitWidth="31.0" layoutX="97.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/hot.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="12.0" layoutY="14.0" text="TEMPERATURA FRIGORÍFICO" textFill="WHITE">
+                     <font>
+                        <Font name="Noto Music Regular" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <ImageView fx:id="iconSave" fitHeight="37.0" fitWidth="31.0" layoutX="374.0" layoutY="606.0" onMouseClicked="#cambiarVistaAjustes" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/save.png" />
+               </image>
+            </ImageView>
+            <ComboBox fx:id="comboModo" layoutX="183.0" layoutY="402.0" prefWidth="150.0" />
+            <Pane layoutX="290.0" layoutY="82.0" prefHeight="241.0" prefWidth="200.0">
+               <children>
+                  <ComboBox fx:id="comboUdMedida" layoutX="16.0" layoutY="51.0" prefWidth="150.0" />
+                  <Label layoutX="14.0" layoutY="14.0" text="UNIDAD DE MEDIDA" textFill="WHITE">
+                     <font>
+                        <Font name="Noto Music Regular" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

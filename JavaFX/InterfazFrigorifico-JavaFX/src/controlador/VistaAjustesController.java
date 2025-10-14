@@ -42,11 +42,13 @@ public class VistaAjustesController implements Initializable {
     @FXML
     private ImageView iconPowerOff;
     @FXML
-    private Pane panelDateTime;
-    @FXML
     private Label labelDate;
     @FXML
     private Label labelTime;
+    
+    @FXML
+    private ImageView iconMore;
+
 
     /**
      * Initializes the controller class.
@@ -111,6 +113,22 @@ public class VistaAjustesController implements Initializable {
         reloj.setCycleCount(Timeline.INDEFINITE);
         reloj.play();
     }
+
+    @FXML
+    private void cambiarVistaAjustesAdicionales(MouseEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/vistaAjustesAdicionales.fxml"));
+
+        Parent root = loader.load();
+        Scene escena = new Scene(root);
+
+        // Obtener el Stage actual desde el botón
+        Stage stage = (Stage) iconMore.getScene().getWindow();
+
+        // Reemplazar la escena actual
+        stage.setScene(escena);
+        stage.setTitle("AJUSTES ADICIONALES");
+    }
+
     
     
     /** NO VOY A UTILIZARLO
