@@ -50,7 +50,7 @@ public class VistaHomeController implements Initializable {
     private boolean alimentosVisibles = false;
     @FXML
     private ImageView iconFreeze;
-
+    
     /**
      * Initializes the controller class.
      */

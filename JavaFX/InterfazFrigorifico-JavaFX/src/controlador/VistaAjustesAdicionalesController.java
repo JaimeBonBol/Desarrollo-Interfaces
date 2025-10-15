@@ -13,9 +13,12 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.Slider;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
@@ -37,23 +40,34 @@ public class VistaAjustesAdicionalesController implements Initializable {
     @FXML
     private ImageView iconPowerOff;
     @FXML
-    private ImageView iconBack;
-    @FXML
     private Slider sliderTemperature;
     @FXML
     private Label labelTemperature;
     @FXML
-    private ImageView iconTemperature;
+    private ComboBox<String> comboModo;
+    @FXML
+    private ComboBox<String> comboFormatoTemp;
+    @FXML
+    private ComboBox<String> comboMedidaAlimentos;
+    
+    @FXML
+    private PasswordField passwordWifi;
+    @FXML
+    private Button botonWifi;
+    @FXML
+    private ImageView iconWifi;
+    @FXML
+    private ImageView iconBack;
     @FXML
     private Pane paneTemperature;
+    @FXML
+    private ImageView iconTemperature;
     @FXML
     private ImageView iconTemperature2;
     @FXML
     private ImageView iconSave;
     @FXML
-    private ComboBox<String> comboModo;
-    @FXML
-    private ComboBox<String> comboUdMedida;
+    private Slider sliderBrillo;
 
     /**
      * Initializes the controller class.
@@ -61,7 +75,7 @@ public class VistaAjustesAdicionalesController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // Obtiene la propiedad del valor del slider, formatea el numero con un decimal y 
-        // le añade ºC. .bind() hace que el label se actualize en timepo real cuando
+        // le añade ºC, .bind() hace que el label se actualize en timepo real cuando
         // se mueve el slider.
         //labelTemperature.textProperty().bind(
         //    sliderTemperature.valueProperty().asString("%.1f " + comprobarUdMedida())
@@ -70,7 +84,7 @@ public class VistaAjustesAdicionalesController implements Initializable {
         labelTemperature.textProperty().bind(
             Bindings.createStringBinding(() -> {
                 double tempC = sliderTemperature.getValue();
-                String unidad = comboUdMedida.getValue();
+                String unidad = comboFormatoTemp.getValue();
                 if (unidad == null) unidad = "ºC"; // valor por defecto
 
                 double tempFinal;
@@ -80,12 +94,14 @@ public class VistaAjustesAdicionalesController implements Initializable {
                     tempFinal = tempC; // mantener Celsius
                 }
 
+                // Devolver de forma formateada con decimales, el valor en Celciues o Fahrenheit y la unidad correspondiente
                 return String.format("%.1f %s", tempFinal, unidad);
-            }, sliderTemperature.valueProperty(), comboUdMedida.valueProperty())
+            }, sliderTemperature.valueProperty(), comboFormatoTemp.valueProperty())
         );
         
         comboModo.getItems().addAll("Eco", "Vacaciones", "UltraFreeze");        
-        comboUdMedida.getItems().addAll("ºC", "ºF");
+        comboFormatoTemp.getItems().addAll("ºC", "ºF");
+        comboMedidaAlimentos.getItems().addAll("KG", "G");
     }    
 
     @FXML
@@ -141,7 +157,17 @@ public class VistaAjustesAdicionalesController implements Initializable {
     }
     
     public String comprobarUdMedida(){
-        return comboUdMedida.getValue();
+        return comboFormatoTemp.getValue();
+    }
+
+    @FXML
+    private void comprobarConexionWifi(MouseEvent event) {
+        if (!passwordWifi.getText().equals("DIN")) {
+            botonWifi.setText("Contraseña Erronea");
+        }else{
+            passwordWifi.setText("Conectado");
+            iconWifi.setImage(new Image(getClass().getResourceAsStream("/images/tick.png")));            
+        }
     }
     
 }
