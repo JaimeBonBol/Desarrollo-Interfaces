@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="748.0" prefWidth="543.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.VistaModificarAlimentoController">
+   <children>
+      <Pane prefHeight="754.0" prefWidth="543.0" style="-fx-border-width: 80; -fx-background-color: #13161f;">
+         <children>
+            <ImageView fx:id="iconHome" fitHeight="50.0" fitWidth="50.0" layoutX="246.0" layoutY="668.0" onMouseClicked="#cambiarVistaHome" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/home.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="iconSettings" fitHeight="50.0" fitWidth="50.0" layoutX="416.0" layoutY="668.0" onMouseClicked="#cambiarVistaAjustes" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/settings.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="iconDish" fitHeight="50.0" fitWidth="50.0" layoutX="77.0" layoutY="667.0" onMouseClicked="#cambiarVistaAlimentos" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/dish.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="iconPowerOff" fitHeight="36.0" fitWidth="31.0" layoutX="498.0" layoutY="13.0" onMouseClicked="#salirApp" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/power-off.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="158.0" layoutY="5.0" text="AGREGAR ALIMENTO" textFill="WHITE">
+               <font>
+                  <Font name="Noto Music Regular" size="23.0" />
+               </font>
+            </Label>
+            <VBox alignment="TOP_CENTER" layoutX="76.0" layoutY="90.0" prefHeight="531.0" prefWidth="392.0" spacing="50.0">
+               <children>
+                  <Label text="Modificar Alimento" textFill="WHITE">
+                     <font>
+                        <Font name="Noto Music Regular" size="15.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label text="¿Qué alimento quiere modificar?" textFill="WHITE" />
+                        <TextField fx:id="textNombreBuscar">
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <TextField fx:id="textNombreNuevo" prefHeight="26.0" prefWidth="324.0" promptText="Nuevo nombre del alimento">
+                     <VBox.margin>
+                        <Insets left="50.0" right="50.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="textCantidadNueva" prefHeight="26.0" prefWidth="324.0" promptText="Nueva cantidad">
+                     <VBox.margin>
+                        <Insets left="50.0" right="50.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <ComboBox fx:id="comboUnidadNueva" prefHeight="26.0" prefWidth="293.0" />
+                  <Button fx:id="btnModificar" mnemonicParsing="false" onMouseClicked="#modificarAlimento" prefHeight="26.0" prefWidth="88.0" style="-fx-background-color: yellow;" text="Modificar" />
+                  <Label fx:id="mensaje" />
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
