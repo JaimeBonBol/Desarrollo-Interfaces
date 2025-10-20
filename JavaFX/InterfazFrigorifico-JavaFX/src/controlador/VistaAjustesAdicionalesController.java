@@ -165,7 +165,7 @@ public class VistaAjustesAdicionalesController implements Initializable {
         if (!passwordWifi.getText().equals("DIN")) {
             botonWifi.setText("Contraseña Erronea");
         }else{
-            passwordWifi.setText("Conectado");
+            botonWifi.setText("Conectado");
             iconWifi.setImage(new Image(getClass().getResourceAsStream("/images/tick.png")));            
         }
     }
