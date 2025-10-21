@@ -74,29 +74,11 @@ public class VistaAjustesAdicionalesController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // Obtiene la propiedad del valor del slider, formatea el numero con un decimal y 
-        // le añade ºC, .bind() hace que el label se actualize en timepo real cuando
-        // se mueve el slider.
-        //labelTemperature.textProperty().bind(
-        //    sliderTemperature.valueProperty().asString("%.1f " + comprobarUdMedida())
-        //);
-        
+        /* Obtiene la propiedad del valor del slider, formatea el numero con un decimal y 
+         le añade ºC, .bind() hace que el label se actualize en timepo real cuando
+         se mueve el slider.*/
         labelTemperature.textProperty().bind(
-            Bindings.createStringBinding(() -> {
-                double tempC = sliderTemperature.getValue();
-                String unidad = comboFormatoTemp.getValue();
-                if (unidad == null) unidad = "ºC"; // valor por defecto
-
-                double tempFinal;
-                if (unidad.equals("ºF")) {
-                    tempFinal = tempC * 9 / 5 + 32; // convertir a Fahrenheit
-                } else {
-                    tempFinal = tempC; // mantener Celsius
-                }
-
-                // Devolver de forma formateada con decimales, el valor en Celciues o Fahrenheit y la unidad correspondiente
-                return String.format("%.1f %s", tempFinal, unidad);
-            }, sliderTemperature.valueProperty(), comboFormatoTemp.valueProperty())
+            sliderTemperature.valueProperty().asString("%.1f " + "º")
         );
         
         comboModo.getItems().addAll("Eco", "Vacaciones", "UltraFreeze");        
