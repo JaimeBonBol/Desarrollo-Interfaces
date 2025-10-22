@@ -48,6 +48,9 @@ public class VistaModificarAlimentoController implements Initializable {
     private Button btnModificar;
     @FXML
     private Label mensaje;
+    
+    private String rutaArchivoAlimentos = "src/fichero/alimentos.txt";
+
 
     /**
      * Initializes the controller class.
@@ -151,6 +154,10 @@ public class VistaModificarAlimentoController implements Initializable {
             alimentoModificar.setNombre(nombreNuevo);
             alimentoModificar.setCantidad(cantidadNueva);
             alimentoModificar.setUnidad(unidadNueva);
+            
+            // Una vez que en la lista este actualizado el alimento, llamo al metodo de la clase 
+            // compartida donde esta la lista guardaralimentos en fichero para que se actualice
+            modelo.DatosCompartidos.guardarAlimentosFichero(rutaArchivoAlimentos);
 
             mensaje.setStyle("-fx-text-fill: green");
             mensaje.setText(alimentoModificar.getNombre() + " modificado con éxito");

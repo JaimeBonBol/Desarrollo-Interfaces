@@ -53,6 +53,8 @@ public class VistaAlimentosController implements Initializable {
     private Button btnModificar;
     @FXML
     private Label labelMensaje;
+    
+    private String rutaArchivoAlimentos = "src/fichero/alimentos.txt";
 
     /**
      * Initializes the controller class.
@@ -112,7 +114,10 @@ public class VistaAlimentosController implements Initializable {
         modelo.Alimento alimento = tablaAlimentos.getSelectionModel().getSelectedItem();
         
         if (alimento != null) {
+            // Se elimina y se llama al metodo de escribir en el txt para que lo actualice
             modelo.DatosCompartidos.getAlimentos().remove(alimento);
+            modelo.DatosCompartidos.guardarAlimentosFichero(rutaArchivoAlimentos);
+            
             labelMensaje.setStyle("-fx-text-fill: green;");
             labelMensaje.setText(alimento.getNombre() + " eliminado con éxito");
 

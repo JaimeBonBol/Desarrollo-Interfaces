@@ -46,6 +46,8 @@ public class VistaAgregarAlimentoController implements Initializable {
     private Button btnGuardar;
     @FXML
     private Label mensaje;
+    
+    private String rutaArchivoAlimentos = "src/fichero/alimentos.txt";
 
     /**
      * Initializes the controller class.
@@ -137,6 +139,10 @@ public class VistaAgregarAlimentoController implements Initializable {
         // Si se ha validado lo anterior agregamos a la lista observable el alimento
         Alimento alimentoAgregar = new Alimento(nombre, cantidad, unidad);
         modelo.DatosCompartidos.getAlimentos().add(alimentoAgregar);
+
+        // Actualizar el txt ahora con el nuevo alimento
+        modelo.DatosCompartidos.guardarAlimentosFichero(rutaArchivoAlimentos);
+
         
         mensaje.setStyle("-fx-text-fill: green");
         mensaje.setText(alimentoAgregar.getNombre() + " agregado con éxito");
@@ -144,5 +150,5 @@ public class VistaAgregarAlimentoController implements Initializable {
         textNombre.setText("");
         comboUnidad.setValue("");
     }
-    
+        
 }
