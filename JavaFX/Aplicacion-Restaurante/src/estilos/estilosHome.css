@@ -1,5 +1,5 @@
 .root {
-    -fx-background-image: url("../imagenes/fondo-home.jpg");
+    -fx-background-image: url("../imagenes/fondo-home2.jpg");
     -fx-font-family: "Segoe UI";
     -fx-background-size: cover;       /* Ajusta la imagen al tamaño del contenedor */
     -fx-background-repeat: no-repeat; /* No repetir la imagen */
@@ -13,5 +13,35 @@
 }
 
 .logo{
-    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 10, 0, 0, 4);
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.8), 10, 0, 0, 4);
+    /*-fx-effect: dropshadow(gaussian, white, 15, 0.3, 0, 0);*/
+
+}
+
+.subtitulo{
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(gaussian, white, 15, 0.025, 0, 0);
+
+}
+
+.btnIniciar {
+    -fx-background-color: #fcd358; /* color amarillo */
+    -fx-text-fill: black;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-padding: 12 30;
+    -fx-background-radius: 15;
+    -fx-cursor: hand;             /* cursor de puntero al pasar el mouse */
+    -fx-effect: dropshadow(gaussian, #fcd358, 20, 0.15, 0, 0);
+}
+
+.btnIniciar:hover {
+    -fx-background-color: #d1af4b; /* color más intenso al pasar el mouse */
+    -fx-effect: dropshadow(gaussian, #d1af4b, 20, 0.15, 0, 0);
+}
+
+.btnIniciar:pressed {
+    -fx-background-color: #a48a3c /* #a48a3c */; /* color aún más oscuro al presionar */
 }
