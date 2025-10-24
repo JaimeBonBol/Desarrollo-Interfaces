@@ -1,0 +1,17 @@
+.root {
+    -fx-background-image: url("../imagenes/fondo-home.jpg");
+    -fx-font-family: "Segoe UI";
+    -fx-background-size: cover;       /* Ajusta la imagen al tamaño del contenedor */
+    -fx-background-repeat: no-repeat; /* No repetir la imagen */
+    -fx-background-position: center;  /* Centrar la imagen */
+}
+
+.main-container{
+    -fx-alignment: center;
+    -fx-spacing: 30;       /* Espacio entre logo, títulos y botón */
+    -fx-padding: 50;       /* Margen interno */
+}
+
+.logo{
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 10, 0, 0, 4);
+}
