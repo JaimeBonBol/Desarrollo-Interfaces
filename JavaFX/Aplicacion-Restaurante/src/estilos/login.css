@@ -1,32 +1,21 @@
 .root {
-    -fx-background-image: url("../imagenes/fondo-home2.jpg");
+    -fx-background-color: #2e2e2e;/*#161616*/
     -fx-font-family: "Segoe UI";
     -fx-background-size: cover;       /* Ajusta la imagen al tamaño del contenedor */
     -fx-background-repeat: no-repeat; /* No repetir la imagen */
     -fx-background-position: center;  /* Centrar la imagen */
 }
 
-.main-container{
-    -fx-alignment: center;
-    -fx-spacing: 30;       /* Espacio entre logo, títulos y botón */
-    -fx-padding: 50;       /* Margen interno */
+.titulo{
+    -fx-text-fill: #fcd358;
+    -fx-font-size: 30px;
 }
 
-.logo{
-    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.8), 10, 0, 0, 4);
-    /*-fx-effect: dropshadow(gaussian, white, 15, 0.3, 0, 0);*/
-
+.textField{
+    -fx-padding:  10 10px;
 }
 
-.subtitulo{
-    -fx-font-size: 26px;
-    -fx-font-weight: bold;
-    -fx-text-fill: white;
-    -fx-effect: dropshadow(gaussian, white, 15, 0.025, 0, 0);
-
-}
-
-.btnIniciar {
+.btnLogin{
     -fx-background-color: #fcd358; /* color amarillo */
     -fx-text-fill: black;
     -fx-font-size: 16px;
@@ -37,25 +26,31 @@
     -fx-effect: dropshadow(gaussian, #fcd358, 20, 0.15, 0, 0);
 }
 
-.btnIniciar:hover {
+.btnLogin:hover {
     -fx-background-color: #d1af4b; /* color más intenso al pasar el mouse */
     -fx-effect: dropshadow(gaussian, #d1af4b, 20, 0.15, 0, 0);
 }
 
-.btnIniciar:pressed {
+.btnLogin:pressed {
     -fx-background-color: #a48a3c; /* color aún más oscuro al presionar */
 }
 
-.textFieldSesion{
-    -fx-background-color: #a48a3c;
-}
-
-.btnLogOut{
-    -fx-background-color: #D4374F;
-    -fx-text-fill: white;
-}
-
-.btnLogIn{
-    -fx-background-color: #3DF056;
+.btnAtras{
+    -fx-background-color: #D4374F; /* color amarillo */
     -fx-text-fill: black;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-padding: 12 30;
+    -fx-background-radius: 15;
+    -fx-cursor: hand;             /* cursor de puntero al pasar el mouse */
+    -fx-effect: dropshadow(gaussian, #CC293A, 20, 0.15, 0, 0);
+}
+
+.btnAtras:hover {
+    -fx-background-color: #CC293A; /* color más intenso al pasar el mouse */
+    -fx-effect: dropshadow(gaussian, #d1af4b, 20, 0.15, 0, 0);
+}
+
+.btnAtras:pressed {
+    -fx-background-color: #CC293A; /* color aún más oscuro al presionar */
 }
