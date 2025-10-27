@@ -17,17 +17,17 @@
                   <Image url="@../imagenes/logo-bgremoved.png" />
                </image>
             </ImageView>
-            <HBox prefHeight="54.0" prefWidth="446.0" spacing="15.0">
+            <Button fx:id="btnIniciar" mnemonicParsing="false" styleClass="btnIniciar" text="INICIAR APLICACIÓN" />
+            <HBox alignment="CENTER" prefHeight="54.0" prefWidth="446.0" spacing="15.0">
                <children>
-                  <Button fx:id="btnIniciar" mnemonicParsing="false" styleClass="btnIniciar" text="INICIAR " />
-                  <Button fx:id="btnGestionUsuarios" mnemonicParsing="false" styleClass="btnIniciar" text="USUARIOS" />
+                  <Button fx:id="btnGestionUsuarios" mnemonicParsing="false" onMouseClicked="#cambiarVistaGestionUsuarios" styleClass="btnIniciar" text="USUARIOS" />
                   <Button fx:id="btnGestionInventario" mnemonicParsing="false" styleClass="btnIniciar" text="INVENTARIO" />
                </children>
             </HBox>
          </children></VBox>
-      <TextField fx:id="textFieldSesion" editable="false" layoutX="48.0" layoutY="14.0" promptText="Sesión no iniciada" styleClass="textFieldSesion" />
-      <Button fx:id="btnLogOut" layoutX="222.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#deslogearse" styleClass="btnLogOut" text="LogOut" />
-      <Button fx:id="btnLogin" layoutX="300.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#cambiarVistaLogin" styleClass="btnLogIn" text="LogIn" />
+      <TextField fx:id="textFieldSesion" editable="false" layoutX="101.0" layoutY="14.0" promptText="Sesión no iniciada" styleClass="textFieldSesion" />
+      <Button fx:id="btnLogOut" layoutX="296.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#deslogearse" styleClass="btnLogOut" text="LogOut" />
+      <Button fx:id="btnLogin" layoutX="34.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#cambiarVistaLogin" styleClass="btnLogIn" text="LogIn" />
       <ImageView fx:id="iconoApagar" fitHeight="39.0" fitWidth="48.0" layoutX="1304.0" layoutY="14.0" onMouseClicked="#salirApp" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../imagenes/iconoApagar.png" />

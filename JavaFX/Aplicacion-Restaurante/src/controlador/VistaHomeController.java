@@ -18,6 +18,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import modelo.Restaurante;
+import modelo.RolUsuario;
 
 /**
  * FXML Controller class
@@ -50,6 +51,7 @@ public class VistaHomeController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         comprobarUsuarioSesion();
+        comprobarRolSesion();
     }
 
     @FXML
@@ -57,8 +59,7 @@ public class VistaHomeController implements Initializable {
         restaurante.setUsuarioSesion(null);
         
         comprobarUsuarioSesion();
-        
-        btnLogin.setVisible(true);
+        comprobarRolSesion();
     }
 
     @FXML
@@ -81,8 +82,13 @@ public class VistaHomeController implements Initializable {
         if (restaurante.getUsuarioSesion() == null) {
             textFieldSesion.setText("Sesión no iniciada");
             btnLogOut.setVisible(false);
+            btnLogin.setVisible(true);
+            
+            btnGestionInventario.setVisible(false);
+            btnGestionUsuarios.setVisible(false);
         }else{
             textFieldSesion.setText(restaurante.getUsuarioSesion().toString());
+            
             btnLogOut.setVisible(true);
             btnLogin.setVisible(false);
         }
@@ -94,4 +100,29 @@ public class VistaHomeController implements Initializable {
         
         stage.close();
     }
+    
+    public void comprobarRolSesion() {
+        if (restaurante.getUsuarioSesion() == null) {
+            // Si no hay usuario logueado ocultar
+            btnGestionInventario.setVisible(false);
+            btnGestionUsuarios.setVisible(false);
+            return;
+        }
+
+        RolUsuario rol = restaurante.getUsuarioSesion().getRol();
+
+        if (rol == RolUsuario.ADMIN) {
+            btnGestionInventario.setVisible(true);
+            btnGestionUsuarios.setVisible(true);
+        } else {
+            btnGestionInventario.setVisible(false);
+            btnGestionUsuarios.setVisible(false);
+        }
+    }
+
+    @FXML
+    private void cambiarVistaGestionUsuarios(MouseEvent event) {
+        
+    }
+
 }

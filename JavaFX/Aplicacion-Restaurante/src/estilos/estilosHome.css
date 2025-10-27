@@ -53,9 +53,11 @@
 .btnLogOut{
     -fx-background-color: #D4374F;
     -fx-text-fill: white;
+    -fx-cursor: hand;
 }
 
 .btnLogIn{
     -fx-background-color: #3DF056;
     -fx-text-fill: black;
+    -fx-cursor: hand;
 }

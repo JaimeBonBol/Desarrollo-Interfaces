@@ -36,7 +36,7 @@
 }
 
 .btnAtras{
-    -fx-background-color: #D4374F; /* color amarillo */
+    -fx-background-color: #D4374F;
     -fx-text-fill: black;
     -fx-font-size: 16px;
     -fx-font-weight: bold;
@@ -48,7 +48,7 @@
 
 .btnAtras:hover {
     -fx-background-color: #CC293A; /* color más intenso al pasar el mouse */
-    -fx-effect: dropshadow(gaussian, #d1af4b, 20, 0.15, 0, 0);
+    -fx-effect: dropshadow(gaussian, #CC293A, 20, 0.15, 0, 0);
 }
 
 .btnAtras:pressed {

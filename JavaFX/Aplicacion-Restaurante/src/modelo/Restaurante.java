@@ -15,6 +15,8 @@ import javafx.collections.ObservableList;
  * Singleton para crear una instancia y esta se comparte con todos  los controladores
  * que necesitan acceder a ella. Es para que exista solo un objeto Restaurante en toda
  * la aaplicacion.
+ * 
+ * No puedo escribir tildes en los comentarios
  */
 public class Restaurante {
     
