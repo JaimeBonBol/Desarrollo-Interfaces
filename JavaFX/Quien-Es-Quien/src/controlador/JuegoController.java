@@ -161,7 +161,7 @@ public class JuegoController {
         String textoCorazones = "";
         
         if (vidas == 0) {
-            textoCorazones = "💀";
+            textoCorazones = "";
         } else {
             for (int i = 0; i < vidas; i++) {
                 textoCorazones = textoCorazones + "❤️ ";
