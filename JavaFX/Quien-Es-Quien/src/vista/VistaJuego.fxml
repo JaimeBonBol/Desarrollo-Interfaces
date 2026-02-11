@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="700.0" prefWidth="950.0" 
+            stylesheets="@../estilos/estilos.css" 
+            xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" 
+            fx:controller="controlador.JuegoController">
+   
+   <top>
+       <HBox styleClass="header-panel" alignment="CENTER_LEFT" spacing="15">
+           <Label text="¿QUIÉN ES QUIÉN?" styleClass="titulo-juego" />
+           
+           <Region HBox.hgrow="ALWAYS" />
+           
+           <Label text="VIDAS:" textFill="#bdc3c7" style="-fx-font-weight: bold; -fx-font-size: 14px;"/>
+           <Label fx:id="lblVidas" text="❤️❤️❤️" styleClass="label-vidas"/>
+           
+           <Region prefWidth="20" />
+           
+           <Button text="?" styleClass="boton-ayuda" onAction="#onMenuAyudaClick"/>
+       </HBox>
+   </top>
+
+   <center>
+      <GridPane fx:id="gridPersonajes" hgap="20" vgap="20" style="-fx-padding: 30;" alignment="CENTER">
+         </GridPane>
+   </center>
+
+   <bottom>
+      <VBox spacing="15" styleClass="panel-inferior">
+         
+         <HBox spacing="15" alignment="CENTER_LEFT">
+            <Label text="PANEL DE CONTROL" style="-fx-font-size: 10px; -fx-font-weight: bold; -fx-text-fill: #a4b0be;"/>
+         </HBox>
+
+         <HBox spacing="10" alignment="CENTER_LEFT">
+            <ComboBox fx:id="comboPreguntas" prefWidth="350.0" promptText="Selecciona una característica..." styleClass="combo-box-base" />
+            
+            <Button fx:id="btnPreguntar" text="PREGUNTAR" onAction="#onBotonPreguntarClick" styleClass="boton-accion"/>
+            
+            <Region HBox.hgrow="ALWAYS" />
+            
+            <Button fx:id="btnReiniciar" text="Reiniciar Juego" onAction="#onBotonReiniciarClick" styleClass="boton-accion"/>
+         </HBox>
+         
+         <TextArea fx:id="areaLog" prefHeight="100.0" editable="false" wrapText="true" focusTraversable="false" style="-fx-background-color: transparent;"/>
+      </VBox>
+   </bottom>
+
+</BorderPane>

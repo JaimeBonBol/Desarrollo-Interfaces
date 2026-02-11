@@ -1,0 +1,196 @@
+/* --- TEMA GENERAL: AZULADO MODERNO --- */
+.root {
+    -fx-font-family: 'Segoe UI', 'Roboto', sans-serif;
+    /* Fondo con un degradado sutil muy claro */
+    -fx-background-color: linear-gradient(to bottom, #dfe9f3, #ffffff);
+}
+
+/* --- CABECERA (Vuelve el azul degradado) --- */
+.header-panel {
+    /* Degradado de Azul Oscuro a Azul Claro */
+    -fx-background-color: linear-gradient(to right, #2c3e50, #4ca1af);
+    -fx-padding: 15 30;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 8, 0, 0, 2);
+}
+
+.titulo-juego {
+    -fx-text-fill: white;
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 2, 0, 0, 1);
+}
+
+/* Vidas */
+.label-vidas {
+    -fx-text-fill: #ff6b6b; /* Rojo coral brillante */
+    -fx-font-size: 20px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 3, 0, 0, 1);
+}
+
+/* Botón Ayuda */
+.boton-ayuda {
+    -fx-background-color: rgba(255,255,255,0.2);
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 50%;
+    -fx-min-width: 35px;
+    -fx-min-height: 35px;
+    -fx-border-color: rgba(255,255,255,0.5);
+    -fx-border-radius: 50%;
+    -fx-cursor: hand;
+}
+.boton-ayuda:hover {
+    -fx-background-color: white;
+    -fx-text-fill: #2c3e50;
+    -fx-effect: dropshadow(gaussian, rgba(255,255,255,0.8), 5, 0, 0, 0);
+}
+
+/* --- CARTAS --- */
+.carta {
+    -fx-background-color: white;
+    -fx-background-radius: 12;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.15), 5, 0, 0, 2);
+    -fx-padding: 10;
+    -fx-alignment: center;
+}
+.carta-viva { -fx-cursor: hand; }
+.carta-viva:hover {
+    -fx-translate-y: -5;
+    /* Resplandor azul al pasar el ratón */
+    -fx-effect: dropshadow(three-pass-box, rgba(52, 152, 219, 0.6), 15, 0, 0, 0);
+}
+.carta-eliminada {
+    -fx-opacity: 0.6;
+    -fx-effect: none;
+    -fx-background-color: #ecf0f1;
+}
+
+/* --- PANEL INFERIOR --- */
+.panel-inferior {
+    -fx-background-color: white;
+    -fx-background-radius: 20 20 0 0;
+    -fx-padding: 25;
+    /* Sombra azulada hacia arriba */
+    -fx-effect: dropshadow(three-pass-box, rgba(44, 62, 80, 0.2), 0, -5, 15, 0);
+    -fx-border-color: #3498db; /* Borde fino azul arriba */
+    -fx-border-width: 3 0 0 0;
+}
+
+/* COMBOBOX */
+.combo-box-base {
+    -fx-background-color: #f0f8ff; /* AliceBlue (Azul muy pálido) */
+    -fx-border-color: #bdc3c7;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+}
+.combo-box-base:hover { -fx-border-color: #3498db; }
+
+/* --- ÁREA DE TEXTO (LOG ESTILIZADO) --- */
+.text-area {
+    -fx-font-family: 'Consolas', 'Monospaced', monospace;
+    -fx-font-size: 13px;
+    -fx-text-fill: #2c3e50; /* Azul oscuro */
+    -fx-background-color: transparent;
+    -fx-padding: 5;
+}
+
+.text-area .content {
+    /* Fondo azul muy clarito, como una pantalla futurista suave */
+    -fx-background-color: #eaf2f8; 
+    -fx-background-radius: 8;
+    -fx-border-color: #d4e6f1;
+    -fx-border-radius: 8;
+    -fx-border-width: 1;
+}
+
+/* BOTONES DE ACCIÓN */
+.boton-accion {
+    -fx-padding: 10 20;
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+    -fx-background-radius: 50; /* Botones redondeados */
+    -fx-cursor: hand;
+}
+
+#btnPreguntar {
+    /* Degradado verde */
+    -fx-background-color: linear-gradient(to bottom, #2ecc71, #27ae60);
+    -fx-text-fill: white;
+}
+#btnPreguntar:hover {
+    -fx-background-color: linear-gradient(to bottom, #27ae60, #219150);
+    -fx-effect: dropshadow(three-pass-box, rgba(39, 174, 96, 0.4), 5, 0, 0, 1);
+}
+
+#btnReiniciar {
+    -fx-background-color: transparent;
+    -fx-border-color: #e67e22;
+    -fx-border-width: 2;
+    -fx-border-radius: 50;
+    -fx-text-fill: #e67e22;
+}
+#btnReiniciar:hover {
+    -fx-background-color: #e67e22;
+    -fx-text-fill: white;
+}
+
+
+/* --- ALERTAS (DIALOGS) PERSONALIZADAS --- */
+
+/* El contenedor principal de la alerta */
+.dialog-pane {
+    -fx-background-color: white;
+    -fx-font-family: 'Segoe UI', 'Roboto', sans-serif;
+    /* Un borde sutil azulado */
+    -fx-border-color: #3498db; 
+    -fx-border-width: 2;
+}
+
+/* La Cabecera de la alerta (donde sale el título grande) */
+.dialog-pane .header-panel {
+    /* El mismo degradado azul que tu juego */
+    -fx-background-color: linear-gradient(to right, #2c3e50, #4ca1af);
+    -fx-padding: 15;
+}
+
+.dialog-pane .header-panel .label {
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 2, 0, 0, 1);
+}
+
+/* El cuerpo del mensaje */
+.dialog-pane .content {
+    -fx-padding: 20;
+    -fx-background-color: white;
+}
+
+.dialog-pane .content .label {
+    -fx-text-fill: #2c3e50; /* Texto oscuro */
+    -fx-font-size: 14px;
+    -fx-wrap-text: true;
+}
+
+/* Iconos dentro de la alerta (si salen) */
+.dialog-pane .graphic-container {
+    -fx-background-color: white; 
+}
+
+/* Botones de la alerta (Aceptar, Cerrar...) */
+.dialog-pane .button-bar .button {
+    /* Estilo igual a tu botón de 'Preguntar' */
+    -fx-background-color: linear-gradient(to bottom, #2ecc71, #27ae60);
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 50; /* Redondeados */
+    -fx-cursor: hand;
+    -fx-padding: 8 20;
+}
+
+.dialog-pane .button-bar .button:hover {
+    -fx-background-color: linear-gradient(to bottom, #27ae60, #219150);
+    -fx-effect: dropshadow(three-pass-box, rgba(39, 174, 96, 0.4), 5, 0, 0, 1);
+}
