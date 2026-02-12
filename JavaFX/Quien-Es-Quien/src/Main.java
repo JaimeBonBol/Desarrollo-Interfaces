@@ -14,7 +14,7 @@ public class Main extends Application {
         
         Scene scene = new Scene(root);
         
-        stage.setTitle("¿Quién es Quién? - Práctica DIN");
+        stage.setTitle("¿Quién es Quién?");
         stage.setScene(scene);
         stage.show();
     }

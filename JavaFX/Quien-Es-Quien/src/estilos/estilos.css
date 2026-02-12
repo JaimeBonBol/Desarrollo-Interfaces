@@ -194,3 +194,74 @@
     -fx-background-color: linear-gradient(to bottom, #27ae60, #219150);
     -fx-effect: dropshadow(three-pass-box, rgba(39, 174, 96, 0.4), 5, 0, 0, 1);
 }
+
+/* --- VISTA DE AYUDA (MANUAL) --- */
+
+/* Sidebar (Menú Izquierdo) */
+.ayuda-sidebar {
+    -fx-background-color: #2c3e50; /* Azul oscuro */
+    -fx-padding: 10;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 5, 0, 0, 0);
+}
+
+/* Título del menú lateral */
+.ayuda-menu-titulo {
+    -fx-text-fill: #bdc3c7;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-padding: 0 0 10 10;
+}
+
+/* Botones del menú lateral */
+.boton-menu-ayuda {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-alignment: CENTER_LEFT;
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+    -fx-padding: 10 15;
+    -fx-background-radius: 5;
+}
+
+.boton-menu-ayuda:hover {
+    -fx-background-color: rgba(255,255,255,0.1);
+    -fx-padding: 10 10 10 20; /* Pequeña animación de desplazamiento */
+}
+
+.boton-menu-ayuda:focused {
+    -fx-background-color: #3498db; /* Azul brillante al seleccionar */
+    -fx-font-weight: bold;
+}
+
+/* Panel de Contenido (Derecha) */
+.ayuda-content-pane {
+    -fx-background-color: white;
+    -fx-padding: 30;
+}
+
+/* Títulos del contenido */
+.ayuda-titulo-seccion {
+    -fx-text-fill: #2c3e50;
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 0, 0, 0, 1);
+    -fx-padding: 0 0 15 0;
+    -fx-border-color: #3498db;
+    -fx-border-width: 0 0 2 0; /* Línea azul debajo */
+}
+
+/* Texto del cuerpo */
+.ayuda-texto-cuerpo {
+    -fx-text-fill: #555;
+    -fx-font-size: 14px;
+    -fx-line-spacing: 5; /* Espacio entre líneas para leer mejor */
+}
+
+/* Botón Cerrar (en el menú) */
+.boton-cerrar-ayuda {
+    -fx-background-color: #c0392b;
+    -fx-text-fill: white;
+    -fx-cursor: hand;
+    -fx-background-radius: 5;
+}
+.boton-cerrar-ayuda:hover { -fx-background-color: #e74c3c; }
