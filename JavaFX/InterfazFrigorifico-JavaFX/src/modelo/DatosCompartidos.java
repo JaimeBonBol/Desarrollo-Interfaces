@@ -20,19 +20,44 @@ public class DatosCompartidos {
     
     private static String rutaArchivoAlimentos = "src/fichero/alimentos.txt";
     
-    // ObservableList porque se actualiza automaticamente en la TbaleView al aadir o eliminar
     private static final ObservableList<Alimento> alimentos = leerFichero(rutaArchivoAlimentos);
+
+    // --- VARIABLES PARA AJUSTES ADICIONALES ---
+    private static double temperatura = 0.0;
+    private static String formatoTemp = "ºC";
+    private static String modo = "Eco";
+    private static String medidaAlimentos = "KG";
+    private static double brillo = 0.5;
     
-//    static {
-//        alimentos.addAll(
-//            new Alimento("Leche", 1, "L"),
-//            new Alimento("Huevos", 12, "Unidades"),
-//            new Alimento("Manzanas", 2.5, "kg")
-//        );
-//    }
+    // NUEVAS VARIABLES
+    private static boolean notificaciones = false;
+    private static boolean wifiConectado = false;
+
+    // --- GETTERS Y SETTERS PARA AJUSTES ADICIONALES ---
+    public static double getTemperatura() { return temperatura; }
+    public static void setTemperatura(double temp) { temperatura = temp; }
+
+    public static String getFormatoTemp() { return formatoTemp; }
+    public static void setFormatoTemp(String formato) { formatoTemp = formato; }
+
+    public static String getModo() { return modo; }
+    public static void setModo(String m) { modo = m; }
+
+    public static String getMedidaAlimentos() { return medidaAlimentos; }
+    public static void setMedidaAlimentos(String medida) { medidaAlimentos = medida; }
+
+    public static double getBrillo() { return brillo; }
+    public static void setBrillo(double b) { brillo = b; }
+
+    // NUEVOS GETTERS Y SETTERS
+    public static boolean isNotificaciones() { return notificaciones; }
+    public static void setNotificaciones(boolean n) { notificaciones = n; }
+
+    public static boolean isWifiConectado() { return wifiConectado; }
+    public static void setWifiConectado(boolean w) { wifiConectado = w; }
 
 
-    // Getter
+    // Getter alimentos
     public static ObservableList<Alimento> getAlimentos() {
         return alimentos;
     }
@@ -53,13 +78,13 @@ public class DatosCompartidos {
                 
                 alimentos.add(new Alimento(nombre, cantidad, unidad));
             }
+            br.close();
             
         } catch (Exception e) {
             System.out.println("Error: " + e.getMessage());
         }
         
-        return  alimentos;
-
+        return alimentos;
     }
     
     public static void guardarAlimentosFichero(String ruta){
@@ -80,6 +105,4 @@ public class DatosCompartidos {
             System.out.println(e.getMessage());
         }
     }
-        
-    
 }

@@ -23,7 +23,6 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
-import com.calendarfx.view.CalendarView;
 
 
 /**

@@ -116,7 +116,7 @@
                      </font>
                   </Label>
                   <Slider fx:id="sliderBrillo" layoutX="48.0" layoutY="98.0" max="1.0" value="0.5" />
-                  <CheckBox layoutX="53.0" layoutY="123.0" mnemonicParsing="false" text="NOTIFICACIONES" textFill="WHITE">
+                  <CheckBox fx:id="checkNotificaciones" layoutX="53.0" layoutY="123.0" mnemonicParsing="false" text="NOTIFICACIONES" textFill="WHITE">
                      <font>
                         <Font name="Noto Music Regular" size="13.0" />
                      </font>

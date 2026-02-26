@@ -14,6 +14,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox; // Añadido
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
@@ -23,6 +24,8 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+
+import modelo.DatosCompartidos; 
 
 /**
  * FXML Controller class
@@ -68,15 +71,15 @@ public class VistaAjustesAdicionalesController implements Initializable {
     private ImageView iconSave;
     @FXML
     private Slider sliderBrillo;
+    
+    @FXML
+    private CheckBox checkNotificaciones; // Nuevo CheckBox
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        /* Obtiene la propiedad del valor del slider, formatea el numero con un decimal y 
-         le añade ºC, .bind() hace que el label se actualize en timepo real cuando
-         se mueve el slider.*/
         labelTemperature.textProperty().bind(
             sliderTemperature.valueProperty().asString("%.1f " + "º")
         );
@@ -84,34 +87,75 @@ public class VistaAjustesAdicionalesController implements Initializable {
         comboModo.getItems().addAll("Eco", "Vacaciones", "UltraFreeze");        
         comboFormatoTemp.getItems().addAll("ºC", "ºF");
         comboMedidaAlimentos.getItems().addAll("KG", "G");
+
+        // --- CARGAR LOS AJUSTES GUARDADOS PREVIAMENTE ---
+        sliderTemperature.setValue(DatosCompartidos.getTemperatura());
+        sliderBrillo.setValue(DatosCompartidos.getBrillo());
+        comboModo.setValue(DatosCompartidos.getModo());
+        comboFormatoTemp.setValue(DatosCompartidos.getFormatoTemp());
+        comboMedidaAlimentos.setValue(DatosCompartidos.getMedidaAlimentos());
+        
+        // Cargar CheckBox (comprobamos null por si olvidas poner el fx:id en SceneBuilder)
+        if (checkNotificaciones != null) {
+            checkNotificaciones.setSelected(DatosCompartidos.isNotificaciones());
+        }
+        
+        // Cargar estado del Wi-Fi
+        if (DatosCompartidos.isWifiConectado()) {
+            botonWifi.setText("Conectado");
+            iconWifi.setImage(new Image(getClass().getResourceAsStream("/images/tick.png"))); 
+            passwordWifi.setText("DIN"); // Rellenamos la contraseña para que quede bonito
+        }
     }    
+
+    // --- GUARDAR LOS AJUSTES TEMPORALMENTE ---
+    private void guardarAjustesTemporales() {
+        DatosCompartidos.setTemperatura(sliderTemperature.getValue());
+        DatosCompartidos.setBrillo(sliderBrillo.getValue());
+        
+        if (comboFormatoTemp.getValue() != null) {
+            DatosCompartidos.setFormatoTemp(comboFormatoTemp.getValue());
+        }
+        if (comboModo.getValue() != null) {
+            DatosCompartidos.setModo(comboModo.getValue());
+        }
+        if (comboMedidaAlimentos.getValue() != null) {
+            DatosCompartidos.setMedidaAlimentos(comboMedidaAlimentos.getValue());
+        }
+        
+        // Guardar Notificaciones
+        if (checkNotificaciones != null) {
+            DatosCompartidos.setNotificaciones(checkNotificaciones.isSelected());
+        }
+        
+        // Guardar Wi-Fi (si el botón dice "Conectado", es que lo logramos)
+        DatosCompartidos.setWifiConectado(botonWifi.getText().equals("Conectado"));
+    }
 
     @FXML
     private void cambiarVistaHome(MouseEvent event) throws IOException {
+        guardarAjustesTemporales(); 
+
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/vistaHome.fxml"));
 
         Parent root = loader.load();
         Scene escena = new Scene(root);
 
-        // Obtener el Stage actual desde el botón
         Stage stage = (Stage) iconHome.getScene().getWindow();
-
-        // Reemplazar la escena actual
         stage.setScene(escena);
         stage.setTitle("HOME"); 
     }
 
     @FXML
     private void cambiarVistaAlimentos(MouseEvent event) throws IOException {
+        guardarAjustesTemporales(); 
+
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/vistaAlimentos.fxml"));
 
         Parent root = loader.load();
         Scene escena = new Scene(root);
 
-        // Obtener el Stage actual desde el botón
         Stage stage = (Stage) iconDish.getScene().getWindow();
-
-        // Reemplazar la escena actual
         stage.setScene(escena);
         stage.setTitle("ALIMENTOS");
     }
@@ -119,21 +163,19 @@ public class VistaAjustesAdicionalesController implements Initializable {
     @FXML
     private void salirApp(MouseEvent event) {
         Stage stage = (Stage) iconPowerOff.getScene().getWindow();
-        
         stage.close();
     }
 
     @FXML
     private void cambiarVistaAjustes(MouseEvent event) throws IOException {
+        guardarAjustesTemporales(); 
+
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/vistaAjustes.fxml"));
 
         Parent root = loader.load();
         Scene escena = new Scene(root);
 
-        // Obtener el Stage actual desde el botón
         Stage stage = (Stage) iconSettings.getScene().getWindow();
-
-        // Reemplazar la escena actual
         stage.setScene(escena);
         stage.setTitle("AJUSTES");
     }
