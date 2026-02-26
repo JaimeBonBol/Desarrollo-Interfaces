@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
- */
 package controlador;
 
 import java.io.IOException;
@@ -13,19 +9,22 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox; // Añadido
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.Slider;
+import javafx.scene.control.TextArea;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
-import modelo.DatosCompartidos; 
+import modelo.DatosCompartidos;
 
 /**
  * FXML Controller class
@@ -52,7 +51,7 @@ public class VistaAjustesAdicionalesController implements Initializable {
     private ComboBox<String> comboFormatoTemp;
     @FXML
     private ComboBox<String> comboMedidaAlimentos;
-    
+
     @FXML
     private PasswordField passwordWifi;
     @FXML
@@ -71,9 +70,11 @@ public class VistaAjustesAdicionalesController implements Initializable {
     private ImageView iconSave;
     @FXML
     private Slider sliderBrillo;
-    
+
     @FXML
     private CheckBox checkNotificaciones; // Nuevo CheckBox
+    @FXML
+    private ImageView iconInfo;
 
     /**
      * Initializes the controller class.
@@ -81,10 +82,9 @@ public class VistaAjustesAdicionalesController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         labelTemperature.textProperty().bind(
-            sliderTemperature.valueProperty().asString("%.1f " + "º")
-        );
-        
-        comboModo.getItems().addAll("Eco", "Vacaciones", "UltraFreeze");        
+                sliderTemperature.valueProperty().asString("%.1f " + "º"));
+
+        comboModo.getItems().addAll("Eco", "Vacaciones", "UltraFreeze");
         comboFormatoTemp.getItems().addAll("ºC", "ºF");
         comboMedidaAlimentos.getItems().addAll("KG", "G");
 
@@ -94,25 +94,26 @@ public class VistaAjustesAdicionalesController implements Initializable {
         comboModo.setValue(DatosCompartidos.getModo());
         comboFormatoTemp.setValue(DatosCompartidos.getFormatoTemp());
         comboMedidaAlimentos.setValue(DatosCompartidos.getMedidaAlimentos());
-        
-        // Cargar CheckBox (comprobamos null por si olvidas poner el fx:id en SceneBuilder)
+
+        // Cargar CheckBox (comprobamos null por si olvidas poner el fx:id en
+        // SceneBuilder)
         if (checkNotificaciones != null) {
             checkNotificaciones.setSelected(DatosCompartidos.isNotificaciones());
         }
-        
+
         // Cargar estado del Wi-Fi
         if (DatosCompartidos.isWifiConectado()) {
             botonWifi.setText("Conectado");
-            iconWifi.setImage(new Image(getClass().getResourceAsStream("/images/tick.png"))); 
+            iconWifi.setImage(new Image(getClass().getResourceAsStream("/images/tick.png")));
             passwordWifi.setText("DIN"); // Rellenamos la contraseña para que quede bonito
         }
-    }    
+    }
 
     // --- GUARDAR LOS AJUSTES TEMPORALMENTE ---
     private void guardarAjustesTemporales() {
         DatosCompartidos.setTemperatura(sliderTemperature.getValue());
         DatosCompartidos.setBrillo(sliderBrillo.getValue());
-        
+
         if (comboFormatoTemp.getValue() != null) {
             DatosCompartidos.setFormatoTemp(comboFormatoTemp.getValue());
         }
@@ -122,19 +123,19 @@ public class VistaAjustesAdicionalesController implements Initializable {
         if (comboMedidaAlimentos.getValue() != null) {
             DatosCompartidos.setMedidaAlimentos(comboMedidaAlimentos.getValue());
         }
-        
+
         // Guardar Notificaciones
         if (checkNotificaciones != null) {
             DatosCompartidos.setNotificaciones(checkNotificaciones.isSelected());
         }
-        
+
         // Guardar Wi-Fi (si el botón dice "Conectado", es que lo logramos)
         DatosCompartidos.setWifiConectado(botonWifi.getText().equals("Conectado"));
     }
 
     @FXML
     private void cambiarVistaHome(MouseEvent event) throws IOException {
-        guardarAjustesTemporales(); 
+        guardarAjustesTemporales();
 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/vistaHome.fxml"));
 
@@ -143,12 +144,12 @@ public class VistaAjustesAdicionalesController implements Initializable {
 
         Stage stage = (Stage) iconHome.getScene().getWindow();
         stage.setScene(escena);
-        stage.setTitle("HOME"); 
+        stage.setTitle("HOME");
     }
 
     @FXML
     private void cambiarVistaAlimentos(MouseEvent event) throws IOException {
-        guardarAjustesTemporales(); 
+        guardarAjustesTemporales();
 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/vistaAlimentos.fxml"));
 
@@ -168,7 +169,7 @@ public class VistaAjustesAdicionalesController implements Initializable {
 
     @FXML
     private void cambiarVistaAjustes(MouseEvent event) throws IOException {
-        guardarAjustesTemporales(); 
+        guardarAjustesTemporales();
 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/vistaAjustes.fxml"));
 
@@ -179,8 +180,8 @@ public class VistaAjustesAdicionalesController implements Initializable {
         stage.setScene(escena);
         stage.setTitle("AJUSTES");
     }
-    
-    public String comprobarUdMedida(){
+
+    public String comprobarUdMedida() {
         return comboFormatoTemp.getValue();
     }
 
@@ -188,10 +189,54 @@ public class VistaAjustesAdicionalesController implements Initializable {
     private void comprobarConexionWifi(MouseEvent event) {
         if (!passwordWifi.getText().equals("DIN")) {
             botonWifi.setText("Contraseña Erronea");
-        }else{
+        } else {
             botonWifi.setText("Conectado");
-            iconWifi.setImage(new Image(getClass().getResourceAsStream("/images/tick.png")));            
+            iconWifi.setImage(new Image(getClass().getResourceAsStream("/images/tick.png")));
         }
     }
-    
+
+    @FXML
+    private void mostrarAyudaSensible(MouseEvent event) {
+        Alert alerta = new Alert(AlertType.INFORMATION);
+        alerta.setTitle("Ayuda — Ajustes Adicionales");
+        alerta.setHeaderText("Configuración Detallada del Frigorífico");
+
+        String textoAyuda = "Panel de configuración avanzada del frigorífico.\n\n"
+
+                + "TEMPERATURA\n\n"
+                + "Desliza la barra vertical para ajustar la temperatura "
+                + "del frigorífico (rango: de -10 ºC a 10 ºC). "
+                + "El valor seleccionado se muestra junto al control.\n\n"
+
+                + "FUNCIONES DEL SISTEMA\n\n"
+                + "  - Formato de temperatura: ºC o ºF.\n"
+                + "  - Modo de funcionamiento: Eco, Vacaciones "
+                + "o UltraFreeze.\n"
+                + "  - Unidad de medida de alimentos: KG o G.\n\n"
+
+                + "FUNCIONES INTELIGENTES\n\n"
+                + "  - Brillo: desliza la barra para ajustarlo.\n"
+                + "  - Notificaciones: activa o desactiva la casilla.\n"
+                + "  - Conexión Wi-Fi: introduce la contraseña "
+                + "correcta y pulsa el botón Conectar.\n\n"
+
+                + "GUARDAR Y VOLVER\n\n"
+                + "  - Icono de disquete: guarda los cambios y "
+                + "vuelve a la pantalla de Ajustes.\n"
+                + "  - Flecha atrás: vuelve sin guardar.\n\n"
+                + "Los ajustes se mantienen en memoria mientras "
+                + "la aplicación siga abierta.";
+
+        TextArea areaTexto = new TextArea(textoAyuda);
+        areaTexto.setEditable(false);
+        areaTexto.setWrapText(true);
+        areaTexto.setPrefWidth(450);
+        areaTexto.setPrefHeight(320);
+        areaTexto.getStyleClass().add("area-ayuda");
+
+        alerta.getDialogPane().setContent(areaTexto);
+        alerta.getDialogPane().getStylesheets().add(getClass().getResource("/vista/estilosAyuda.css").toExternalForm());
+        alerta.showAndWait();
+    }
+
 }

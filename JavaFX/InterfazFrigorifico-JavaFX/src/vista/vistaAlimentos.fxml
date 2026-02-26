@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="748.0" prefWidth="543.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.VistaAlimentosController">
+<AnchorPane id="AnchorPane" prefHeight="748.0" prefWidth="543.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.VistaAlimentosController">
    <children>
       <Pane prefHeight="754.0" prefWidth="543.0" style="-fx-border-width: 80; -fx-background-color: #13161f;">
          <children>
@@ -77,5 +77,10 @@
             </VBox>
          </children>
       </Pane>
+      <ImageView fx:id="iconInfo" fitHeight="36.0" fitWidth="31.0" layoutX="36.0" layoutY="23.0" onMouseClicked="#mostrarAyudaSensible" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/icon-info.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
- */
 package controlador;
 
 import java.io.IOException;
@@ -16,14 +12,15 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
-
-
 
 /**
  * FXML Controller class
@@ -44,10 +41,13 @@ public class VistaAjustesController implements Initializable {
     private Label labelDate;
     @FXML
     private Label labelTime;
-    
+
     @FXML
     private ImageView iconMore;
-
+    @FXML
+    private Pane panelDateTime;
+    @FXML
+    private ImageView iconInfo;
 
     /**
      * Initializes the controller class.
@@ -55,13 +55,13 @@ public class VistaAjustesController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         inicializarTiempoyFecha();
-        //inicializarCalendario();
-    }    
+        // inicializarCalendario();
+    }
 
     @FXML
     private void salirApp(MouseEvent event) {
         Stage stage = (Stage) iconPowerOff.getScene().getWindow();
-        
+
         stage.close();
     }
 
@@ -77,7 +77,7 @@ public class VistaAjustesController implements Initializable {
 
         // Reemplazar la escena actual
         stage.setScene(escena);
-        stage.setTitle("HOME");  
+        stage.setTitle("HOME");
     }
 
     @FXML
@@ -92,13 +92,14 @@ public class VistaAjustesController implements Initializable {
 
         // Reemplazar la escena actual
         stage.setScene(escena);
-        stage.setTitle("ALIMENTOS");  
+        stage.setTitle("ALIMENTOS");
     }
-    
+
     /**
-     * Funcion para inicializar los label de tiempo y fecha y se actualizen cada segundo.
+     * Funcion para inicializar los label de tiempo y fecha y se actualizen cada
+     * segundo.
      */
-    public void inicializarTiempoyFecha(){
+    public void inicializarTiempoyFecha() {
         // Formato de hora y fecha
         DateTimeFormatter formatoHora = DateTimeFormatter.ofPattern("HH:mm:ss");
         DateTimeFormatter formatoFecha = DateTimeFormatter.ofPattern("dd/MM/yyyy");
@@ -128,26 +129,64 @@ public class VistaAjustesController implements Initializable {
         stage.setTitle("AJUSTES ADICIONALES");
     }
 
-    
-    
-    /** NO VOY A UTILIZARLO
+    @FXML
+    private void mostrarAyudaSensible(MouseEvent event) {
+        Alert alerta = new Alert(AlertType.INFORMATION);
+        alerta.setTitle("Ayuda — Ajustes");
+        alerta.setHeaderText("Ajustes Generales");
+
+        String textoAyuda = "Pantalla de ajustes generales del frigorífico. "
+                + "Aquí se muestran varios widgets informativos.\n\n"
+
+                + "RELOJ Y FECHA\n\n"
+                + "En la parte superior se muestra la hora y la fecha "
+                + "del sistema en tiempo real.\n\n"
+
+                + "WIDGETS\n\n"
+                + "  - Calendario: vista mensual.\n"
+                + "  - Lista de deseos: productos que te gustaría comprar.\n"
+                + "  - Noticias: panel informativo.\n\n"
+
+                + "AJUSTES ADICIONALES\n\n"
+                + "Pulsa el icono de los tres puntos en la esquina "
+                + "inferior derecha para acceder a la configuración "
+                + "detallada: temperatura, modo, brillo, Wi-Fi, etc.\n\n"
+
+                + "NAVEGACIÓN\n\n"
+                + "Usa la barra inferior para ir a Inicio o al "
+                + "Inventario de Alimentos.";
+
+        TextArea areaTexto = new TextArea(textoAyuda);
+        areaTexto.setEditable(false);
+        areaTexto.setWrapText(true);
+        areaTexto.setPrefWidth(450);
+        areaTexto.setPrefHeight(300);
+        areaTexto.getStyleClass().add("area-ayuda");
+
+        alerta.getDialogPane().setContent(areaTexto);
+        alerta.getDialogPane().getStylesheets().add(getClass().getResource("/vista/estilosAyuda.css").toExternalForm());
+        alerta.showAndWait();
+    }
+
+    /**
+     * NO VOY A UTILIZARLO
      * Funcion para inicializar calendario, aadido a traves de dependencia maven
-    public void inicializarCalendario(){
-        // Crear el calendario
-        CalendarView calendario = new CalendarView();
-        
-        // Configuraciones
-        calendario.setShowPageToolBarControls(false); // Barra navegacion
-        calendario.showMonthPage(); // mostrar vista mensual
+     * public void inicializarCalendario(){
+     * // Crear el calendario
+     * CalendarView calendario = new CalendarView();
+     * 
+     * // Configuraciones
+     * calendario.setShowPageToolBarControls(false); // Barra navegacion
+     * calendario.showMonthPage(); // mostrar vista mensual
+     * 
+     * // Ajustar el tamaño para que llene el panelCalendar
+     * calendario.prefWidthProperty().bind(panelCalendar.widthProperty());
+     * calendario.prefHeightProperty().bind(panelCalendar.heightProperty());
+     * 
+     * // Agregar el calendario al panel
+     * panelCalendar.getChildren().add(calendario);
+     * 
+     * }
+     */
 
-        // Ajustar el tamaño para que llene el panelCalendar
-        calendario.prefWidthProperty().bind(panelCalendar.widthProperty());
-        calendario.prefHeightProperty().bind(panelCalendar.heightProperty());
-
-        // Agregar el calendario al panel
-        panelCalendar.getChildren().add(calendario);
-
-    }*/
-    
-    
 }
