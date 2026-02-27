@@ -154,7 +154,11 @@ public class VistaAjustesController implements Initializable {
 
                 + "NAVEGACIÓN\n\n"
                 + "Usa la barra inferior para ir a Inicio o al "
-                + "Inventario de Alimentos.";
+                + "Inventario de Alimentos.\n\n"
+                
+                + "APAGADO\n\n"
+                + "El botón de encendido en la esquina superior derecha "
+                + "cierra la aplicación por completo.";
 
         TextArea areaTexto = new TextArea(textoAyuda);
         areaTexto.setEditable(false);

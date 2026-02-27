@@ -177,6 +177,15 @@ public class VistaAlimentosController implements Initializable {
                 + "  - Botón rojo (Eliminar): selecciona un alimento "
                 + "de la tabla y pulsa este botón para borrarlo "
                 + "del inventario.\n\n"
+                
+                + "BARRA DE NAVEGACIÓN\n\n"
+                + "  - Icono de bandeja (izquierda): Estás aquí.\n"
+                + "  - Icono de casa (centro): Home\n"
+                + "  - Icono de engranaje (derecha): Ajustes.\n\n"
+                
+                + "APAGADO\n\n"
+                + "El botón de encendido en la esquina superior derecha "
+                + "cierra la aplicación por completo."
 
                 + "PERSISTENCIA\n\n"
                 + "Toda la información se guarda automáticamente "

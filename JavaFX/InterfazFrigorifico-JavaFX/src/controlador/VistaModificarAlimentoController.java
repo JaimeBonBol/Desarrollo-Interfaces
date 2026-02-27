@@ -197,7 +197,11 @@ public class VistaModificarAlimentoController implements Initializable {
                 + "alimento del inventario, se mostrará un mensaje "
                 + "de error. Todos los campos nuevos son obligatorios. "
                 + "Puedes usar la barra inferior para navegar a "
-                + "otra pantalla sin guardar cambios.";
+                + "otra pantalla sin guardar cambios.\n\n"
+                
+                + "APAGADO\n\n"
+                + "El botón de encendido en la esquina superior derecha "
+                + "cierra la aplicación por completo.";
 
         TextArea areaTexto = new TextArea(textoAyuda);
         areaTexto.setEditable(false);

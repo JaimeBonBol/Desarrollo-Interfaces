@@ -225,7 +225,13 @@ public class VistaAjustesAdicionalesController implements Initializable {
                 + "vuelve a la pantalla de Ajustes.\n"
                 + "  - Flecha atrás: vuelve sin guardar.\n\n"
                 + "Los ajustes se mantienen en memoria mientras "
-                + "la aplicación siga abierta.";
+                + "la aplicación siga abierta."
+                + "Puedes usar la barra inferior para navegar a "
+                + "otra pantalla sin guardar cambios.\n\n"
+                
+                + "APAGADO\n\n"
+                + "El botón de encendido en la esquina superior derecha "
+                + "cierra la aplicación por completo.";
 
         TextArea areaTexto = new TextArea(textoAyuda);
         areaTexto.setEditable(false);
